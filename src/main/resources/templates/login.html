@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>登录若依系统</title>
-    <meta name="description" content="若依后台管理框架">
+    <title>登录物流管理凭条</title>
+    <meta name="description" content="物流管理平台">
     <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
     <link href="../static/css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
@@ -14,7 +14,7 @@
     <meta name="renderer" content="webkit">
     <!-- 避免IE使用兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="../static/favicon.ico" th:href="@{favicon.ico}"/>
+    <!--<link rel="shortcut icon" href="../static/favicon.ico" th:href="@{favicon.ico}"/>-->
     <style type="text/css">label.error { position:inherit;  }</style>
     <script>
         if(window.top!==window.self){alert('未登录或登录超时。请重新登录');window.top.location=window.location};
@@ -26,10 +26,10 @@
             <div class="col-sm-7">
                 <div class="signin-info">
                     <div class="logopanel m-b">
-                        <h1><img alt="[ 若依 ]" src="../static/ruoyi.png" th:src="@{/ruoyi.png}"></h1>
+                        <!--<h1><img alt="[ 物流管理平台 ]" src="../static/ruoyi.png" th:src="@{/ruoyi.png}"></h1>-->
                     </div>
                     <div class="m-b"></div>
-                    <h4>欢迎使用 <strong>若依 后台管理系统</strong></h4>
+                    <h2><font color="#1c84C6">欢迎使用 <strong>物流管理平台</strong></font></h2>
                     <ul class="m-b">
                         <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> SpringBoot</li>
                         <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> Mybatis</li>
@@ -42,10 +42,9 @@
             </div>
             <div class="col-sm-5">
                 <form id="signupForm" autocomplete="off">
-                    <h4 class="no-margins">登录：</h4>
-                    <p class="m-t-md">你若不离不弃，我必生死相依</p>
-                    <input type="text"     name="username" class="form-control uname"     placeholder="用户名" value="admin"    />
-                    <input type="password" name="password" class="form-control pword"     placeholder="密码"   value="admin123" />
+                    <h3 class="no-margins"><B><font color="#1c84C6">登录：</font></B></h3>
+                    <input type="text"     name="username" class="form-control uname"     placeholder="用户名" value=""    />
+                    <input type="password" name="password" class="form-control pword"     placeholder="密码"   value="" />
 					<div class="row m-t" th:if="${captchaEnabled==true}">
 						<div class="col-xs-6">
 						    <input type="text" name="validateCode" class="form-control code" placeholder="验证码" maxlength="5" />
@@ -65,7 +64,7 @@
         </div>
         <div class="signup-footer">
             <div class="pull-left">
-                &copy; 2019 All Rights Reserved. RuoYi <br>
+                &copy; 2020 All Rights Reserved. 物流管理平台 <br>
             </div>
         </div>
     </div>

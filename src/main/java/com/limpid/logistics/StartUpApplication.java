@@ -3,6 +3,8 @@ package com.limpid.logistics;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.context.request.RequestContextListener;
 
 /**
  * 启动程序
@@ -16,4 +18,10 @@ public class StartUpApplication {
         SpringApplication.run(StartUpApplication.class, args);
         System.out.println("(♥◠‿◠)ﾉﾞ  物流平台启动成功   ლ(´ڡ`ლ)ﾞ  \n");
     }
+
+    @Bean
+    public RequestContextListener requestContextListener(){
+        return new RequestContextListener();
+    }
+
 }

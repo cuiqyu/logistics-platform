@@ -33,7 +33,9 @@ public class ResourcesConfig implements WebMvcConfigurer
     @Override
     public void addViewControllers(ViewControllerRegistry registry)
     {
-        registry.addViewController("/").setViewName("forward:" + indexUrl);
+//      registry.addViewController("/").setViewName("forward:" + indexUrl);
+        registry.addViewController("/").setViewName("forward:" + "/html/index.html");
+        registry.addViewController("/logistics").setViewName("forward:" + indexUrl);
     }
 
     @Override
@@ -45,6 +47,8 @@ public class ResourcesConfig implements WebMvcConfigurer
         /** swagger配置 */
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        /** 静态界面配置 */
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
     }
 
     /**
