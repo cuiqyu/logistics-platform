@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.limpid.logistics.project.logistics.info.mapper.TLogisticsInfoMapper">
+
+    <resultMap type="TLogisticsInfo" id="TLogisticsInfoResult">
+        <result property="id" column="id"/>
+        <result property="waybillNumber" column="waybill_number"/>
+        <result property="recordDate" column="record_date"/>
+        <result property="recordStatus" column="record_status"/>
+        <result property="remarks" column="remarks"/>
+    </resultMap>
+
+    <sql id="selectTLogisticsInfoVo">
+        select id, waybill_number, record_date, record_status, remarks from t_logistics_info
+    </sql>
+
+    <select id="selectTLogisticsInfoList" parameterType="TLogisticsInfo" resultMap="TLogisticsInfoResult">
+        <include refid="selectTLogisticsInfoVo"/>
+        <where>
+            <if test="waybillNumber != null  and waybillNumber != ''">and waybill_number = #{waybillNumber}</if>
+            <if test="params.beginRecordDate != null and params.beginRecordDate != ''"><!-- 开始时间检索 -->
+                AND date_format(record_date,'%y%m%d') &gt;= date_format(#{params.beginRecordDate},'%y%m%d')
+            </if>
+            <if test="params.endRecordDate != null and params.endRecordDate != ''"><!-- 结束时间检索 -->
+                AND date_format(record_date,'%y%m%d') &lt;= date_format(#{params.endRecordDate},'%y%m%d')
+            </if>
+            <if test="recordStatus != null ">and record_status = #{recordStatus}</if>
+        </where>
+    </select>
+
+    <select id="selectTLogisticsInfoById" parameterType="Long" resultMap="TLogisticsInfoResult">
+        <include refid="selectTLogisticsInfoVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertTLogisticsInfo" parameterType="TLogisticsInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into t_logistics_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="waybillNumber != null and waybillNumber != ''">waybill_number,</if>
+            <if test="recordDate != null">record_date,</if>
+            <if test="recordStatus != null">record_status,</if>
+            <if test="remarks != null">remarks,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="waybillNumber != null and waybillNumber != ''">#{waybillNumber},</if>
+            <if test="recordDate != null">#{recordDate},</if>
+            <if test="recordStatus != null">#{recordStatus},</if>
+            <if test="remarks != null">#{remarks},</if>
+        </trim>
+    </insert>
+
+    <update id="updateTLogisticsInfo" parameterType="TLogisticsInfo">
+        update t_logistics_info
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="waybillNumber != null and waybillNumber != ''">waybill_number = #{waybillNumber},</if>
+            <if test="recordDate != null">record_date = #{recordDate},</if>
+            <if test="recordStatus != null">record_status = #{recordStatus},</if>
+            <if test="remarks != null">remarks = #{remarks},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteTLogisticsInfoById" parameterType="Long">
+        delete from t_logistics_info where id = #{id}
+    </delete>
+
+    <delete id="deleteTLogisticsInfoByIds" parameterType="String">
+        delete from t_logistics_info where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="include :: header('新增物流信息记录')" />
+    <th:block th:include="include :: datetimepicker-css" />
+</head>
+<body class="white-bg">
+    <div class="wrapper wrapper-content animated fadeInRight ibox-content">
+        <form class="form-horizontal m" id="form-LogisticsRecord-add">
+            <div class="form-group">    
+                <label class="col-sm-3 control-label is-required">运单号：</label>
+                <div class="col-sm-8">
+                    <input name="waybillNumber" class="form-control" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">    
+                <label class="col-sm-3 control-label is-required">物流日期：</label>
+                <div class="col-sm-8">
+                    <div class="input-group date">
+                        <input name="recordDate" class="form-control" placeholder="yyyy-MM-dd HH:mm:ss" type="text" required>
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">    
+                <label class="col-sm-3 control-label is-required">运单状态枚举：</label>
+                <div class="col-sm-8">
+                    <select name="recordStatus" class="form-control m-b" th:with="type=${@dict.getType('logistics_record_status')}" required>
+                        <option value="">所有</option>
+                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">备注：</label>
+                <div class="col-sm-8">
+                    <textarea name="remarks" class="form-control"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <th:block th:include="include :: footer" />
+    <th:block th:include="include :: datetimepicker-js" />
+    <script th:inline="javascript">
+        var prefix = ctx + "/logistics/info/LogisticsRecord"
+        $("#form-LogisticsRecord-add").validate({
+            focusCleanup: true
+        });
+
+        function submitHandler() {
+            if ($.validate.form()) {
+                $.operate.save(prefix + "/add", $('#form-LogisticsRecord-add').serialize());
+            }
+        }
+
+        $("input[name='recordDate']").datetimepicker({
+            format: "yyyy-mm-dd HH:mm:ss",
+            minView: "month",
+            autoclose: true
+        });
+    </script>
+</body>
+</html>
