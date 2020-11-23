@@ -142,14 +142,19 @@
         $(".search").click(function(){
             console.log(111);
             $.ajax({
-            type:"POST",
-            url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
-            data:JSON.stringify({"waybillNumber":"wl0000001"}),
-            datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
-            success:function(data){
-              console.log(JSON.stringify(data))      
-            }
-           
+                type:'post',
+                headers: {
+                 'Content-Type': 'application/json'
+                  },
+            processData: false,
+            data: JSON.stringify({waybillNumber: 'wl0000001'}),
+               url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+               //data:JSON.stringify({}),
+               //dataType:"json",
+                success:function(data){
+                    console.log(JSON.stringify(data))      
+                }
+                
         })
 
         })
