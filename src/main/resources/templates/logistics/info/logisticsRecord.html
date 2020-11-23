@@ -2,10 +2,22 @@
 <html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <th:block th:include="include :: header('物流信息记录列表')" />
+    <th:block th:include="include :: datetimepicker-css" />
     <style>
         label {
             width: 120px !important;
         }
+        #startTime,#endTime {
+            width: 240px !important;
+            float: left;
+        }
+        #dateLi {
+            width: 620px !important;
+        }
+        #dateLi >span {
+            float: left;
+        }
+
     </style>
 </head>
 <body class="gray-bg">
@@ -19,11 +31,11 @@
                                 <label>运单号：</label>
                                 <input type="text" name="waybillNumber"/>
                             </li>
-                            <li class="select-time">
+                            <li id="dateLi">
                                 <label>物流日期：</label>
-                                <input type="text" class="time-input" id="startTime" placeholder="开始时间" name="params[beginRecordDate]"/>
-                                <span>-</span>
-                                <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endRecordDate]"/>
+                                <input type="text" class="form-control" id="startTime" placeholder="开始时间 yyyy-MM-dd HH:mm:ss" name="params[beginRecordDate]"/>
+                                <span> - </span>
+                                <input type="text" class="form-control" id="endTime" placeholder="结束时间 yyyy-MM-dd HH:mm:ss" name="params[endRecordDate]"/>
                             </li>
                             <li>
                                 <label>运单状态枚举：</label>
@@ -61,11 +73,38 @@
         </div>
     </div>
     <th:block th:include="include :: footer" />
+     <th:block th:include="include :: datetimepicker-js" />
     <script th:inline="javascript">
         var editFlag = [[${@permission.hasPermi('logistics:info:edit')}]];
         var removeFlag = [[${@permission.hasPermi('logistics:info:remove')}]];
         var status = [[${@dict.getType('logistics_record_status')}]];
         var prefix = ctx + "logistics/info/LogisticsRecord";
+
+        $("#startTime").datetimepicker({
+            format: "yyyy-mm-dd hh:ii:ss",
+            todayBtn:  true,
+            autoclose: true,
+            endDate : new Date(),
+            minuteStep:1
+        }).on('changeDate', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            var startTime = event.date;
+            $('#endTime').datetimepicker('setStartDate', startTime);
+        });
+
+        $("#endTime").datetimepicker({
+            format: "yyyy-mm-dd hh:ii:ss",
+            todayBtn:  true,
+            autoclose: true,
+            endDate : new Date(),
+            minuteStep:1
+        }).on('changeDate', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            var endTime = event.date;
+            $("#startTime").datetimepicker('setEndDate', endTime);
+        });
 
         $(function() {
             var options = {
@@ -95,10 +134,10 @@
                 },
                 {
                     field: 'recordStatus',
-                    title: '运单状态枚举'/*,
+                    title: '运单状态枚举',
                     formatter: function(value, row, index) {
                         return $.table.selectDictLabel(status, value);
-                    }*/
+                    }
                 },
                 {
                     field: 'remarks',

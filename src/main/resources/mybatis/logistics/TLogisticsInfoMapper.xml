@@ -34,6 +34,11 @@
         <include refid="selectTLogisticsInfoVo"/>
         where id = #{id}
     </select>
+    <select id="getWaybillNumber" parameterType="string" resultMap="TLogisticsInfoResult">
+        <include refid="selectTLogisticsInfoVo"/>
+        where waybill_number = #{waybillNumber}
+        order by record_date asc;
+    </select>
 
     <insert id="insertTLogisticsInfo" parameterType="TLogisticsInfo" useGeneratedKeys="true" keyProperty="id">
         insert into t_logistics_info

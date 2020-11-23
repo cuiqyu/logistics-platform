@@ -1,6 +1,8 @@
 package com.limpid.logistics.project.logistics.info.service;
 
 import java.util.List;
+
+import com.limpid.logistics.communication.vo.LogisticsInfoVo;
 import com.limpid.logistics.project.logistics.info.domain.TLogisticsInfo;
 
 /**
@@ -58,4 +60,12 @@ public interface ITLogisticsInfoService
      * @return 结果
      */
     public int deleteTLogisticsInfoById(Long id);
+
+    /**
+     * 根据物流单号查询物流记录
+     * @param waybillNumber 物流单号
+     * @return
+     */
+    List<LogisticsInfoVo> getWaybillNumber(String waybillNumber);
+
 }

@@ -27,7 +27,7 @@ public class TLogisticsInfo extends BaseEntity
 
     /** 物流日期 */
     @Excel(name = "物流日期", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date recordDate;
 
     /** 运单状态枚举 */

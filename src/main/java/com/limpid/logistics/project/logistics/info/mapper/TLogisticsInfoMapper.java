@@ -2,6 +2,7 @@ package com.limpid.logistics.project.logistics.info.mapper;
 
 import java.util.List;
 import com.limpid.logistics.project.logistics.info.domain.TLogisticsInfo;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 物流信息记录Mapper接口
@@ -58,4 +59,12 @@ public interface TLogisticsInfoMapper
      * @return 结果
      */
     public int deleteTLogisticsInfoByIds(String[] ids);
+
+    /**
+     * 根据物流单号查询物流记录
+     * @param waybillNumber 物流单号
+     * @return
+     */
+    List<TLogisticsInfo> getWaybillNumber(@Param("waybillNumber") String waybillNumber);
+
 }
