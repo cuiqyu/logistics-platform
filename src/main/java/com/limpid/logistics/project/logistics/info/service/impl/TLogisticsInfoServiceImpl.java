@@ -138,7 +138,7 @@ public class TLogisticsInfoServiceImpl implements ITLogisticsInfoService {
         Map<Integer, String> result = new HashMap<>();
         List<DictData> logistics_record_status = dictService.getType("logistics_record_status");
         if (CollectionUtils.isNotEmpty(logistics_record_status)) {
-            result = logistics_record_status.stream().collect(Collectors.toMap(d -> Integer.valueOf(d.getDictValue()), DictData::getDictValue, (m1, m2) -> m1));
+            result = logistics_record_status.stream().collect(Collectors.toMap(d -> Integer.valueOf(d.getDictValue()), DictData::getDictLabel, (m1, m2) -> m1));
         }
         return result;
     }

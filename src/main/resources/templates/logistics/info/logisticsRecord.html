@@ -77,7 +77,7 @@
     <script th:inline="javascript">
         var editFlag = [[${@permission.hasPermi('logistics:info:edit')}]];
         var removeFlag = [[${@permission.hasPermi('logistics:info:remove')}]];
-        var status = [[${@dict.getType('logistics_record_status')}]];
+        var datas = [[${@dict.getType('logistics_record_status')}]];
         var prefix = ctx + "logistics/info/LogisticsRecord";
 
         $("#startTime").datetimepicker({
@@ -136,7 +136,7 @@
                     field: 'recordStatus',
                     title: '运单状态枚举',
                     formatter: function(value, row, index) {
-                        return $.table.selectDictLabel(status, value);
+                        return $.table.selectDictLabel(datas, value);
                     }
                 },
                 {
