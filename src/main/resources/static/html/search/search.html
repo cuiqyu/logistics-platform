@@ -94,7 +94,7 @@
                         </ul>
                     </div>
 
-                    <div class="pull-left service-content hidden-lg ml-40">
+                    <!--<div class="pull-left service-content hidden-lg ml-40">
                         <div id="currentContent"><span>境内快递</span><img style="margin-left: 10px" width="12"
                                 src="../../img/service/service_arrow_blue.png" /></div>
                         <ul class="flow-content hidden">
@@ -102,7 +102,7 @@
                             <li value="2"><span>费用时效</span></li>
 
                         </ul>
-                    </div>
+                    </div>-->
                     <div class="pull-left visible-lg" style="margin-top: 20px">
                         <ul id="startAdd" class="selectService">
 
@@ -140,19 +140,32 @@
         }
         $(function () { 
         $(".search").click(function(){
-            console.log(111);
+            var  billNumber=$("#search-input").val();
+            console.log(billNumber);
             $.ajax({
                 type:'post',
                 headers: {
                  'Content-Type': 'application/json'
                   },
-            processData: false,
-            data: JSON.stringify({waybillNumber: 'wl0000001'}),
-               url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
-               //data:JSON.stringify({}),
-               //dataType:"json",
+            data: JSON.stringify({waybillNumber: billNumber}),
+              // url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+               url:"/logistics/service/logisticsinfo/getBywaybillNumber",
                 success:function(data){
-                    console.log(JSON.stringify(data))      
+                    console.log(JSON.stringify(data)) 
+                    var list=data.data;  
+                    if(list.length!==0){
+                        var str="";
+                        //<span class="signed">'+list[i].recordStatusStr+'</span>
+                        list.sort(function(a,b){
+                         return Date.parse(b.recordDate) - Date.parse(a.recordDate);//时间最近放最上面
+                        });
+                        for(var i=0;i<list.length;i++){
+                            str+='<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">'+(i===0?'<img src="../../img/search/status-transported.png" />':'<img src="../../img/search/status-transporting.png" />')+'</li><li class="route-date-time">'+(i===0?'<i>'+list[i].recordDate+'</i>':'<span>'+list[i].recordDate+'</span>')+'</li><li class="route-desc">'+(i===0?'<i>'+list[i].recordStatusStr+'</i>':'<span>'+list[i].recordStatusStr+'</span>')+'</li></ul>'; 
+                        }
+                        $(".route-list").html(str);
+                    }else{
+                        $(".route-list").html('<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'); 
+                    }   
                 }
                 
         })
@@ -187,11 +200,11 @@
         <section class="flow">
             <div class="container pc-web">
                 <div class="service-flow">
-                    <div class="service-title">服务流程</div>
+                    <div class="service-title">回国快递</div>
                     <div class="service-separate"></div>
                     <div class="routes-wrapper">
                         <div class="route-list ">
-                            <ul class="route first  ">
+                            <!--<ul class="route first  ">
                                 <li class="route-status-text"><span class="signed">已签收</span></li>
                                 <li class="route-status-icon"><img src="../../img/search/status-signed.png" />
                                 </li>
@@ -233,7 +246,7 @@
                                 </li>
                                 <li class="route-date-time"><span>2020-11-19 18:06</span></li>
                                 <li class="route-desc"><span>已收取快件</span></li>
-                            </ul>
+                            </ul>-->
                         </div>
                     </div>
                 </div>

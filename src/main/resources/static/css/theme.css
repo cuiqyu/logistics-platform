@@ -7624,6 +7624,7 @@ body.nav-active {
   left: 14.9%;
   top: 30px;
 }*/
+.routes-wrapper{margin-top:30px;}
 .routes-wrapper .route-list .first {
   color: #333;
   -webkit-box-align: center;
@@ -7673,6 +7674,14 @@ body.nav-active {
   width: 25%;
   color: #333;
 }
+.routes-wrapper .route-list .route  i{
+  color:#004399;
+  font-size:15px;
+}
+.routes-wrapper .route-list .route .none{
+  text-align: center;
+}
+
 .routes-wrapper .route-list .route .route-desc {
   max-width: 425px;
 }
