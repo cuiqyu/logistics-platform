@@ -351,6 +351,11 @@ a.transition:hover {
 }
 /* =========================== color =========================== */
 /* =========================== media =========================== */
+@media (min-width: 1200px){
+.container {
+    width: 1220px;
+}
+}
 .top-holder {
   padding: 10px 0;
   text-align: center;
@@ -1256,8 +1261,41 @@ iframe {
   }
 }
 .footer {
-  background: #f7f7f7;
+  padding: .48rem 0 .3rem 0;
+  background-color: #1e1d20;
 }
+.footer h2{
+  margin:0;
+  padding:0;
+  line-height:42px;
+  font-weight: bold;
+ }
+.footer h3{
+ margin:0;
+ padding:0;
+ line-height:24px;
+}
+.footer h4{
+  margin:0;
+ padding:0;
+ line-height:22px;
+
+}
+.footer-middle ul{
+  display: flex;
+  justify-content:center;
+}
+.footer-middle ul li{
+  justify-content:center;
+  padding: 0 20px;
+  color: #fff;
+  border-right: .01rem solid #fff;
+}
+  .footer-middle ul li:last-of-type{
+    border-right: none;
+  }
+.footer-middle::after{clear: both;}
+.footer-middle p{text-align: center;}
 .guide-list {
   padding: 40px 0 20px;
 }
