@@ -549,7 +549,7 @@ a.transition:hover {
 }
 .subheader {
   /*height: 104px;*/
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
 }
 .new-header-container {
