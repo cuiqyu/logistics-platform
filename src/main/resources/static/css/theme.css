@@ -10,7 +10,7 @@ body {
   position: relative;
   height: 100%;
 }
-a{color:#333 !important; cursor: pointer;}
+a{ cursor: pointer;}
 article,
 aside,
 blockquote,
@@ -500,9 +500,8 @@ a.transition:hover {
   line-height: 24px;
 }
 .header li {
-  display: inline-block;
+  display: block;
   padding: 0 10px;
-  vertical-align: top;
 }
 .header li a {
   display: block;
@@ -511,8 +510,8 @@ a.transition:hover {
   position: relative;
   width: 13px;
   height: 20px;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+ 
   margin-left: 5px;
 }
 .header li .icon i {
@@ -1243,7 +1242,7 @@ a.transition:hover {
   a,
   label,
   .font-16 {
-    font-size: 0.16rem;
+    font-size: 16px;
   }
 }
 body {
@@ -1254,12 +1253,6 @@ img {
 }
 iframe {
   max-width: 100%;
-}
-@media (max-width: 480px) {
-  .subscribe-box .block,
-  .container {
-    width: 300px;
-  }
 }
 .footer {
   padding: .48rem 0 .3rem 0;
@@ -7784,10 +7777,8 @@ body.nav-active {
   background: #e2231a !important;
 }
 .middle-container {
-  width: 1200px;
   margin: 0 auto;
   position: relative;
-  height:80px;
 }
 .query-container {
   background: #302e3d;
@@ -7825,20 +7816,10 @@ body.nav-active {
 
 .waybill-query {
   background-color: #302e3d;
-  height: 100%;
-  z-index: 8;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  padding: 0 .3rem;
-
+  width:100%;
 }
 .waybill-query-content {
-  height: 80px;
   overflow: hidden;
-  border-radius: .04rem;
-  margin-top: .2rem;
 }
 .el-textarea {
   position: relative;
@@ -7888,19 +7869,20 @@ body.nav-active {
   clear: both;
 }
 .waybill-query-content .input{
-  height: 50px;
-  margin-top: 14px;
-  position: relative;
-  background: #fff;
-  border-radius: 10px;
-  margin-left:20px;
+    height: 50px;
+    margin: 14px auto;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    /* margin-left: 20px; */
+    width: 92%;
 }
-.waybill-query-content .input input{
+.waybill-query-content .input input {
   height: 100%;
   background: transparent;
   border: 0;
-  width:70%;
-  padding-left:10px;
+  width: 70%;
+  padding-left: 10px;
 }
 .other-query{
   height: 80px;
@@ -8054,7 +8036,7 @@ body.nav-active {
   margin:20px 0;
 }
 .core-business-item {
- margin:0 10px;
+ margin:10px;
   height:245px;
   background: #fff;
   border-radius: 2px;
@@ -8062,28 +8044,20 @@ body.nav-active {
   text-align: center;
   position: relative;
 }
+
+
 .core-business-item span {
   font-size: 18px;
   color: #404040;
-  display: inline-block;
-  position: absolute;
-  bottom: 38px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  white-space: nowrap;
 }
-.core-business-item img {
-  width: 122px;
-  height:122px;
-  margin-top: 38px;
-}
+
 .core-business-item:hover span{
   color:#E2231A;
 }
 .core-business-item:hover{
   -moz-box-shadow:2px 2px 5px #d6d6d6; -webkit-box-shadow:2px 2px 5px #d6d6d6; box-shadow:2px 2px 5px #d6d6d6;
 }
+.solution-item{margin-top:20px;}
 .containerRuler-bg{
     height: 556px;
     background-repeat: no-repeat;
@@ -8175,7 +8149,7 @@ body.nav-active {
 .solution-item .solution-item-text {
   padding: 18px 15px;
   cursor: pointer;
-  height:174px;
+  height:140px;
 }
 .solution-item-img{
   width: 100%;
@@ -8191,10 +8165,6 @@ body.nav-active {
 .solution-item .solution-item-text:hover{
   
   background: #e50039;
-}
-.solution-wrapper .col-lg-4 ,.solution-wrapper .col-md-4, .solution-wrapper .col-xs-4 {
-  padding:0 !important ;
-  margin:0 4%;
 }
 .cover-container{
   /*height: 648px;
@@ -8238,7 +8208,6 @@ body.nav-active {
   color: #999;
   font-weight: 400;
   margin: 0;
-  width:551px;
   line-height: 22px;
   height: 42px;
   margin-bottom: 11px;
@@ -8389,4 +8358,56 @@ body.nav-active {
   border: none;
   cursor: pointer;
   margin: 60px auto 0 auto;
+}
+.navbar-toggle .icon-bar {
+  background: #E2231A;
+}
+@media (max-width: 992px){
+  .core-business-item{
+    height:125px;
+}
+.core-business-item span {
+  font-size: 14px;
+  color: #404040;
+}
+.core-business-title h2{
+  padding: 40px 0 30px 0;
+  font-size:28px;
+}
+.core-business-title h3 {
+  font-size:16px;
+  line-height:32px;
+}
+.solution-item-text{
+  height:130px;
+}
+.footer-middle ul li {
+  padding: 0 10px;
+  font-size:14px;
+}
+.logo{
+  display: block;
+  height:60px;
+  margin:0 auto;
+}
+.logo img{
+  height:100%;
+  
+}
+.navbar-header{
+  margin-top:20px;
+}
+  
+}
+
+@media (min-width: 1200px){
+  .waybill-query {
+    width: 1200px;
+    /* margin: 0px auto; */
+    z-index: 99;
+    bottom: -30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
 }
