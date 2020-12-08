@@ -16,6 +16,10 @@
                 <div class="select-list">
                     <ul>
                         <li>
+                            <label>寄件唯一识别码：</label>
+                            <input type="text" name="id" />
+                        </li>
+                        <li>
                             <label>寄件人姓名：</label>
                             <input type="text" name="mailName" placeholder="模糊查询"/>
                         </li>
@@ -103,8 +107,7 @@
             columns: [
                 {
                     field: 'id',
-                    title: '',
-                    visible: false
+                    title: '寄件唯一识别码'
                 },
                 {
                     field: 'mailName',

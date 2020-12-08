@@ -32,6 +32,7 @@
     <select id="selectTExpressDeliveryInfoList" parameterType="TExpressDeliveryInfo" resultMap="TExpressDeliveryInfoResult">
         <include refid="selectTExpressDeliveryInfoVo"/>
         <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
             <if test="mailName != null  and mailName != ''">and mail_name like concat('%', #{mailName}, '%')</if>
             <if test="mailSex != null ">and mail_sex = #{mailSex}</if>
             <if test="mailWxid != null  and mailWxid != ''">and mail_wxid = #{mailWxid}</if>
@@ -57,6 +58,7 @@
                 </choose>
             </if>
         </where>
+        order by update_time desc
     </select>
 
     <select id="selectTExpressDeliveryInfoById" parameterType="Long" resultMap="TExpressDeliveryInfoResult">
@@ -64,9 +66,10 @@
         where id = #{id}
     </select>
 
-    <insert id="insertTExpressDeliveryInfo" parameterType="TExpressDeliveryInfo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertTExpressDeliveryInfo" parameterType="TExpressDeliveryInfo">
         insert into t_express_delivery_info
         <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != ''">id,</if>
             <if test="mailName != null and mailName != ''">mail_name,</if>
             <if test="mailSex != null">mail_sex,</if>
             <if test="mailWxid != null">mail_wxid,</if>
@@ -78,12 +81,13 @@
             <if test="receiptPostCode != null and receiptPostCode != ''">receipt_post_code,</if>
             <if test="receiptTellphone != null and receiptTellphone != ''">receipt_tellphone,</if>
             <if test="receiptIdcard != null">receipt_idcard,</if>
-            <if test="createTime != null">create_time,</if>
-            <if test="updateTime != null">update_time,</if>
+            create_time,
+            update_time,
             <if test="receiptName != null and receiptName != ''">receipt_name,</if>
             <if test="waybillNumber != null">waybill_number,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != ''">#{id},</if>
             <if test="mailName != null and mailName != ''">#{mailName},</if>
             <if test="mailSex != null">#{mailSex},</if>
             <if test="mailWxid != null">#{mailWxid},</if>
@@ -95,8 +99,8 @@
             <if test="receiptPostCode != null and receiptPostCode != ''">#{receiptPostCode},</if>
             <if test="receiptTellphone != null and receiptTellphone != ''">#{receiptTellphone},</if>
             <if test="receiptIdcard != null">#{receiptIdcard},</if>
-            <if test="createTime != null">#{createTime},</if>
-            <if test="updateTime != null">#{updateTime},</if>
+            now(),
+            now(),
             <if test="receiptName != null and receiptName != ''">#{receiptName},</if>
             <if test="waybillNumber != null">#{waybillNumber},</if>
         </trim>
@@ -116,8 +120,7 @@
             <if test="receiptPostCode != null and receiptPostCode != ''">receipt_post_code = #{receiptPostCode},</if>
             <if test="receiptTellphone != null and receiptTellphone != ''">receipt_tellphone = #{receiptTellphone},</if>
             <if test="receiptIdcard != null">receipt_idcard = #{receiptIdcard},</if>
-            <if test="createTime != null">create_time = #{createTime},</if>
-            <if test="updateTime != null">update_time = #{updateTime},</if>
+            update_time = now(),
             <if test="receiptName != null and receiptName != ''">receipt_name = #{receiptName},</if>
             <if test="waybillNumber != null">waybill_number = #{waybillNumber},</if>
         </trim>
