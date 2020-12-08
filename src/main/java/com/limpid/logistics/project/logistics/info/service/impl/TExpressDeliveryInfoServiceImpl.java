@@ -110,6 +110,7 @@ public class TExpressDeliveryInfoServiceImpl implements ITExpressDeliveryInfoSer
         }
         CustomExceptionAssert.notEmpty(expressDeliveryInfoParamVo.getMailAddress(), "寄件人地址不能为空");
         CustomExceptionAssert.notEmpty(expressDeliveryInfoParamVo.getMailPostCode(), "寄件人邮编不能为空");
+        CustomExceptionAssert.notNull(expressDeliveryInfoParamVo.getMailDate(), "寄件日期不能为空");
         CustomExceptionAssert.notNull(expressDeliveryInfoParamVo.getBagsNum(), "寄件包裹数量不能为空");
         CustomExceptionAssert.notEmpty(expressDeliveryInfoParamVo.getReceiptAddress(), "收件人地址不能为空");
         CustomExceptionAssert.notEmpty(expressDeliveryInfoParamVo.getReceiptPostCode(), "收件人邮编不能为空");
@@ -124,7 +125,7 @@ public class TExpressDeliveryInfoServiceImpl implements ITExpressDeliveryInfoSer
         tExpressDeliveryInfo.setMailWxid(expressDeliveryInfoParamVo.getMailWxid());
         tExpressDeliveryInfo.setMailAddress(expressDeliveryInfoParamVo.getMailAddress());
         tExpressDeliveryInfo.setMailPostCode(expressDeliveryInfoParamVo.getMailPostCode());
-        tExpressDeliveryInfo.setMailDate(new Date());
+        tExpressDeliveryInfo.setMailDate(expressDeliveryInfoParamVo.getMailDate());
         tExpressDeliveryInfo.setBagsNum(expressDeliveryInfoParamVo.getBagsNum());
         tExpressDeliveryInfo.setReceiptAddress(expressDeliveryInfoParamVo.getReceiptAddress());
         tExpressDeliveryInfo.setReceiptPostCode(expressDeliveryInfoParamVo.getReceiptPostCode());

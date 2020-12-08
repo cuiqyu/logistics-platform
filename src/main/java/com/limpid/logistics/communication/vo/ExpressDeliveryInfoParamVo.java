@@ -1,9 +1,11 @@
 package com.limpid.logistics.communication.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.limpid.logistics.framework.aspectj.lang.annotation.Excel;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 客户寄件对象参数信息
@@ -35,6 +37,11 @@ public class ExpressDeliveryInfoParamVo implements Serializable {
     /** 寄件人邮编 */
     @Excel(name = "寄件人邮编")
     private String mailPostCode;
+
+    /** 寄件日期 */
+    @Excel(name = "寄件日期", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date mailDate;
 
     /** 预估行李数量 */
     @Excel(name = "预估行李数量")
