@@ -1,10 +1,13 @@
 package com.limpid.logistics.project.logistics.info.domain;
 
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.limpid.logistics.framework.aspectj.lang.annotation.Excel;
 import com.limpid.logistics.framework.web.domain.BaseEntity;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 寄件对象 t_express_delivery_info
@@ -16,7 +19,6 @@ public class TExpressDeliveryInfo extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 
-    /**  */
     private Long id;
 
     /** 寄件人姓名 */
@@ -32,7 +34,7 @@ public class TExpressDeliveryInfo extends BaseEntity
     private String mailWxid;
 
     /**  */
-    @Excel(name = "")
+    @Excel(name = "寄件人地址")
     private String mailAddress;
 
     /** 寄件人邮编 */
@@ -40,7 +42,8 @@ public class TExpressDeliveryInfo extends BaseEntity
     private String mailPostCode;
 
     /** 寄件日期 */
-    @Excel(name = "寄件日期", width = 30, dateFormat = "yyyy-MM-dd")
+    @Excel(name = "寄件日期", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date mailDate;
 
     /** 预估行李数量 */
@@ -70,6 +73,32 @@ public class TExpressDeliveryInfo extends BaseEntity
     /** 运单号 */
     @Excel(name = "运单号")
     private String waybillNumber;
+
+    /**
+     * 发货状态
+     */
+    @Excel(name = "发货状态")
+    private Boolean shipmentStatus;
+    private Boolean shipmentStatusParam;
+
+    public Boolean getShipmentStatus() {
+        if (StringUtils.isEmpty(waybillNumber)) {
+            return false;
+        }
+        return true;
+    }
+
+    public void setShipmentStatus(Boolean shipmentStatus) {
+        this.shipmentStatus = shipmentStatus;
+    }
+
+    public Boolean getShipmentStatusParam() {
+        return shipmentStatusParam;
+    }
+
+    public void setShipmentStatusParam(Boolean shipmentStatusParam) {
+        this.shipmentStatusParam = shipmentStatusParam;
+    }
 
     public void setId(Long id)
     {

@@ -1,56 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.limpid.logistics.project.logistics.info.mapper.TExpressDeliveryInfoMapper">
-    
+
     <resultMap type="TExpressDeliveryInfo" id="TExpressDeliveryInfoResult">
-        <result property="id"    column="id"    />
-        <result property="mailName"    column="mail_name"    />
-        <result property="mailSex"    column="mail_sex"    />
-        <result property="mailWxid"    column="mail_wxid"    />
-        <result property="mailAddress"    column="mail_address"    />
-        <result property="mailPostCode"    column="mail_post_code"    />
-        <result property="mailDate"    column="mail_date"    />
-        <result property="bagsNum"    column="bags_num"    />
-        <result property="receiptAddress"    column="receipt_address"    />
-        <result property="receiptPostCode"    column="receipt_post_code"    />
-        <result property="receiptTellphone"    column="receipt_tellphone"    />
-        <result property="receiptIdcard"    column="receipt_idcard"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
-        <result property="receiptName"    column="receipt_name"    />
-        <result property="waybillNumber"    column="waybill_number"    />
+        <result property="id" column="id"/>
+        <result property="mailName" column="mail_name"/>
+        <result property="mailSex" column="mail_sex"/>
+        <result property="mailWxid" column="mail_wxid"/>
+        <result property="mailAddress" column="mail_address"/>
+        <result property="mailPostCode" column="mail_post_code"/>
+        <result property="mailDate" column="mail_date"/>
+        <result property="bagsNum" column="bags_num"/>
+        <result property="receiptAddress" column="receipt_address"/>
+        <result property="receiptPostCode" column="receipt_post_code"/>
+        <result property="receiptTellphone" column="receipt_tellphone"/>
+        <result property="receiptIdcard" column="receipt_idcard"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="receiptName" column="receipt_name"/>
+        <result property="waybillNumber" column="waybill_number"/>
     </resultMap>
 
     <sql id="selectTExpressDeliveryInfoVo">
-        select id, mail_name, mail_sex, mail_wxid, mail_address, mail_post_code, mail_date, bags_num, receipt_address, receipt_post_code, receipt_tellphone, receipt_idcard, create_time, update_time, receipt_name, waybill_number from t_express_delivery_info
+        select id, mail_name, mail_sex, mail_wxid, mail_address, mail_post_code, mail_date, bags_num, receipt_address,
+         receipt_post_code, receipt_tellphone, receipt_idcard, create_time, update_time, receipt_name, waybill_number
+          from t_express_delivery_info
     </sql>
 
     <select id="selectTExpressDeliveryInfoList" parameterType="TExpressDeliveryInfo" resultMap="TExpressDeliveryInfoResult">
         <include refid="selectTExpressDeliveryInfoVo"/>
-        <where>  
-            <if test="mailName != null  and mailName != ''"> and mail_name like concat('%', #{mailName}, '%')</if>
-            <if test="mailSex != null "> and mail_sex = #{mailSex}</if>
-            <if test="mailWxid != null  and mailWxid != ''"> and mail_wxid = #{mailWxid}</if>
-            <if test="mailAddress != null  and mailAddress != ''"> and mail_address = #{mailAddress}</if>
-            <if test="mailPostCode != null  and mailPostCode != ''"> and mail_post_code = #{mailPostCode}</if>
-            <if test="mailDate != null "> and mail_date = #{mailDate}</if>
-            <if test="bagsNum != null "> and bags_num = #{bagsNum}</if>
-            <if test="receiptAddress != null  and receiptAddress != ''"> and receipt_address = #{receiptAddress}</if>
-            <if test="receiptPostCode != null  and receiptPostCode != ''"> and receipt_post_code = #{receiptPostCode}</if>
-            <if test="receiptTellphone != null  and receiptTellphone != ''"> and receipt_tellphone = #{receiptTellphone}</if>
-            <if test="receiptIdcard != null  and receiptIdcard != ''"> and receipt_idcard = #{receiptIdcard}</if>
-            <if test="receiptName != null  and receiptName != ''"> and receipt_name like concat('%', #{receiptName}, '%')</if>
-            <if test="waybillNumber != null  and waybillNumber != ''"> and waybill_number = #{waybillNumber}</if>
+        <where>
+            <if test="mailName != null  and mailName != ''">and mail_name like concat('%', #{mailName}, '%')</if>
+            <if test="mailSex != null ">and mail_sex = #{mailSex}</if>
+            <if test="mailWxid != null  and mailWxid != ''">and mail_wxid = #{mailWxid}</if>
+            <if test="mailAddress != null  and mailAddress != ''">and mail_address = #{mailAddress}</if>
+            <if test="mailPostCode != null  and mailPostCode != ''">and mail_post_code = #{mailPostCode}</if>
+            <if test="bagsNum != null ">and bags_num = #{bagsNum}</if>
+            <if test="receiptAddress != null  and receiptAddress != ''">and receipt_address = #{receiptAddress}</if>
+            <if test="receiptPostCode != null  and receiptPostCode != ''">and receipt_post_code = #{receiptPostCode}</if>
+            <if test="receiptTellphone != null  and receiptTellphone != ''">and receipt_tellphone = #{receiptTellphone}</if>
+            <if test="receiptIdcard != null  and receiptIdcard != ''">and receipt_idcard = #{receiptIdcard}</if>
+            <if test="receiptName != null  and receiptName != ''">and receipt_name like concat('%', #{receiptName}, '%')</if>
+            <if test="waybillNumber != null  and waybillNumber != ''">and waybill_number = #{waybillNumber}</if>
+            <if test="params.beginMailDate != null and params.beginMailDate != ''"><!-- 开始时间检索 -->
+                AND date_format(mail_date,'%y%m%d') &gt;= date_format(#{params.beginMailDate},'%y%m%d')
+            </if>
+            <if test="params.endMailDate != null and params.endMailDate != ''"><!-- 结束时间检索 -->
+                AND date_format(mail_date,'%y%m%d') &lt;= date_format(#{params.endMailDate},'%y%m%d')
+            </if>
+            <if test="shipmentStatusParam != null">
+                <choose>
+                    <when test="shipmentStatusParam == false">and waybill_number is null</when>
+                    <otherwise>and waybill_number is not null</otherwise>
+                </choose>
+            </if>
         </where>
     </select>
-    
+
     <select id="selectTExpressDeliveryInfoById" parameterType="Long" resultMap="TExpressDeliveryInfoResult">
         <include refid="selectTExpressDeliveryInfoVo"/>
         where id = #{id}
     </select>
-        
+
     <insert id="insertTExpressDeliveryInfo" parameterType="TExpressDeliveryInfo" useGeneratedKeys="true" keyProperty="id">
         insert into t_express_delivery_info
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -69,7 +82,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="updateTime != null">update_time,</if>
             <if test="receiptName != null and receiptName != ''">receipt_name,</if>
             <if test="waybillNumber != null">waybill_number,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="mailName != null and mailName != ''">#{mailName},</if>
             <if test="mailSex != null">#{mailSex},</if>
@@ -86,7 +99,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="updateTime != null">#{updateTime},</if>
             <if test="receiptName != null and receiptName != ''">#{receiptName},</if>
             <if test="waybillNumber != null">#{waybillNumber},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateTExpressDeliveryInfo" parameterType="TExpressDeliveryInfo">
@@ -116,7 +129,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <delete id="deleteTExpressDeliveryInfoByIds" parameterType="String">
-        delete from t_express_delivery_info where id in 
+        delete from t_express_delivery_info where id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>

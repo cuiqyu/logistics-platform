@@ -26,25 +26,25 @@ import com.limpid.logistics.framework.web.page.TableDataInfo;
  * @date 2020-12-07
  */
 @Controller
-@RequestMapping("/logistics/LogisticsRecord")
+@RequestMapping("/logistics/info/expressDeliveryInfo")
 public class TExpressDeliveryInfoController extends BaseController
 {
-    private String prefix = "logistics/LogisticsRecord";
+    private String prefix = "logistics/expressDelivery";
 
     @Autowired
     private ITExpressDeliveryInfoService tExpressDeliveryInfoService;
 
-    @RequiresPermissions("logistics:LogisticsRecord:view")
+    @RequiresPermissions("logistics:expressDelivery:view")
     @GetMapping()
-    public String LogisticsRecord()
+    public String ExpressDelivery()
     {
-        return prefix + "/LogisticsRecord";
+        return prefix + "/expressDeliveryInfo";
     }
 
     /**
      * 查询寄件列表
      */
-    @RequiresPermissions("logistics:LogisticsRecord:list")
+    @RequiresPermissions("logistics:expressDelivery:list")
     @PostMapping("/list")
     @ResponseBody
     public TableDataInfo list(TExpressDeliveryInfo tExpressDeliveryInfo)
@@ -57,7 +57,7 @@ public class TExpressDeliveryInfoController extends BaseController
     /**
      * 导出寄件列表
      */
-    @RequiresPermissions("logistics:LogisticsRecord:export")
+    @RequiresPermissions("logistics:expressDelivery:export")
     @Log(title = "寄件", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     @ResponseBody
@@ -65,7 +65,7 @@ public class TExpressDeliveryInfoController extends BaseController
     {
         List<TExpressDeliveryInfo> list = tExpressDeliveryInfoService.selectTExpressDeliveryInfoList(tExpressDeliveryInfo);
         ExcelUtil<TExpressDeliveryInfo> util = new ExcelUtil<TExpressDeliveryInfo>(TExpressDeliveryInfo.class);
-        return util.exportExcel(list, "LogisticsRecord");
+        return util.exportExcel(list, "expressDeliveryInfo");
     }
 
     /**
@@ -80,7 +80,7 @@ public class TExpressDeliveryInfoController extends BaseController
     /**
      * 新增保存寄件
      */
-    @RequiresPermissions("logistics:LogisticsRecord:add")
+    @RequiresPermissions("logistics:expressDelivery:add")
     @Log(title = "寄件", businessType = BusinessType.INSERT)
     @PostMapping("/add")
     @ResponseBody
@@ -103,7 +103,7 @@ public class TExpressDeliveryInfoController extends BaseController
     /**
      * 修改保存寄件
      */
-    @RequiresPermissions("logistics:LogisticsRecord:edit")
+    @RequiresPermissions("logistics:expressDelivery:edit")
     @Log(title = "寄件", businessType = BusinessType.UPDATE)
     @PostMapping("/edit")
     @ResponseBody
@@ -115,7 +115,7 @@ public class TExpressDeliveryInfoController extends BaseController
     /**
      * 删除寄件
      */
-    @RequiresPermissions("logistics:LogisticsRecord:remove")
+    @RequiresPermissions("logistics:expressDelivery:remove")
     @Log(title = "寄件", businessType = BusinessType.DELETE)
     @PostMapping( "/remove")
     @ResponseBody
@@ -123,4 +123,5 @@ public class TExpressDeliveryInfoController extends BaseController
     {
         return toAjax(tExpressDeliveryInfoService.deleteTExpressDeliveryInfoByIds(ids));
     }
+
 }
