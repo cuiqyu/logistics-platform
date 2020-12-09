@@ -15,43 +15,38 @@
     <meta property="og:url" content="https://us.deerex.com/service/service.html?status=1&type=1" />
     <meta property="og:site_name" content="西游寄SuperEx" />
     <meta content="user-scalable=no" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <noscript>
         <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=801664066698082&ev=PageView&noscript=1" />
     </noscript>
 </head>
 <link rel="shortcut icon" href="../img/newfavicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="../css/libs.all.min.css">
 <link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
 
 <script src="../js/libs/jquery-1.11.3.min.js"></script>
-<script src="../js/base.js"></script>
-<script src="../js/jquery.SuperSlide.2.1.1.js"></script>
-<script src="../js/message.js"></script>
-<script src="../js/libs/jquery.form.min.js"></script>
-<script src="../js/libs/fileupload/jquery.ui.widget.js"></script>
-<script src="../js/libs/fileupload/jquery.iframe-transport.js"></script>
-<script src="../js/libs/fileupload/jquery.fileupload.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/swiper.min.js"></script>
 
-<script src="../js/js.all.min.js"></script>
+<body style="background-color: #fff">
+    <header class="header">
+        <section style="background-color: #fff">
+            <div class="container" style="padding-left: 0;padding-right: 0;">
 
-<body>
+                <h1 class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                    <a class="logo">
+                        <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
+                    </a>
+                </h1>
 
-    <body style="background-color: #fff">
-        <header class="header subheader">
-            <section style="background-color: #fff">
-                <div class="container" style="padding-left: 0;padding-right: 0;">
-                    <div class="pull-left" style="margin-top: 0">
-                        <h1>
-                            <a class="nav-title pull-left">
-                                <img src="../img/newlogo.png" title="西游寄速运" alt="西游寄速运">
-                            </a>
-                        </h1>
-                    </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
+                    <div class="pull-left service-type">
                         <div id="homePage"><span>首页</span></div>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -61,7 +56,7 @@
                             <li value="4"><span>马上咨询</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -70,7 +65,7 @@
                             <li value="3"><span>费用时效</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -79,7 +74,7 @@
                             <li value="3"><span>美国->中国</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -87,44 +82,108 @@
                             <li value="2"><span>收费明细</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-                            <li value="1"><a href="../../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../../html/search/search.html?type=3"><span>海淘转运</span></a></li>
+                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
+                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
+                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type" style="margin-left: 10px">
+                    <div class="pull-left service-type">
                         <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-                            <li value="1"><a href="../../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../../html/search/search.html?type=3"><span>海淘转运</span></a></li>
+                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
+                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
+                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
                         </ul>
                     </div>
-
-                    <!--<div class="pull-left service-content hidden-lg ml-40">
-                        <div id="currentContent"><span>境内快递</span><img style="margin-left: 10px" width="12"
-                                src="../../img/service/service_arrow_blue.png" /></div>
-                        <ul class="flow-content hidden">
-                            <li value="1"><span>违禁物品</span></li>
-                            <li value="2"><span>费用时效</span></li>
-
-                        </ul>
-                    </div>-->
-                    <div class="pull-left visible-lg" style="margin-top: 20px">
-                        <ul id="startAdd" class="selectService">
-
-                        </ul>
-                    </div>
-
                 </div>
-            </section>
-        </header>
-    </body>
+                <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="hidden-lg  hidden-md col-sm-12 col-xs-12">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a>首页 <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">回国行李 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>寄件流程</a></li>
+                                    <li><a>费用时效</a></li>
+                                    <li><a>打包手册</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">境内快递 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>违禁物品</a></li>
+                                    <li><a>费用时效</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">海淘转运 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>中国->美国</a></li>
+                                    <li><a>美国->中国</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">免税州服务 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>服务介绍</a></li>
+                                    <li><a>收费明细</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>回国快递</a></li>
+                                    <li><a>境内快递</a></li>
+                                    <li><a> 海淘转运</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>回国快递</a></li>
+                                    <li><a>境内快递</a></li>
+                                    <li><a> 海淘转运</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </header>
     <script>
         //下拉框
         $('.service-type').click(function () {
@@ -133,14 +192,17 @@
         $('.service-content').click(function () {
             $(this).find('.flow-content').toggleClass('hidden')
         })
-        if ((!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        if ((!navigator.userAgent.match(
+                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+                ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
             })
             $('.service-type').mouseleave(function () {
                 $(this).find('.service-option').addClass('hidden');
-                $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow_blue.png");
+                $(this).find('#currentContent').find('img').attr("src",
+                "../img/service/service_arrow_blue.png");
             })
 
             $('.service-content').hover(function () {
@@ -151,7 +213,7 @@
             })
         }
         $(function () {
-            $("#homePage").click(function(){
+            $("#homePage").click(function () {
                 window.location.href = "../html/index.html"
             })
             $(".search").click(function () {
@@ -173,19 +235,20 @@
                         <li class="new-tab-item-two active" data-index="0">物流服务 </li>
                     </ul>
                     <div class="box">
-                        <ul class="boxTopBar">
-                            <li class="boxTopBar-item boxTopBar-current col-lg-1-5 col-md-1-5 col-xs-2 text-center">行李回国
+                        <ul class="boxTopBar hidden-xs">
+                            <li class="boxTopBar-item boxTopBar-current col-lg-1-5 col-md-1-5 hidden-xs text-center">
+                                行李回国
                             </li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-2 text-center">境内快递</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-2 text-center">文件速递</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-2 text-center">美中海淘</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-2 text-center">中美转运</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-3 text-center">奢侈品专线</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5 col-xs-2 text-center">宠物运输</li>
-                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  col-xs-2 text-center">必看 Q&A</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">境内快递</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">文件速递</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">美中海淘</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">中美转运</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">奢侈品专线</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">宠物运输</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">必看 Q&A</li>
                         </ul>
 
-                        <div class="boxBig">
+                        <div class="boxBig hidden-xs">
                             <div class="boxContent currentBox">
                                 <table class="table1">
                                     <tr>
@@ -420,9 +483,9 @@
 
                             <div class="boxContent">
                                 <div class="Q-container">
-                                    <h3><b>1.</b><img src="../img/search/Q.png"/><i>为什么有些公司没有取件费?</i></h3>
+                                    <h3><b>1.</b><img src="../img/search/Q.png" /><i>为什么有些公司没有取件费?</i></h3>
                                     <div class="Q-content">
-                                        <img src="../img/search/A.png"/>
+                                        <img src="../img/search/A.png" />
                                         <div>
                                             <p>羊毛出在羊身上。</p>
                                             <p>首先，FEDEX上门PICKUP本身就不需要取件费。因此，个别快递以此为营销策略.世上没有免费的午餐，也没有无故亏本的商家。</p>
@@ -434,41 +497,125 @@
                                             </p>
                                             <p>我们深深明白，一箱几十磅的行李，不仅仅是海关眼中的货物，更承载着留学生涯里许多沉甸甸的回忆。</p>
                                         </div>
-                                       
-                                    </div>
-                                    
 
-                                    <h3><b>2.</b><img src="../img/search/Q.png"/><i>关于保险</i></h3>
+                                    </div>
+
+
+                                    <h3><b>2.</b><img src="../img/search/Q.png" /><i>关于保险</i></h3>
                                     <div class="Q-content">
-                                        <img src="../img/search/A.png"/>
+                                        <img src="../img/search/A.png" />
                                         <div>
                                             <p>正因为不计成本地采取以上的取件模式，因此我们可以自信地送出一箱$700，最高$3000的免费保险。（免费需要加重）</p>
                                             <p>全美独此一家，相较于其他快递TOTAL $200的保险，诚意十足。</p>
                                         </div>
-                                        
-                                     </div>
-                                    
+
+                                    </div>
+
                                     </p>
 
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
 
 
+
+
+
+                        <div class="panel-group hidden-lg hidden-md " id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                          境内快递
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="free-wrapper">
+                                            <table class="table1">
+                                                    <tr>
+                                                        <th>服务类型 </th>
+                                                        <th>计费公式 </th>
+                                                        <th> 运输时效 </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>自助清关 </td>
+                                                        <td>取件费15/箱 ＋重量*3.8/磅 </td>
+                                                        <td> 2-3个工作日至中国海关 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>代清关</td>
+                                                        <td> 取件费15/箱+重量*4.5/磅+清关费20/箱 </td>
+                                                        <td>2-3个工作日至中国海关</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>急速包税 </td>
+                                                        <td>取件费15/箱＋重量*6.5/磅</td>
+                                                        <td>10-14个工作日门到门</td>
+                                                    </tr>
+                
+                                                </table>
+                                                <h5>注：部分偏远地区需加时</h5>
+                                                <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                                <div class="tips">
+                                                    <h3>快递计费说明：</h3>
+                                                    <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
+                                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inc) ÷139</p>
+                                                    <p><em></em>1cm=0.39 inch</p>
+                                                    <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
+                                                    <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
+                                                    <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                                    <p>5. 清关时效：自助清关在申报单邮寄至海关处后七个工作日左右完成清关。</p>
+                                                    <p><em></em>代清关由于需要补报申报单，清关时效延长至14个工作日。</p>
+                                                    <p><em></em>另外华南地区隶属广州海关，清关速度全国最慢，时效在1个月左右，建议华南地区同学选择代清关模式。</p>
+                                                    <p><em></em>我们会尽量和海关协调催促清关进度，但是无法控制整个进程，尤其是行李中有特殊或高奢物品的行李，</p>
+                                                    <p><em></em>需要更耐心的等待。希望大家共同配合，互相体谅。</p>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            点击我进行展开，再次点击我进行折叠。第 2 部分
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                        vice lomo.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            点击我进行展开，再次点击我进行折叠。第 3 部分
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                        vice lomo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
+
+
 
                 </div>
             </div>
@@ -480,7 +627,8 @@
             $(".boxTopBar-item").click(function () {
                 $(this).addClass("boxTopBar-current").siblings().removeClass("boxTopBar-current");
                 var index = $(this).index();
-                $(".boxBig").find(".boxContent").eq(index).addClass("currentBox").siblings(".boxContent").removeClass("currentBox");
+                $(".boxBig").find(".boxContent").eq(index).addClass("currentBox").siblings(
+                    ".boxContent").removeClass("currentBox");
             })
         })
     </script>
@@ -491,7 +639,7 @@
                 <div id="guideList" class="guide-list">
                     <div class="clearfix row">
                         <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
-                            <img src="../img/newlogo1.png" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
+                            <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
 
                         </div>
                         <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
@@ -506,24 +654,26 @@
                             <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
                         </div>
                         <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
-                            <div class="item col-lg-6 col-md-6 col-xs-12">
+                            <div class="item col-lg-6 col-md-6 col-xs-7">
                                 <h3>西游寄客服专线 </h3>
                                 <h2>718-406-5453</h2>
                                 <h4>美东时间周一~周五</h4>
                                 <h4> 11:00 a.m ~ 5:00 p.m</h4>
                             </div>
 
-                            <div class="item col-lg-3 col-md-6 col-xs-6">
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
                                 <div style="margin-right:5px">
-                                    <img src="../img/qrcon1.jpg" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
+                                    <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
                                 </div>
-                                <span>中国客服</span>
+                                <span style="padding-top:10px;">中国客服</span>
                             </div>
-                            <div class="item col-lg-3 col-md-6 col-xs-6">
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
                                 <div style="margin-left:5px">
-                                    <img src="../img/qrcon2.jpg" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
+                                    <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
                                 </div>
-                                <span>中国客服</span>
+                                <span style="padding-top:10px;">中国客服</span>
                             </div>
                         </div>
 
@@ -537,6 +687,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-822562240"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -545,20 +696,26 @@
         gtag('config', 'AW-822562240');
         gtag('config', 'UA-111709083-1');
 
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '801664066698082');
         fbq('track', 'PageView');
-
     </script>
 
 
@@ -571,7 +728,9 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            data: JSON.stringify({ waybillNumber: billNumber }),
+            data: JSON.stringify({
+                waybillNumber: billNumber
+            }),
             url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
             // url:"/logistics/service/logisticsinfo/getBywaybillNumber",
             success: function (data) {
@@ -581,14 +740,23 @@
                     var str = "";
                     //<span class="signed">'+list[i].recordStatusStr+'</span>
                     list.sort(function (a, b) {
-                        return Date.parse(b.recordDate) - Date.parse(a.recordDate);//时间最近放最上面
+                        return Date.parse(b.recordDate) - Date.parse(a.recordDate); //时间最近放最上面
                     });
                     for (var i = 0; i < list.length; i++) {
-                        str += '<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">' + (i === 0 ? '<img src="../../img/search/status-transported.png" />' : '<img src="../../img/search/status-transporting.png" />') + '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate + '</i>' : '<span>' + list[i].recordDate + '</span>') + '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr + '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
+                        str +=
+                            '<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">' +
+                            (i === 0 ? '<img src="../../img/search/status-transported.png" />' :
+                                '<img src="../../img/search/status-transporting.png" />') +
+                            '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate +
+                                '</i>' : '<span>' + list[i].recordDate + '</span>') +
+                            '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr +
+                                '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
                     }
                     $(".route-list").html(str);
                 } else {
-                    $(".route-list").html('<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>');
+                    $(".route-list").html(
+                        '<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'
+                        );
                 }
             }
 
@@ -619,11 +787,10 @@
 
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
-        var r = window.location.search.substr(1).match(reg);  //匹配目标参数   
-        if (r != null) return unescape(r[2]); return null; //返回参数值  
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数   
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值  
     }
-
-
 </script>
 
 

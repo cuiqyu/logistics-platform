@@ -31,9 +31,7 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 
-<body>
-
-    <body style="background-color: #fff">
+<body style="background-color: #fff">
         <header class="header">
             <section style="background-color: #fff">
                 <div class="container" style="padding-left: 0;padding-right: 0;">
@@ -46,7 +44,7 @@
 
                     <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
                         <div class="pull-left service-type" >
-                            <div id="homePage" class="currentBorder"><span>首页</span></div>
+                            <div id="homePage"><span>首页</span></div>
                         </div>
                         <div class="pull-left service-type" >
                             <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
@@ -173,13 +171,12 @@
                                 </ul>
                                 </div>
                             </div>
-                   
+                
 
 
                 </div>
             </section>
         </header>
-    </body>
     <script>
         //下拉框
         $('.service-type').click(function () {
@@ -188,17 +185,14 @@
         $('.service-content').click(function () {
             $(this).find('.flow-content').toggleClass('hidden')
         })
-        if ((!navigator.userAgent.match(
-            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-        ))) {
+        if ((!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
             })
             $('.service-type').mouseleave(function () {
                 $(this).find('.service-option').addClass('hidden');
-                $(this).find('#currentContent').find('img').attr("src",
-                    "../img/service/service_arrow_blue.png");
+                $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow_blue.png");
             })
 
             $('.service-content').hover(function () {
@@ -208,308 +202,150 @@
                 $(this).find('.flow-content').addClass('hidden')
             })
         }
-    </script>
-    <div style="position: relative;">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../img/banner.jpg" class="img-fluid" /></div>
-            <div class="swiper-slide"><img src="../img/banner2.jpg" class="img-fluid" /></div>
+        $(function () { 
+        $(".search").click(function(){
+            var  billNumber=$("#search-input").val();
+            console.log(billNumber);
+            fn(billNumber);
 
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            autoplay: { disableOnInteraction: false }
+        })
         })
     </script>
 
-   
-        
-           
-                <div class="waybill-query">
-                    <div class="waybill-query-content">
-                        <div class="col-lg-4 col-md-4 col-xs-12">
-                            <div class="input">
-                                <input type="text" placeholder="请您输入查询运单号" autocomplete="off" id="search-input">
-                                <div class="waybill-query-btn-container" style="display: none;">
-                                    <div class="waybill-query-btn"><a href="../html/search/search.html"></a>查询</div>
+    <div class="service-top"
+        style="background:  url('../img/service/info/top-bg.jpg') top center no-repeat #070707;padding-top:60px;padding-bottom:90px">
+        <div class="container back-container">
+            <div class="main-content flex-center" style="margin-top: 80px">
+                <div class="containerSearch col-lg-7 col-md-8 col-xs-12">
+                    <div class="input">
+                        <input type="text" placeholder="请输入快递单号" autocomplete="off" id="search-input">
+                    </div>
+                    <div class="search">立即查询</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-8 col-md-8 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/free.html"><img
-                                            src="../img/icon1.png" class="img-fluid" />运费&时效</a></div>
-                                <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/free.html"><img
-                                            src="../img/icon3.png" class="img-fluid" />保险&理赔</a></div>
-                                <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/free.html"><img
-                                            src="../img/icon2.png" class="img-fluid" />禁运物品</a></div>
-                                <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/onPlaceorder.html"><img
-                                            src="../img/icon4.png" class="img-fluid" />立即寄件</a></div>
-                            </div>
+    <article class="service-main">
+        <section class="flow">
+            <div class="container pc-web">
+                <div class="service-flow">
+                    <div class="service-title">运单查询</div>
+                    <div class="service-separate"></div>
+                    <div class="routes-wrapper">
+                        <div class="route-list ">
+                            
                         </div>
                     </div>
                 </div>
-            </div>
-        
-    
-    <script>
-        $(function () {
-            $(".waybill-query-content .input").click(function () {
-                $(".waybill-query-btn-container").show();
-            })
-            /*$(".waybill-query-content .input input").focus(function () {
-                $(".waybill-query-btn-container").show();
-            })
-            $(".waybill-query-content .input input").blur(function(){
-               $(".waybill-query-btn-container").hide(); 
-            })*/
-            $(".waybill-query-btn").click(function () {
-                var waybillCodes = $(".waybill-query-content .input input").val();
-                window.location.href = "../html/search.html?waybillCodes=" + waybillCodes;
-            })
-            $("#homePage").click(function () {
-                window.location.href = "../html/index.html"
-            })
-
-        })
-    </script>
-    <div class="container">
-        <div class="row core-business-title">
-            <h2>核心业务</h2>
-            <h3>高校精英强强联手打造</h3>
-            <h3>以留学生利益为核心物流一体化服务</h3>
-        </div>
-        <div class="row core-businessDiv">
-            <div class="col-lg-2-5 col-md-2-5 col-xs-4">
-                <div class="core-business-item"> <img src="../img/img2.png"  class="img-fluid"/><span>回国行李</span></div>
-            </div>
-            <div class="col-lg-2-5 col-md-2-5 col-xs-4">
-                <div class="core-business-item"><img src="../img/img3.png"  class="img-fluid"/><span>境内搬家</span></div>
-            </div>
-            <div class="col-lg-2-5 col-md-2-5 col-xs-4">
-                <div class="core-business-item"><img src="../img/img4.png"  class="img-fluid"/><span>宠物回国</span></div>
-            </div>
-            <div class="col-lg-2-5 col-md-2-5 col-xs-4">
-                <div class="core-business-item"><img src="../img/img5.png" class="img-fluid" /><span>奢侈品专线</span></div>
-            </div>
-            <div class="col-lg-2-5 col-md-2-5 col-xs-4">
-                <div class="core-business-item"><img src="../img/img6.png"  class="img-fluid"/><span>中美转运</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="cover-container">
-        <img src="../img/ruler-cover.png"/>
-       </div>
-
-
-    <div class="container">
-        <div class="row core-business-title">
-            <h2>西游寄全球物流</h2>
-            <h3>各大校友倾力合作 各专所长</h3>
-            <h3>以低于行业平均的价格提供最高质量的服务</h3>
-        </div>
-        <div class="row solution-wrapper">
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item ">
-                <div class="solution-item-img">
-                 <img src="../img/company1.jpg" class="img-fluid"/>
-                </div>
-                <div class="solution-item-text">
-                    <h2>Mckinsey&Company</h2>
-                    <h3>联手Fedex, UPS, USPS, 京东物流和顺丰五家国际快递巨头，
-                        缔造留学生专享的低廉，高效物流渠道</h3>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item">
-                <div class="solution-item-img">
-                    <img src="../img/company2.jpg" class="img-fluid" />
-                </div>
-                <div class="solution-item-text">
-                    <h2>Harvard Law School & Minnesota Law School & 中国政法大学</h2>
-                    <h3>法律顾问。跨境物流涉及海关法，商检法，知识产权法等各项法律。来自中美两国法律专业的校友发挥专业特长，以合法方式将风险和税费合理最低化。</h3> 
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item ">
-                <div class="solution-item-img">
-                    <img src="../img/company3.png" class="img-fluid"/>
-                </div>
-                <div class="solution-item-text">
-                    <h2>Facebook</h2>
-                    <h3>技术Backup.行李邮寄过程中客户个人信息极易被泄露盗取。四位来自FACABOOK校友，从前端到后台实时监护，保障每一个用户的隐私安全。</h3>
-                
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="cover-container">
-     <img src="../img/cover1.png " class="img-fluid"/>
-    </div>
-
-<div class="news-container ">
-    <div class="container">
-        <div class="row core-business-title">
-            <h2>公告资讯</h2>
-            
-        </div>
-        <div class="row">
-            <div class="news-item col-lg-6 col-md-6 col-xs-12" >
-                <a class="news-item-box" href="../html/news.html?contentId=0">
-                <h2>紧急新闻</h2>
-                <p class="abstract">两大行李快递公司Towhere及Luggageasy老友寄，其共用仓库的负责人HAO LIU确诊新冠肺炎。Fedex中国已收到通告，将对两家快递公司的行李进行严查消毒。也希望通过这两个公司进行邮寄的同学在收到行李后做好防护措施。（注：Towhere又以Fedex行李快递总代理自称。公司真实注册名字为：）  </p>
-                <p class="date">西游寄</p>
-                <p class="date">12/01/2020</p>
-               </a>
-            </div>
-            <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                <a class="news-item-box" href="../html/news.html?contentId=1">
-                <h2>华北地区申报政策更新</h2>
-                <p class="abstract">北京海关总署最新通知：由于疫情的有效缓解，华北地区同学在邮寄行李回国时，需要邮寄护照原件来核实身份。之前临时颁发的疫情期间宽容性政策（无需护照原件）取消。华南及华东地区同学依然可以凭借个人证件扫描件进行清关事宜。 </p>
-                <p class="date">西游寄</p>
-                <p class="date">10/01/2020</p>
-                </a>
-            </div>
-
-            <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                <a class="news-item-box" href="../html/news.html?contentId=2">
-                <h2>加拿大行李快递</h2>
-                <p class="abstract">西游寄加拿大回国行李路线正式开通上线。同时加拿大地区的宠物回国事宜也顺利开展。所有的邮寄流程和美国一致，大家可以加官方客服进行咨询了解。 </p>
-                <p class="date">西游寄</p>
-                <p class="date">10/30/2020</p>
-                </a>
-            </div>
-            <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                <a class="news-item-box" href="../html/news.html?contentId=3">
-                <h2>校园代理招募</h2>
-                <p class="abstract">作为全美首家留学生自创物流平台，我们热忱邀请各大高校精英加入我们的团队，以更好地向广大留学生提供更为优质的服务。有意向的同学可以发邮件到jewel@fedexglobaluggage.com </p>
-                <p class="date">西游寄</p>
-                <p class="date">12/05/2020</p>
-            </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="footer">
-        <section class="container" id="footerContainer">
-            <div>
-                <div id="guideList" class="guide-list">
-                    <div class="clearfix row">
-                        <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
-                            <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
-
-                        </div>
-                        <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
-                            <ul>
-                                <li>关于我们</li>
-                                <li>代理招募</li>
-                                <li>隐私协议</li>
-                                <li>服务细则</li>
-                                <li>联系客服</li>
-                            </ul>
-                            <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
-                            <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
-                        </div>
-                        <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
-                            <div class="item col-lg-6 col-md-6 col-xs-7">
-                                <h3>西游寄客服专线 </h3>
-                                <h2>718-406-5453</h2>
-                                <h4>美东时间周一~周五</h4>
-                                <h4> 11:00 a.m ~ 5:00 p.m</h4>
-                            </div>
-
-                            <div class="item col-lg-3 col-md-6 col-xs-2">
-                                <div style="margin-right:5px">
-                                    <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                </div>
-                                <span style="padding-top:10px;">中国客服</span>
-                            </div>
-                            <div class="item col-lg-3 col-md-6 col-xs-2">
-                                <div style="margin-left:5px">
-                                    <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                </div>
-                                <span style="padding-top:10px;">中国客服</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
         </section>
-    </footer>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-822562240"></script>
 
 
 
 
+
+
+
+
+    </article>
+    <footer class="footer">
+            <section class="container" id="footerContainer">
+                <div>
+                    <div id="guideList" class="guide-list">
+                        <div class="clearfix row">
+                            <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
+                                <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
+    
+                            </div>
+                            <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
+                                <ul>
+                                    <li>关于我们</li>
+                                    <li>代理招募</li>
+                                    <li>隐私协议</li>
+                                    <li>服务细则</li>
+                                    <li>联系客服</li>
+                                </ul>
+                                <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
+                                <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
+                            </div>
+                            <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
+                                <div class="item col-lg-6 col-md-6 col-xs-7">
+                                    <h3>西游寄客服专线 </h3>
+                                    <h2>718-406-5453</h2>
+                                    <h4>美东时间周一~周五</h4>
+                                    <h4> 11:00 a.m ~ 5:00 p.m</h4>
+                                </div>
+    
+                                <div class="item col-lg-3 col-md-6 col-xs-2">
+                                    <div style="margin-right:5px">
+                                        <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
+                                    </div>
+                                    <span style="padding-top:10px;">中国客服</span>
+                                </div>
+                                <div class="item col-lg-3 col-md-6 col-xs-2">
+                                    <div style="margin-left:5px">
+                                        <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
+                                    </div>
+                                    <span style="padding-top:10px;">中国客服</span>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </section>
+        </footer>
 </body>
 <script type="text/javascript">
+function fn(billNumber){
+    $.ajax({
+                type:'post',
+                headers: {
+                 'Content-Type': 'application/json'
+                  },
+            data: JSON.stringify({waybillNumber: billNumber}),
+               url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+               //url:"/logistics/service/logisticsinfo/getBywaybillNumber",
+                success:function(data){
+                    console.log(JSON.stringify(data)) 
+                    var list=data.data;  
+                    if(list.length!==0){
+                        var str="";
+                        //<span class="signed">'+list[i].recordStatusStr+'</span>
+                        list.sort(function(a,b){
+                         return Date.parse(b.recordDate) - Date.parse(a.recordDate);//时间最近放最上面
+                        });
+                        for(var i=0;i<list.length;i++){
+                            str+='<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">'+(i===0?'<img src="../img/search/status-transported.png" />':'<img src="../img/search/status-transporting.png" />')+'</li><li class="route-date-time">'+(i===0?'<i>'+list[i].recordDate+'</i>':'<span>'+list[i].recordDate+'</span>')+'</li><li class="route-desc">'+(i===0?'<i>'+list[i].recordStatusStr+'</i>':'<span>'+list[i].recordStatusStr+'</span>')+'</li></ul>'; 
+                        }
+                        $(".route-list").html(str);
+                    }else{
+                        $(".route-list").html('<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'); 
+                    }   
+                }
+                
+        })
+}
     $(function () {
-        var type = getUrlParam("type");
-        if (type === "1") {
-            $(".service-title").html("回国快递");
-
-        } else if (type === "2") {
-            $(".service-title").html("境内快递");
-        } else if (type === "3") {
-            $(".service-title").html("海淘转运");
-        }
-
-
-
-        var cookieName = 'x_o=';
-        $('.goPackage').click(function () {
-            var goHref = $(this).attr('go');;
-            if (document.cookie.indexOf(cookieName) > -1) {
-                location.href = goHref;
-                return;
-            }
-            $('#loginDialog').attr('goHref', goHref).click();
-        });
-
+        $("#homePage").click(function(){
+                window.location.href = "../html/index.html"
+            })
+        var waybillCodes=getUrlParam("waybillCodes");
+        $("#search-input").val(waybillCodes);
+        fn(waybillCodes);
     })
-    $('#passageway').hover(switchShow, switchShow)
+    
 
-    function switchShow() {
-        $('#qr-code').toggle()
-    }
+    function getUrlParam(name) {   
+             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+             var r = window.location.search.substr(1).match(reg);  //匹配目标参数   
+             if (r != null) return unescape(r[2]); return null; //返回参数值  
+        } 
 
-    function getUrlParam(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
-        var r = window.location.search.substr(1).match(reg); //匹配目标参数   
-        if (r != null) return unescape(r[2]);
-        return null; //返回参数值  
-    }
+
 </script>
 
 
