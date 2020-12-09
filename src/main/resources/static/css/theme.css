@@ -7601,7 +7601,7 @@ body.nav-active {
   background: #000;
 }
 .containerSearch {
-  width: 590px;
+  width:100%;
   margin: 30px auto 10px;
   position: relative;
 }
@@ -7639,9 +7639,7 @@ body.nav-active {
   line-height:46px;
   font-size: 16px;
 }
-.containerSearch>div {
-  float: left;
-}
+
 
 
 .routes-wrapper .route-list .first {
@@ -8432,6 +8430,7 @@ input::-webkit-input-placeholder{
 .contact-input > div {
   margin-top: 14px;
 }
+.service-title{font-size:16px !important;}
   .btn1{text-align: center;padding-bottom: 40px;}
   .tips{padding:10px;}
   .tips h3{font-size:14px;}
