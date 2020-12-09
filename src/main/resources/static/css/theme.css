@@ -7883,6 +7883,8 @@ body.nav-active {
   border: 0;
   width: 70%;
   padding-left: 10px;
+  line-height:50px;
+  font-size:16px !important;
 }
 .other-query{
   height: 80px;

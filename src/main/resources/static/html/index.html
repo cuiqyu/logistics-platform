@@ -271,10 +271,13 @@
     
     <script>
         $(function () {
-            $(".waybill-query-content .input input").focus(function () {
+            $(".waybill-query-content .input").click(function () {
                 $(".waybill-query-btn-container").show();
             })
-            /*$(".waybill-query-content .input input").blur(function(){
+            /*$(".waybill-query-content .input input").focus(function () {
+                $(".waybill-query-btn-container").show();
+            })
+            $(".waybill-query-content .input input").blur(function(){
                $(".waybill-query-btn-container").hide(); 
             })*/
             $(".waybill-query-btn").click(function () {
