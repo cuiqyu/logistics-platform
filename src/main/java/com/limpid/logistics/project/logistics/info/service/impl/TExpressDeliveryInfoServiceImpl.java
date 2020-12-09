@@ -34,7 +34,7 @@ public class TExpressDeliveryInfoServiceImpl implements ITExpressDeliveryInfoSer
      * @return 寄件
      */
     @Override
-    public TExpressDeliveryInfo selectTExpressDeliveryInfoById(Long id) {
+    public TExpressDeliveryInfo selectTExpressDeliveryInfoById(String id) {
         return tExpressDeliveryInfoMapper.selectTExpressDeliveryInfoById(id);
     }
 
@@ -89,7 +89,7 @@ public class TExpressDeliveryInfoServiceImpl implements ITExpressDeliveryInfoSer
      * @return 结果
      */
     @Override
-    public int deleteTExpressDeliveryInfoById(Long id) {
+    public int deleteTExpressDeliveryInfoById(String id) {
         return tExpressDeliveryInfoMapper.deleteTExpressDeliveryInfoById(id);
     }
 

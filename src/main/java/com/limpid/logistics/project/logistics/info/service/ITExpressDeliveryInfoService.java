@@ -18,7 +18,7 @@ public interface ITExpressDeliveryInfoService {
      * @param id 寄件ID
      * @return 寄件
      */
-    public TExpressDeliveryInfo selectTExpressDeliveryInfoById(Long id);
+    public TExpressDeliveryInfo selectTExpressDeliveryInfoById(String id);
 
     /**
      * 查询寄件列表
@@ -58,7 +58,7 @@ public interface ITExpressDeliveryInfoService {
      * @param id 寄件ID
      * @return 结果
      */
-    public int deleteTExpressDeliveryInfoById(Long id);
+    public int deleteTExpressDeliveryInfoById(String id);
 
     /**
      * 客户寄件

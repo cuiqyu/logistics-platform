@@ -61,7 +61,7 @@
         order by update_time desc
     </select>
 
-    <select id="selectTExpressDeliveryInfoById" parameterType="Long" resultMap="TExpressDeliveryInfoResult">
+    <select id="selectTExpressDeliveryInfoById" parameterType="string" resultMap="TExpressDeliveryInfoResult">
         <include refid="selectTExpressDeliveryInfoVo"/>
         where id = #{id}
     </select>
@@ -127,7 +127,7 @@
         where id = #{id}
     </update>
 
-    <delete id="deleteTExpressDeliveryInfoById" parameterType="Long">
+    <delete id="deleteTExpressDeliveryInfoById" parameterType="string">
         delete from t_express_delivery_info where id = #{id}
     </delete>
 

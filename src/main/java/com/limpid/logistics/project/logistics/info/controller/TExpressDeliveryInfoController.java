@@ -93,7 +93,7 @@ public class TExpressDeliveryInfoController extends BaseController
      * 修改寄件
      */
     @GetMapping("/edit/{id}")
-    public String edit(@PathVariable("id") Long id, ModelMap mmap)
+    public String edit(@PathVariable("id") String id, ModelMap mmap)
     {
         TExpressDeliveryInfo tExpressDeliveryInfo = tExpressDeliveryInfoService.selectTExpressDeliveryInfoById(id);
         mmap.put("tExpressDeliveryInfo", tExpressDeliveryInfo);
