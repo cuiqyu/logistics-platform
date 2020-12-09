@@ -23,13 +23,13 @@
 <body class="gray-bg">
      <div class="container-div">
         <div class="row">
-            <div class="col-sm-12 search-collapse">
+            <div class="col-sm-12 search-collapse" id="searchSelf">
                 <form id="formId">
                     <div class="select-list">
                         <ul>
                             <li>
                                 <label>运单号：</label>
-                                <input type="text" name="waybillNumber"/>
+                                <input type="text" name="waybillNumber" th:value="*{waybillNumber}"/>
                             </li>
                             <li id="dateLi">
                                 <label>物流日期：</label>
@@ -67,6 +67,7 @@
                     <i class="fa fa-download"></i> 导出
                 </a>
             </div>
+
             <div class="col-sm-12 select-table table-striped">
                 <table id="bootstrap-table"></table>
             </div>
@@ -79,6 +80,7 @@
         var removeFlag = [[${@permission.hasPermi('logistics:info:remove')}]];
         var datas = [[${@dict.getType('logistics_record_status')}]];
         var prefix = ctx + "logistics/info/LogisticsRecord";
+        var hideFlag = [[${hideFlag}]];
 
         $("#startTime").datetimepicker({
             format: "yyyy-mm-dd hh:ii:ss",
@@ -107,6 +109,11 @@
         });
 
         $(function() {
+            if (hideFlag) {
+                $("#toolbar").hide();
+                $("#searchSelf").hide();
+            }
+
             var options = {
                 url: prefix + "/list",
                 createUrl: prefix + "/add",

@@ -221,8 +221,9 @@
      */
     function viewLogisticsRecords(waybillNumber) {
         table.set();
-        $.modal.open("查询物流信息", ctx + "logistics/info/LogisticsRecord");
+        $.modal.open("查询物流信息", ctx + "/logistics/info/LogisticsRecord/" + waybillNumber);
     }
+
 </script>
 </body>
 </html>

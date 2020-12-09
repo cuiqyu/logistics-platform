@@ -36,10 +36,24 @@ public class TLogisticsInfoController extends BaseController
 
     @RequiresPermissions("logistics:info:view")
     @GetMapping()
-    public String LogisticsRecord()
+    public String LogisticsRecord(ModelMap mmap)
     {
+        mmap.put("waybillNumber", "");
+        mmap.put("hideFlag", false);
         return prefix + "/logisticsRecord";
     }
+
+
+    @RequiresPermissions("logistics:info:view")
+    @GetMapping("/{waybillNumber}")
+    public String LogisticsRecordByWaybillNumber(@PathVariable("waybillNumber") String waybillNumber, ModelMap mmap)
+    {
+        mmap.put("waybillNumber", waybillNumber);
+        mmap.put("hideFlag", true);
+        return prefix + "/logisticsRecord";
+    }
+
+
 
     /**
      * 查询物流信息记录列表
