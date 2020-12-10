@@ -14,6 +14,10 @@
         content="西游寄(SuperEx)与联邦快递(FedEx)合作为美国的留学生提供美国寄往中国的回国行李快递服务。小鹿不仅提供安全可靠的优质运输服务，更有令人心动的价格，寄得越多优惠更多，最低可至$2.6/lb，而且，免费上门取件！免费仓储！免费协助清关！免费加固包裹！" />
     <meta property="og:url" content="https://us.deerex.com/service/service.html?status=1&type=1" />
     <meta property="og:site_name" content="西游寄SuperEx" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta content="user-scalable=no" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -908,7 +912,7 @@
                         </div>
                         <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
                             <ul>
-                                <li>关于我们</li>
+                                <li><a href="../html/about.html">关于我们</a></li>
                                 <li>代理招募</li>
                                 <li>隐私协议</li>
                                 <li>服务细则</li>
@@ -948,39 +952,7 @@
             </div>
         </section>
     </footer>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-822562240"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-822562240');
-        gtag('config', 'UA-111709083-1');
-
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '801664066698082');
-        fbq('track', 'PageView');
-    </script>
+   
 
 
 
@@ -1032,23 +1004,10 @@
         fn(waybillCodes);
 
 
-        var cookieName = 'x_o=';
-        $('.goPackage').click(function () {
-            var goHref = $(this).attr('go');;
-            if (document.cookie.indexOf(cookieName) > -1) {
-                location.href = goHref;
-                return;
-            }
-            $('#loginDialog').attr('goHref', goHref).click();
-        });
+     
 
     })
-    $('#passageway').hover(switchShow, switchShow)
-
-    function switchShow() {
-        $('#qr-code').toggle()
-    }
-
+   
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
         var r = window.location.search.substr(1).match(reg); //匹配目标参数   

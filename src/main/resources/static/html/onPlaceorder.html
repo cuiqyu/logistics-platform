@@ -14,6 +14,10 @@
         content="西游寄(SuperEx)与联邦快递(FedEx)合作为美国的留学生提供美国寄往中国的回国行李快递服务。小鹿不仅提供安全可靠的优质运输服务，更有令人心动的价格，寄得越多优惠更多，最低可至$2.6/lb，而且，免费上门取件！免费仓储！免费协助清关！免费加固包裹！" />
     <meta property="og:url" content="https://us.deerex.com/service/service.html?status=1&type=1" />
     <meta property="og:site_name" content="西游寄SuperEx" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta content="user-scalable=no" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,153 +34,162 @@
 <script src="../js/libs/jquery-1.11.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
+<script src="../js/laydate/laydate.js"></script>
+<script src="../js/toast.js"></script>
 
 <body style="background-color: #fff">
-        <header class="header">
-            <section style="background-color: #fff">
-                <div class="container" style="padding-left: 0;padding-right: 0;">
+    <header class="header">
+        <section style="background-color: #fff">
+            <div class="container" style="padding-left: 0;padding-right: 0;">
 
-                    <h1 class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
-                        <a class="logo">
-                            <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
-                        </a>
-                    </h1>
+                <h1 class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                    <a class="logo">
+                        <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
+                    </a>
+                </h1>
 
-                    <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
-                        <div class="pull-left service-type" >
-                            <div id="homePage"><span>首页</span></div>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a><span>寄件流程</span></a></li>
-                                <li value="2"><span>费用时效</span></li>
-                                <li value="3"><span>打包手册</span></li>
-                                <li value="4"><span>马上咨询</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-
-                                <li value="2"><span>违禁物品</span></li>
-                                <li value="3"><span>费用时效</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-
-                                <li value="2"><span>中国->美国</span></li>
-                                <li value="3"><span>美国->中国</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><span>服务介绍</span></li>
-                                <li value="2"><span>收费明细</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                                <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                                <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                                <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                                <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                            </ul>
-                        </div>
+                <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
+                    <div class="pull-left service-type">
+                        <div id="homePage"><span>首页</span></div>
                     </div>
-                    <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
-                            <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                      <span class="sr-only">Toggle navigation</span>
-                                      <span class="icon-bar"></span>
-                                      <span class="icon-bar"></span>
-                                      <span class="icon-bar"></span>
-                                    </button>
-                                    
-                                  </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><a><span>寄件流程</span></a></li>
+                            <li value="2"><span>费用时效</span></li>
+                            <li value="3"><span>打包手册</span></li>
+                            <li value="4"><span>马上咨询</span></li>
+                        </ul>
                     </div>
-                    <div class="hidden-lg  hidden-md col-sm-12 col-xs-12">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                  <li><a href="../html/index.html">首页 <span class="sr-only">(current)</span></a></li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">回国行李 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>寄件流程</a></li>
-                                      <li><a>费用时效</a></li>
-                                      <li><a>打包手册</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">境内快递 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>违禁物品</a></li>
-                                      <li><a>费用时效</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">海淘转运 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>中国->美国</a></li>
-                                      <li><a>美国->中国</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">免税州服务 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>服务介绍</a></li>
-                                      <li><a>收费明细</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>回国快递</a></li>
-                                      <li><a>境内快递</a></li>
-                                      <li><a> 海淘转运</a></li>
-                                     
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a>回国快递</a></li>
-                                        <li><a>境内快递</a></li>
-                                        <li><a> 海淘转运</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                                </div>
-                            </div>
-                
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
 
+                            <li value="2"><span>违禁物品</span></li>
+                            <li value="3"><span>费用时效</span></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
 
+                            <li value="2"><span>中国->美国</span></li>
+                            <li value="3"><span>美国->中国</span></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><span>服务介绍</span></li>
+                            <li value="2"><span>收费明细</span></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
+                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
+                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
+                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
+                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-        </header>
+                <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="hidden-lg  hidden-md col-sm-12 col-xs-12">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../html/index.html">首页 <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">回国行李 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>寄件流程</a></li>
+                                    <li><a>费用时效</a></li>
+                                    <li><a>打包手册</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">境内快递 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>违禁物品</a></li>
+                                    <li><a>费用时效</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">海淘转运 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>中国->美国</a></li>
+                                    <li><a>美国->中国</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">免税州服务 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>服务介绍</a></li>
+                                    <li><a>收费明细</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>回国快递</a></li>
+                                    <li><a>境内快递</a></li>
+                                    <li><a> 海淘转运</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>回国快递</a></li>
+                                    <li><a>境内快递</a></li>
+                                    <li><a> 海淘转运</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </header>
     <script>
         //下拉框
         $('.service-type').click(function () {
@@ -185,14 +198,17 @@
         $('.service-content').click(function () {
             $(this).find('.flow-content').toggleClass('hidden')
         })
-        if ((!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        if ((!navigator.userAgent.match(
+                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+            ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
             })
             $('.service-type').mouseleave(function () {
                 $(this).find('.service-option').addClass('hidden');
-                $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow_blue.png");
+                $(this).find('#currentContent').find('img').attr("src",
+                    "../img/service/service_arrow_blue.png");
             })
 
             $('.service-content').hover(function () {
@@ -206,12 +222,7 @@
             $("#homePage").click(function () {
                 window.location.href = "../html/index.html"
             })
-            $(".search").click(function () {
-                var billNumber = $("#search-input").val();
-                console.log(billNumber);
-                fn(billNumber);
 
-            })
         })
     </script>
 
@@ -227,59 +238,54 @@
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>中英文姓名:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire mailName"
                                         placeholder="请填写寄件人姓名">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>性别:</span>
-                                <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <div style="display: flex; vertical-align:middle;line-height:32px;">
-                                        <input id="man" type="radio" checked="checked" name="1" class="radio" />男
-                                        <input id="woman" type="radio" name="1" class="radio" />女
+                                <div class="contact-input-opa b-contact-input c-require-parent mailSex">
+                                    <div style="display: flex; vertical-align:middle;line-height:32px; ">
+                                        <input id="man" type="radio" checked="checked" name="1" class="radio"
+                                            value="1" />男
+                                        <input id="woman" type="radio" name="0" class="radio" value="0" />女
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>微信号:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire mailWxid"
                                         placeholder="请填写微信号">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>寄件地址:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire mailAddress"
                                         placeholder="请填写寄件地址">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>寄件邮编:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire mailPostCode"
                                         placeholder="请填写寄件邮编">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>寄件日期:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="datetime" class="zr-input contact-input-ele c-isrequire mailDate"
                                         placeholder="请选择寄件日期">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请选择寄件日期</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>预估行李数量(箱)</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="number" class="zr-input contact-input-ele c-isrequire bagsNum"
                                         placeholder="请填写行李数量">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                         </div>
@@ -288,33 +294,29 @@
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>中英文姓名:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
-                                        placeholder="请填写寄件人姓名">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire receiptName"
+                                        placeholder="请填写收件人姓名">
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>收件地址:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire receiptAddress"
                                         placeholder="请填写收件地址">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>收件邮编:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="text" class="zr-input contact-input-ele c-isrequire receiptPostCode"
                                         placeholder="请填写收件邮编">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
                                 <span class="contact-input-title"><em></em>收件电话:</span>
                                 <div class="contact-input-opa b-contact-input c-require-parent">
-                                    <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
+                                    <input type="number" class="zr-input contact-input-ele c-isrequire receiptTellphone"
                                         placeholder="请填写收件电话">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <div class="order-input">
@@ -322,7 +324,6 @@
                                 <div class="contact-input-opa b-contact-input c-require-parent">
                                     <input type="text" class="zr-input contact-input-ele c-isrequire c-contract-name"
                                         placeholder="请填写收件人身份证号码">
-                                    <p class="error-message c-err-msg"><i class="zricon-warning"></i>请输入姓名</p>
                                 </div>
                             </div>
                             <h5 class="order-input1">
@@ -338,8 +339,8 @@
                         </div>
 
                     </div>
-                    
-                   
+
+
 
                 </div>
             </div>
@@ -347,92 +348,147 @@
     </div>
 
     <footer class="footer">
-            <section class="container" id="footerContainer">
-                <div>
-                    <div id="guideList" class="guide-list">
-                        <div class="clearfix row">
-                            <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
-                                <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
-    
-                            </div>
-                            <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
-                                <ul>
-                                    <li>关于我们</li>
-                                    <li>代理招募</li>
-                                    <li>隐私协议</li>
-                                    <li>服务细则</li>
-                                    <li>联系客服</li>
-                                </ul>
-                                <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
-                                <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
-                            </div>
-                            <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
-                                <div class="item col-lg-6 col-md-6 col-xs-7">
-                                    <h3>西游寄客服专线 </h3>
-                                    <h2>718-406-5453</h2>
-                                    <h4>美东时间周一~周五</h4>
-                                    <h4> 11:00 a.m ~ 5:00 p.m</h4>
-                                </div>
-    
-                                <div class="item col-lg-3 col-md-6 col-xs-2">
-                                    <div style="margin-right:5px">
-                                        <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                    </div>
-                                    <span style="padding-top:10px;">中国客服</span>
-                                </div>
-                                <div class="item col-lg-3 col-md-6 col-xs-2">
-                                    <div style="margin-left:5px">
-                                        <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                    </div>
-                                    <span style="padding-top:10px;">中国客服</span>
-                                </div>
-                            </div>
-    
+        <section class="container" id="footerContainer">
+            <div>
+                <div id="guideList" class="guide-list">
+                    <div class="clearfix row">
+                        <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
+                            <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
+
                         </div>
-    
+                        <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
+                            <ul>
+                                <li><a href="../html/about.html">关于我们</a></li>
+                                <li>代理招募</li>
+                                <li>隐私协议</li>
+                                <li>服务细则</li>
+                                <li>联系客服</li>
+                            </ul>
+                            <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
+                            <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
+                        </div>
+                        <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
+                            <div class="item col-lg-6 col-md-6 col-xs-7">
+                                <h3>西游寄客服专线 </h3>
+                                <h2>718-406-5453</h2>
+                                <h4>美东时间周一~周五</h4>
+                                <h4> 11:00 a.m ~ 5:00 p.m</h4>
+                            </div>
+
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
+                                <div style="margin-right:5px">
+                                    <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
+                                </div>
+                                <span style="padding-top:10px;">中国客服</span>
+                            </div>
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
+                                <div style="margin-left:5px">
+                                    <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
+                                </div>
+                                <span style="padding-top:10px;">中国客服</span>
+                            </div>
+                        </div>
+
                     </div>
-    
+
                 </div>
-            </section>
-        </footer>
+
+            </div>
+        </section>
+    </footer>
 </body>
 <script type="text/javascript">
-    function fn(billNumber) {
+    $(function () {
+        
+        $(".submitBtn").click(function () {
+            var mailName = $(".mailName").val(),
+            mailSex = $('.mailSex input:radio:checked').val(),
+            mailWxid = $(".mailWxid").val(),
+            mailAddress = $(".mailAddress").val(),
+            mailPostCode = $(".mailPostCode").val(),
+            bagsNum = $(".bagsNum").val(),
+            receiptName = $(".receiptName").val(),
+            receiptAddress = $(".bagsNum").val(),
+            receiptPostCode = $(".receiptPostCode").val(),
+            receiptTellphone = $(".receiptTellphone").val(),
+            receiptIdcard = $(".receiptIdcard").val(),
+            mailDate = $(".mailDate").val(); 
+            if (mailName === "") {
+                Toast('请填写寄件人姓名', 2000);
+            } else if (mailWxid === "") {
+                Toast('请填写微信号', 2000);
+            } else if (mailAddress === "") {
+                Toast('请填写寄件地址', 2000);
+            } else if (mailPostCode === "") {
+                Toast('请填写寄件邮编', 2000);
+            } else if (bagsNum === "") {
+                Toast('请填写寄件日期', 2000);
+            } else if (receiptName === "") {
+                Toast('请填写收件人姓名', 2000);
+            } else if (receiptAddress === "") {
+                Toast('请填写收件地址', 2000);
+            } else if (receiptPostCode === "") {
+                Toast('请填写收件邮编', 2000);
+            } else if (receiptTellphone === "") {
+                Toast('请填写收件电话', 2000);
+            } else if (receiptIdcard === "") {
+                Toast('请填写收件人身份证号码', 2000);
+            } else if (mailDate === "") {
+                Toast('请填写寄件日期', 2000);
+            } else {
+                var newList = {
+                    "mailName": mailName,
+                    "mailSex": Number(mailSex),
+                    "mailWxid": mailWxid,
+                    "mailAddress": mailAddress,
+                    "mailPostCode": mailPostCode,
+                    "bagsNum": Number(bagsNum),
+                    "receiptAddress": receiptAddress,
+                    "receiptPostCode": receiptPostCode,
+                    "receiptTellphone": receiptTellphone,
+                    "receiptIdcard": receiptIdcard,
+                    "receiptName": receiptName,
+                    "mailDate": mailDate
+                }
+                fn(newList);
+            }
+        })
+    })
+
+
+
+    function fn(newList) {
         $.ajax({
             type: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
-            data: JSON.stringify({ waybillNumber: billNumber }),
-            url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+            data: JSON.stringify(newList),
+            url: "http://fedexglobaluggage.com/logistics/service/expressDelivery/mail",
             // url:"/logistics/service/logisticsinfo/getBywaybillNumber",
             success: function (data) {
                 console.log(JSON.stringify(data))
-                var list = data.data;
-                if (list.length !== 0) {
-                    var str = "";
-                    //<span class="signed">'+list[i].recordStatusStr+'</span>
-                    list.sort(function (a, b) {
-                        return Date.parse(b.recordDate) - Date.parse(a.recordDate);//时间最近放最上面
-                    });
-                    for (var i = 0; i < list.length; i++) {
-                        str += '<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">' + (i === 0 ? '<img src="../../img/search/status-transported.png" />' : '<img src="../../img/search/status-transporting.png" />') + '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate + '</i>' : '<span>' + list[i].recordDate + '</span>') + '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr + '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
-                    }
-                    $(".route-list").html(str);
-                } else {
-                    $(".route-list").html('<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>');
+                if(data.message==="成功"){
+                    Toast('提交成功', 2000);
+                }else{
+                    Toast(data.message, 2000); 
                 }
+                
+
             }
 
         })
     }
-   
 
-    function getUrlParam(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
-        var r = window.location.search.substr(1).match(reg);  //匹配目标参数   
-        if (r != null) return unescape(r[2]); return null; //返回参数值  
-    }
+    
+
+//执行一个laydate实例
+laydate.render({
+  elem: '.mailDate' , //指定元素
+  type: 'datetime'
+});
 
 
 </script>

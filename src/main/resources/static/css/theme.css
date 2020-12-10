@@ -176,7 +176,7 @@ ins {
 a,
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
   outline-style: none;
 }
 .cf:after,
@@ -7618,7 +7618,7 @@ body.nav-active {
 .containerSearch .input>input {
   outline: none;
   border: none;
-  padding: 0 80px 0 10px;
+  padding: 0 10px 0 10px;
   margin: 0;
   height: 44px;
   color: #333;
@@ -8459,3 +8459,8 @@ input::-webkit-input-placeholder{
     margin-left: -600px;
 }
 }
+.about-font{
+  font-size:16px;
+  line-height:36px;
+}
+.footer-middle ul li a{color:#fff !important;}
