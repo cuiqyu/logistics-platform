@@ -21,10 +21,10 @@
     <meta content="user-scalable=no" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <noscript>
+    <!-- <noscript>
         <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=801664066698082&ev=PageView&noscript=1" />
-    </noscript>
+    </noscript>-->
 </head>
 <link rel="shortcut icon" href="../img/newfavicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="../css/theme.css">
@@ -34,51 +34,54 @@
 <script src="../js/libs/jquery-1.11.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
+<script src="../js/toast.js"></script>
 
 <body style="background-color: #fff">
-        <header class="header">
-            <section style="background-color: #fff">
-                <div class="container" style="padding-left: 0;padding-right: 0;">
+    <!--头部文件-->
+    <header class="header">
+        <section style="background-color: #fff">
+            <div class="container" style="padding-left: 0;padding-right: 0;">
 
-                    <h1 class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
-                        <a class="logo">
-                            <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
-                        </a>
-                    </h1>
+                <h1 class="col-lg-2 col-md-2 col-sm-2 col-xs-8">
+                    <a class="logo" href="../html/index.html">
+                        <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
+                    </a>
+                </h1>
 
-                    <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
-                        <div class="pull-left service-type" >
-                            <div id="homePage"><span>首页</span></div>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a><span>寄件流程</span></a></li>
-                                <li value="2"><span>费用时效</span></li>
-                                <li value="3"><span>打包手册</span></li>
-                                <li value="4"><span>马上咨询</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
+                <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
+                    <div class="pull-left service-type">
+                        <div id="homePage"><span>首页</span></div>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><a><span>寄件流程</span></a></li>
+                            <li value="2"><span>费用时效</span></li>
+                            <li value="3"><span>打包手册</span></li>
+                            <li value="4"><span>马上咨询</span></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
 
-                                <li value="2"><span>违禁物品</span></li>
-                                <li value="3"><span>费用时效</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-
-                                <li value="2"><span>中国->美国</span></li>
-                                <li value="3"><span>美国->中国</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type" >
+                            <li value="2"><span>违禁物品</span></li>
+                            <li value="3"><span>费用时效</span></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><span>奢侈品专线</span></li>
+                            <li value="2"><span>免税州服务</span></li>
+                            <!--<li value="2"><span>中国->美国</span></li>
+                                <li value="3"><span>美国->中国</span></li>-->
+                        </ul>
+                    </div>
+                    <!--<div class="pull-left service-type">
                             <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
                                     src="../img/service/service_arrow_blue.png" /></div>
                             <ul class="service-option hidden">
@@ -86,7 +89,7 @@
                                 <li value="2"><span>收费明细</span></li>
                             </ul>
                         </div>
-                        <div class="pull-left service-type" >
+                        <div class="pull-left service-type">
                             <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
                                     src="../img/service/service_arrow_blue.png" /></div>
                             <ul class="service-option hidden">
@@ -94,93 +97,106 @@
                                 <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
                                 <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
                             </ul>
-                        </div>
-                        <div class="pull-left service-type" >
-                            <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                                <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                                <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                            </ul>
-                        </div>
+                        </div>-->
+                    <div class="pull-left service-type">
+                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
+                                src="../img/service/service_arrow_blue.png" /></div>
+                        <ul class="service-option hidden">
+                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
+                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
+                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
+                        </ul>
                     </div>
-                    <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
-                            <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                      <span class="sr-only">Toggle navigation</span>
-                                      <span class="icon-bar"></span>
-                                      <span class="icon-bar"></span>
-                                      <span class="icon-bar"></span>
-                                    </button>
-                                    
-                                  </div>
+                    <div class="pull-left service-type">
+                        <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
                     </div>
-                    <div class="hidden-lg  hidden-md col-sm-12 col-xs-12">
+                </div>
+                <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="hidden-lg  hidden-md col-sm-10 col-xs-12">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                  <li><a href="../html/index.html">首页 <span class="sr-only">(current)</span></a></li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">回国行李 <img style="float:right" width="18"
+                        <ul class="nav navbar-nav">
+                            <li><a href="../html/index.html">首页 <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">回国行李 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>寄件流程</a></li>
+                                    <li><a>费用时效</a></li>
+                                    <li><a>打包手册</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">境内快递 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>违禁物品</a></li>
+                                    <li><a>费用时效</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">海淘转运 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>奢侈品专线</a></li>
+                                    <li><a>免税州服务</a></li>
+                                    <!--<li><a>中国->美国</a></li>
+                                        <li><a>美国->中国</a></li>-->
+                                </ul>
+                            </li>
+                            <!--<li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                        aria-expanded="false">免税州服务 <img style="float:right" width="18"
+                                            src="../img/service/service_arrow_blue.png" /></a>
                                     <ul class="dropdown-menu">
-                                      <li><a>寄件流程</a></li>
-                                      <li><a>费用时效</a></li>
-                                      <li><a>打包手册</a></li>
+                                        <li><a>服务介绍</a></li>
+                                        <li><a>收费明细</a></li>
                                     </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">境内快递 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>违禁物品</a></li>
-                                      <li><a>费用时效</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">海淘转运 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>中国->美国</a></li>
-                                      <li><a>美国->中国</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">免税州服务 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>服务介绍</a></li>
-                                      <li><a>收费明细</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                      <li><a>回国快递</a></li>
-                                      <li><a>境内快递</a></li>
-                                      <li><a> 海淘转运</a></li>
-                                     
-                                    </ul>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                        aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
+                                            src="../img/service/service_arrow_blue.png" /></a>
                                     <ul class="dropdown-menu">
                                         <li><a>回国快递</a></li>
                                         <li><a>境内快递</a></li>
                                         <li><a> 海淘转运</a></li>
+
                                     </ul>
-                                  </li>
+                                </li>-->
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
+                                        src="../img/service/service_arrow_blue.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>回国快递</a></li>
+                                    <li><a>境内快递</a></li>
+                                    <li><a> 海淘转运</a></li>
                                 </ul>
-                                </div>
-                            </div>
-                
-
-
+                            </li>
+                            <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-        </header>
+
+
+
+            </div>
+        </section>
+    </header>
     <script>
         //下拉框
         $('.service-type').click(function () {
@@ -189,14 +205,17 @@
         $('.service-content').click(function () {
             $(this).find('.flow-content').toggleClass('hidden')
         })
-        if ((!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        if ((!navigator.userAgent.match(
+                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+            ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
             })
             $('.service-type').mouseleave(function () {
                 $(this).find('.service-option').addClass('hidden');
-                $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow_blue.png");
+                $(this).find('#currentContent').find('img').attr("src",
+                    "../img/service/service_arrow_blue.png");
             })
 
             $('.service-content').hover(function () {
@@ -205,15 +224,16 @@
             $('.service-content').mouseleave(function () {
                 $(this).find('.flow-content').addClass('hidden')
             })
-        }
-        $(function () { 
-        $(".search").click(function(){
-            var  billNumber=$("#search-input").val();
-            console.log(billNumber);
-            fn(billNumber);
 
-        })
-        })
+            //导航跳转
+            $("#homePage").click(function () {
+                window.location.href = "../html/index.html"
+            })
+            $(".aboutUs").click(function () {
+                window.location.href = "../html/about.html"
+            })
+
+        }
     </script>
 
     <div class="service-top"
@@ -238,7 +258,7 @@
                     <div class="service-separate"></div>
                     <div class="routes-wrapper">
                         <div class="route-list ">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -254,104 +274,123 @@
 
     </article>
     <footer class="footer">
-            <section class="container" id="footerContainer">
-                <div>
-                    <div id="guideList" class="guide-list">
-                        <div class="clearfix row">
-                            <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
-                                <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
-    
-                            </div>
-                            <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
-                                <ul>
-                                    <li><a href="../html/about.html">关于我们</a></li>
-                                    <li>代理招募</li>
-                                    <li>隐私协议</li>
-                                    <li>服务细则</li>
-                                    <li>联系客服</li>
-                                </ul>
-                                <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
-                                <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
-                            </div>
-                            <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
-                                <div class="item col-lg-6 col-md-6 col-xs-7">
-                                    <h3>西游寄客服专线 </h3>
-                                    <h2>718-406-5453</h2>
-                                    <h4>美东时间周一~周五</h4>
-                                    <h4> 11:00 a.m ~ 5:00 p.m</h4>
-                                </div>
-    
-                                <div class="item col-lg-3 col-md-6 col-xs-2">
-                                    <div style="margin-right:5px">
-                                        <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                    </div>
-                                    <span style="padding-top:10px;">中国客服</span>
-                                </div>
-                                <div class="item col-lg-3 col-md-6 col-xs-2">
-                                    <div style="margin-left:5px">
-                                        <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码" title="西游寄微信客服二维码" />
-                                    </div>
-                                    <span style="padding-top:10px;">中国客服</span>
-                                </div>
-                            </div>
-    
+        <section class="container" id="footerContainer">
+            <div>
+                <div id="guideList" class="guide-list">
+                    <div class="clearfix row">
+                        <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
+                            <a href="../html/index.html"> <img src="../img/newlogo1.png" class="img-fluid"
+                                    alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" /></a>
+
                         </div>
-    
+                        <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
+                            <ul>
+                                <li><a href="../html/about.html">公司简介</a></li>
+                                <li><a href="../html/about.html">合作伙伴</a></li>
+                                <li>隐私协议</li>
+                                <li>服务细则</li>
+                                <li>联系客服</li>
+                            </ul>
+                            <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
+                            <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
+                        </div>
+                        <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
+                            <div class="item col-lg-6 col-md-6 col-xs-7">
+                                <h3>西游寄客服专线 </h3>
+                                <h2>718-406-5453</h2>
+                                <h4>美东时间周一~周五</h4>
+                                <h4> 11:00 a.m ~ 5:00 p.m</h4>
+                            </div>
+
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
+                                <div style="margin-right:5px">
+                                    <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
+                                </div>
+                                <span style="padding-top:10px;">中国客服</span>
+                            </div>
+                            <div class="item col-lg-3 col-md-6 col-xs-2">
+                                <div style="margin-left:5px">
+                                    <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
+                                </div>
+                                <span style="padding-top:10px;">中国客服</span>
+                            </div>
+                        </div>
+
                     </div>
-    
+
                 </div>
-            </section>
-        </footer>
+
+            </div>
+        </section>
+    </footer>
 </body>
 <script type="text/javascript">
-function fn(billNumber){
-    $.ajax({
-                type:'post',
-                headers: {
-                 'Content-Type': 'application/json'
-                  },
-            data: JSON.stringify({waybillNumber: billNumber}),
-               url:"http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
-               //url:"/logistics/service/logisticsinfo/getBywaybillNumber",
-                success:function(data){
-                    console.log(JSON.stringify(data)) 
-                    var list=data.data;  
-                    if(list.length!==0){
-                        var str="";
-                        //<span class="signed">'+list[i].recordStatusStr+'</span>
-                        list.sort(function(a,b){
-                         return Date.parse(b.recordDate) - Date.parse(a.recordDate);//时间最近放最上面
-                        });
-                        for(var i=0;i<list.length;i++){
-                            str+='<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">'+(i===0?'<img src="../img/search/status-transported.png" />':'<img src="../img/search/status-transporting.png" />')+'</li><li class="route-date-time">'+(i===0?'<i>'+list[i].recordDate+'</i>':'<span>'+list[i].recordDate+'</span>')+'</li><li class="route-desc">'+(i===0?'<i>'+list[i].recordStatusStr+'</i>':'<span>'+list[i].recordStatusStr+'</span>')+'</li></ul>'; 
-                        }
-                        $(".route-list").html(str);
-                    }else{
-                        $(".route-list").html('<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'); 
-                    }   
-                }
-                
-        })
-}
     $(function () {
-        $("#homePage").click(function(){
-                window.location.href = "../html/index.html"
-            })
-        var waybillCodes=decodeURI(getUrlParam("waybillCodes"));
+        $(".search").click(function () {
+            var billNumber = $("#search-input").val();
+            console.log(billNumber);
+            fn(billNumber);
+
+        })
+    })
+
+    function fn(billNumber) {
+        $.ajax({
+            type: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify({
+                waybillNumber: billNumber
+            }),
+            url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+            //url:"/logistics/service/logisticsinfo/getBywaybillNumber",
+            success: function (data) {
+                console.log(JSON.stringify(data))
+                var list = data.data;
+                if (list.length !== 0) {
+                    var str = "";
+                    //<span class="signed">'+list[i].recordStatusStr+'</span>
+                    list.sort(function (a, b) {
+                        return Date.parse(b.recordDate) - Date.parse(a.recordDate); //时间最近放最上面
+                    });
+                    for (var i = 0; i < list.length; i++) {
+                        str +=
+                            '<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">' +
+                            (i === 0 ? '<img src="../img/search/status-transported.png" />' :
+                                '<img src="../img/search/status-transporting.png" />') +
+                            '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate +
+                                '</i>' : '<span>' + list[i].recordDate + '</span>') +
+                            '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr +
+                                '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
+                    }
+                    $(".route-list").html(str);
+                } else {
+                    $(".route-list").html(
+                        '<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'
+                    );
+                }
+            }
+
+        })
+    }
+    $(function () {
+        var waybillCodes = decodeURI(getUrlParam("waybillCodes"));
         console.log(waybillCodes);
         $("#search-input").val(waybillCodes);
         fn(waybillCodes);
     })
-    
-
-    function getUrlParam(name) {   
-             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
-            // var r = window.location.search.substr(1).match(reg);  //匹配目标参数   
-            var r=encodeURI(window.location.search).substr(1).match(reg);
-             if (r != null) return unescape(r[2]); return null; //返回参数值  
-        } 
 
 
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+        // var r = window.location.search.substr(1).match(reg);  //匹配目标参数   
+        var r = encodeURI(window.location.search).substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值  
+    }
 </script>
 
 

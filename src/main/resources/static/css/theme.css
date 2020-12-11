@@ -404,7 +404,7 @@ a.transition:hover {
   font-size: 16px;
   position: relative;
   height: 81px;
-  width: 130px;
+  width: 129px;
   line-height: 81px;
   text-align: center;
   /*background-color: #284287;
@@ -8445,6 +8445,7 @@ input::-webkit-input-placeholder{
 .routes-wrapper .route-list .route .route-desc {
   max-width: 40%;
 }
+
   
 }
 
@@ -8464,3 +8465,11 @@ input::-webkit-input-placeholder{
   line-height:36px;
 }
 .footer-middle ul li a{color:#fff !important;}
+@media (width: 768px){
+  .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 0 !important;
+}
+
+}
