@@ -67,7 +67,7 @@
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
 
-                            <li value="2"><span>违禁物品</span></li>
+                            <li value="2" class="forbidden"><span>违禁物品</span></li>
                             <li value="3"><span>费用时效</span></li>
                         </ul>
                     </div>
@@ -99,13 +99,7 @@
                             </ul>
                         </div>-->
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                        </ul>
+                        <div id="currentContent"><span>宠物回国</span></div>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
@@ -142,7 +136,7 @@
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>违禁物品</a></li>
+                                    <li><a href="../html/contraband.html">违禁物品</a></li>
                                     <li><a>费用时效</a></li>
                                 </ul>
                             </li>
@@ -179,13 +173,7 @@
                                 </li>-->
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>回国快递</a></li>
-                                    <li><a>境内快递</a></li>
-                                    <li><a> 海淘转运</a></li>
-                                </ul>
+                                    aria-expanded="false">宠物回国 </a>
                             </li>
                             <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
                         </ul>
@@ -206,8 +194,8 @@
             $(this).find('.flow-content').toggleClass('hidden')
         })
         if ((!navigator.userAgent.match(
-                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-            ))) {
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
@@ -233,6 +221,10 @@
             $(".aboutUs").click(function () {
                 window.location.href = "../html/about.html"
             })
+            $(".forbidden").click(function () {
+                window.location.href = "../html/contraband.html"
+            })
+
             $(".search").click(function () {
                 var billNumber = $("#search-input").val();
                 console.log(billNumber);
@@ -261,11 +253,13 @@
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">美中海淘</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">中美转运</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">奢侈品专线</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">免税州代收</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">宠物运输</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">必看 Q&A</li>
                         </ul>
 
                         <div class="boxBig hidden-xs hidden-sm">
+                            <!--行李回国-->
                             <div class="boxContent currentBox">
                                 <table class="table1">
                                     <tr>
@@ -295,7 +289,7 @@
                                 <div class="tips">
                                     <h3>快递计费说明：</h3>
                                     <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
-                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inc) ÷139</p>
+                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
                                     <p><em></em>1cm=0.39 inch</p>
                                     <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
                                     <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
@@ -307,7 +301,7 @@
                                     <p><em></em>需要更耐心的等待。希望大家共同配合，互相体谅。</p>
                                 </div>
                             </div>
-
+                            <!--境内快递-->
                             <div class="boxContent">
                                 <table class="table1">
                                     <tr>
@@ -329,7 +323,7 @@
                                     <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
                                 </div>
                             </div>
-
+                           <!--文件速递-->
                             <div class="boxContent">
                                 <table class="table2">
                                     <tr>
@@ -360,7 +354,7 @@
 
                                 </div>
                             </div>
-
+                            <!--美中海淘-->
                             <div class="boxContent">
                                 <table class="table2">
                                     <tr>
@@ -411,7 +405,7 @@
                                     <p>8.普通货物免费保险=运费价格*3，最高理赔$100</p>
                                 </div>
                             </div>
-
+                             <!--中美转运-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -435,15 +429,13 @@
                                     <p>2.重量达18kg即可起运</p>
                                     <p>3.支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
                                     <p>4.下单前联系客服领取仓库地址，每周二/三视天气情况发船</p>
-                                    <p>5.
-                                        可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。<em></em>带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
+                                    <p>5.可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
                                         RMB/票，木质商检400 RMB/票。</p>
                                     <p>6. 拒收产品类：液体、胶体类不可大于350g（100ml）/支（瓶）； 纯电池类，易燃易爆品，E 烟斗，水烟斗均属于不可邮寄范畴。</p>
 
                                 </div>
                             </div>
-
-
+                            <!--奢侈品专线-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -467,6 +459,53 @@
                                 </div>
                             </div>
 
+
+                            <!--免税州代收-->
+                            <div class="boxContent">
+                                <table class="table3">
+                                    <tr>
+                                        <td>产品类型</td>
+                                        <td>价格</td>
+                                    </tr>
+                                    <tr>
+                                        <td>衣物/护肤品/保健品/二线包类/普通表</td>
+                                        <td><b>$1.5/磅</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机/IPAD</td>
+                                        <td><b>$20/件</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>电脑/大型电器：（15磅以下）</td>
+                                        <td><b>$40/件</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>一线奢侈品</td>
+                                        <td><b>$6/磅</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高价表（购买价>$800）</td>
+                                        <td><b>$30/只</b></td>
+                                    </tr>
+                                </table>
+                                <h5></h5>
+                                <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                <div class="tips">
+                                    <h3>快递计费说明：</h3>
+                                    <p>1.最低收费标准：护肤品/鞋/衣服/二线包类/普通表类按重量收费, 最低收费为6美元。即多个订单入库后，合并重量计费，不足4磅按4磅计算；
+                                        一线奢侈品不足4磅按4磅计算，即最低消费$24</p>
+                                    <p>2. 需要SIGNATURE的贵重物品名字写: Pingwei Wang</p>
+                                    <p>3. 支付方式：接受人民币（支付宝微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                    <p>4. 免税州寄件前联系客服索要仓库地址，订单发运后将对应的TRACKING NUMBER发给客服；</p>
+                                    <p>5. 免税州代收件每周五转运回纽约法拉盛，可自行前往提取；送件费$20/箱，需提前预约。</p>
+                                    <p>6. 外州客人可以通过境内邮寄的方式来收取货物，费用参考境内运费标准。</p>
+                                    <p>7. 海淘客户可以使用我们的中美海淘渠道来寄件，具体费用参考海淘收费标准。</p>
+                                    <p>8. 需要代下单的客户可以联系客服，代下费$5/单</p>
+
+                                </div>
+                            </div>
+                           
+                            <!--宠物运输-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -497,7 +536,7 @@
                                 </div>
                             </div>
 
-
+                            <!--必看Q&A-->
                             <div class="boxContent">
                                 <div class="Q-container">
                                     <h3><b>1.</b><img src="../img/search/Q.png" /><i>为什么有些公司没有取件费?</i></h3>
@@ -578,7 +617,7 @@
                                             <div class="tips">
                                                 <h3>快递计费说明：</h3>
                                                 <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
-                                                <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inc) ÷139</p>
+                                                <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
                                                 <p><em></em>1cm=0.39 inch</p>
                                                 <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
                                                 <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
@@ -761,8 +800,7 @@
                                             <p>2.重量达18kg即可起运</p>
                                             <p>3.支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
                                             <p>4.下单前联系客服领取仓库地址，每周二/三视天气情况发船</p>
-                                            <p>5.
-                                                可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。<em></em>带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
+                                            <p>5.可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
                                                 RMB/票，木质商检400 RMB/票。</p>
                                             <p>6. 拒收产品类：液体、胶体类不可大于350g（100ml）/支（瓶）； 纯电池类，易燃易爆品，E 烟斗，水烟斗均属于不可邮寄范畴。</p>
 
@@ -796,10 +834,62 @@
                                         <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
                                         <div class="tips">
                                             <h3>备注：</h3>
-                                            <p>1.运费计算举例： 爱马仕包包保价3000美金，运费=3000*10%=300美金，如若丢失，理赔3000美金；</p>
-                                            <p><em style="width:128px"></em>保价2000美金，运费=2000*10%=200美金，如若丢失，理赔3000美金；
+                                            <p>1.运费计算举例： 爱马仕包包保价3000美金，运费=3000*10%=300美金，如若丢失，理赔3000美金；
+                                            保价2000美金，运费=2000*10%=200美金，如若丢失，理赔3000美金；
                                             </p>
                                             <p>2.以上收费标准针对于4LB以内的货物，超过4LB的货物额外征收$8/磅的运费。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseNight">
+                                            免税州代收
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseNight" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table3">
+                                            <tr>
+                                                <td>产品类型</td>
+                                                <td>价格</td>
+                                            </tr>
+                                            <tr>
+                                                <td>衣物/护肤品/保健品/二线包类/普通表</td>
+                                                <td><b>$1.5/磅</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>手机/IPAD</td>
+                                                <td><b>$20/件</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>电脑/大型电器：（15磅以下）</td>
+                                                <td><b>$40/件</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>一线奢侈品 </td>
+                                                <td><b> $6/磅</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>高价表（购买价>$800）</td>
+                                                <td><b>$30/只</b></td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>快递计费说明：</h3>
+                                            <p>1.最低收费标准：护肤品/鞋/衣服/二线包类/普通表类按重量收费, 最低收费为6美元。即多个订单入库后，合并重量计费，不足4磅按4磅计算； 一线奢侈品不足4磅按4磅计算，即最低消费$24</p>
+                                            <p>2. 需要SIGNATURE的贵重物品名字写: Pingwei Wang</p>
+                                            <p>3. 支付方式：接受人民币（支付宝微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                            <p>4. 免税州寄件前联系客服索要仓库地址，订单发运后将对应的TRACKING NUMBER发给客服；</p>
+                                            <p>5. 免税州代收件每周五转运回纽约法拉盛，可自行前往提取；送件费$20/箱，需提前预约。</p>
+                                            <p>6. 外州客人可以通过境内邮寄的方式来收取货物，费用参考境内运费标准。</p>
+                                            <p>7. 海淘客户可以使用我们的中美海淘渠道来寄件，具体费用参考海淘收费标准。</p>
+                                            <p>8. 需要代下单的客户可以联系客服，代下费$5/单</p>
                                         </div>
                                     </div>
                                 </div>

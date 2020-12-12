@@ -67,7 +67,7 @@
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
 
-                            <li value="2"><span>违禁物品</span></li>
+                            <li value="2" class="forbidden"><span>违禁物品</span></li>
                             <li value="3"><span>费用时效</span></li>
                         </ul>
                     </div>
@@ -99,13 +99,7 @@
                             </ul>
                         </div>-->
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                        </ul>
+                        <div id="currentContent"><span>宠物回国</span></div>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
@@ -142,7 +136,7 @@
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>违禁物品</a></li>
+                                    <li><a href="../html/contraband.html">违禁物品</a></li>
                                     <li><a>费用时效</a></li>
                                 </ul>
                             </li>
@@ -179,13 +173,7 @@
                                 </li>-->
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>回国快递</a></li>
-                                    <li><a>境内快递</a></li>
-                                    <li><a> 海淘转运</a></li>
-                                </ul>
+                                    aria-expanded="false">宠物回国 </a>
                             </li>
                             <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
                         </ul>
@@ -232,12 +220,15 @@
             $(".aboutUs").click(function () {
                 window.location.href = "../html/about.html"
             })
+            $(".forbidden").click(function () {
+                window.location.href = "../html/contraband.html"
+            })
 
         }
     </script>
     <section class="about">
+        <img src="../img/1.png" class="img-fluid" />
         <div class="container">
-            <img src="../img/1.png" class="img-fluid" />
             <div class="aboutHeader text-center">
                 <h3>公司简介</h3>
                 <div class="service-separate"></div>
@@ -253,7 +244,7 @@
                 <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 text-center">
                     <img src="../img/2.jpg" class="img-fluid" alt="西游寄文章图1" />
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12" style="margin:20px 0">
                     截止2020年10月30日，西游寄物流集结了来自Harward, MIT, Cornel, PSU,CU, GWU,
                     NYU，七所高校的跨专业人才，建立了首个以回国行李，（美国）境内快递，宠物运输，奢侈品专线，中美海淘，免税州代收，六大网络为一体的物流平台。凭借这六大渠道在全球范围内的覆盖以及大数据、云计算的应用，西游寄物流打造了一个从客户端信息录入，
                     快件出库入库、再到运输配送各个环节无所不包，综合效率最优、算法最科学的智能物流服务系统。
@@ -261,20 +252,20 @@
             </div>
 
             <div class="news-detail-wrap row about-font">
-                <div class="col-lg-7 col-md-6 hidden-xs  hidden-sm">
+                <div class="col-lg-7 col-md-6 hidden-xs  hidden-sm" style="margin:20px 0">
                     同时，在法务团队的不懈努力下，我们成为全美首家也是唯一一家“持证上岗”（动植物进出口许可证），拥有合法宠物运输途径的物流公司。2020年数度发生的由于不良中介导致的宠物惨案令我们痛心，在进行多番行业调研，和中国海关的谈判沟通，我们最终开通了这条特殊渠道。另外，我们独家上线单箱理赔$700,
                     最高理赔$3000的免费保险服务。舍公司之利益，开行业之先河，护留学生之周全。比起令人匪夷所思的低价，我们坚信安全可靠的物流端，高额无忧的理赔，才是大家最关心的。
                 </div>
                 <div class="col-lg-5 col-md-6 hidden-xs hidden-sm  text-center">
                     <img src="../img/3.png" class="img-fluid" alt="西游寄文章图2" />
                 </div>
-                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="margin:20px 0">
                     同时，在法务团队的不懈努力下，我们成为全美首家也是唯一一家“持证上岗”（动植物进出口许可证），拥有合法宠物运输途径的物流公司。2020年数度发生的由于不良中介导致的宠物惨案令我们痛心，在进行多番行业调研，和中国海关的谈判沟通，我们最终开通了这条特殊渠道。
                 </div>
                 <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-center">
                     <img src="../img/3.png" class="img-fluid" alt="西游寄文章图2" />
                 </div>
-                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="margin:20px 0">
                     另外，我们独家上线单箱理赔$700,最高理赔$3000的免费保险服务。舍公司之利益，开行业之先河，护留学生之周全。比起令人匪夷所思的低价，我们坚信安全可靠的物流端，高额无忧的理赔，才是大家最关心的。
                 </div>
             </div>
@@ -284,7 +275,7 @@
                 <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 text-center">
                     <img src="../img/4.jpg" class="img-fluid" alt="西游寄文章图3" />
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12" style="margin:20px 0">
                     目前，团队涵括了来自Mckinsey, Facebook, Amazon, Apple, IBM, GE, Oracle, Dell等各大BIG
                     COMPANY的校友，与西游寄风雨同舟，共同走过了最为艰难的2020年。在不到一年的时间里，我们为10W＋留学生提供了回国行李以及宠物运输服务，对于创建初期，由于人手，经验的匮乏，竞争对手的蓄意打压造成的各种不周到，我们真诚道歉。并将砥砺前行，不以价格战为手段，始终以公开透明的计费，高额无忧的理赔，专注为留学生群体服务。尽心做到：事事有回应，件件有着落。道阻且长，物流领航。荣辱同担，情深意长。
                 </div>

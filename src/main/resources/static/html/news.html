@@ -67,7 +67,7 @@
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
 
-                            <li value="2"><span>违禁物品</span></li>
+                            <li value="2" class="forbidden"><span>违禁物品</span></li>
                             <li value="3"><span>费用时效</span></li>
                         </ul>
                     </div>
@@ -99,13 +99,7 @@
                             </ul>
                         </div>-->
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                        </ul>
+                        <div id="currentContent"><span>宠物回国</span></div>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
@@ -142,7 +136,7 @@
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>违禁物品</a></li>
+                                    <li><a href="../html/contraband.html">违禁物品</a></li>
                                     <li><a>费用时效</a></li>
                                 </ul>
                             </li>
@@ -179,13 +173,7 @@
                                 </li>-->
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>回国快递</a></li>
-                                    <li><a>境内快递</a></li>
-                                    <li><a> 海淘转运</a></li>
-                                </ul>
+                                    aria-expanded="false">宠物回国 </a>
                             </li>
                             <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
                         </ul>
@@ -231,6 +219,9 @@
             })
             $(".aboutUs").click(function () {
                 window.location.href = "../html/about.html"
+            })
+            $(".forbidden").click(function () {
+                window.location.href = "../html/contraband.html"
             })
 
         }

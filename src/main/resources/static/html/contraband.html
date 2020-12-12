@@ -50,7 +50,7 @@
 
                 <div class="hidden-xs  hidden-sm col-lg-10 col-md-10">
                     <div class="pull-left service-type">
-                        <div id="homePage" class="currentBorder"><span>首页</span></div>
+                        <div id="homePage"><span>首页</span></div>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
@@ -194,8 +194,8 @@
             $(this).find('.flow-content').toggleClass('hidden')
         })
         if ((!navigator.userAgent.match(
-                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-            ))) {
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
@@ -226,222 +226,51 @@
 
         }
     </script>
-    <!--轮播和导航条-->
-    <div style="position: relative;">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../img/banner.jpg" class="img-fluid" /></div>
-                <div class="swiper-slide"><img src="../img/banner2.jpg" class="img-fluid" /></div>
-
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <script>
-            var mySwiper = new Swiper('.swiper-container', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                autoplay: {
-                    disableOnInteraction: false
-                }
-            })
-        </script>
-        <div class="waybill-query">
-            <div class="waybill-query-content">
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="input">
-                        <input type="text" placeholder="请您输入查询运单号" autocomplete="off" id="search-input">
-                        <div class="waybill-query-btn-container" style="display: none;">
-                            <div class="waybill-query-btn"><a href="../html/search/search.html"></a>查询</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-8 col-md-8 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/free.html"><img
-                                    src="../img/icon1.png" class="img-fluid" />运费&时效</a></div>
-                        <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/free.html"><img
-                                    src="../img/icon3.png" class="img-fluid" />保险&理赔</a></div>
-                        <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/contraband.html"><img
-                                    src="../img/icon2.png" class="img-fluid" />禁运物品</a></div>
-                        <div class="col-lg-3 col-md-3 col-xs-6 other-query"><a href="../html/onPlaceorder.html"><img
-                                    src="../img/icon4.png" class="img-fluid" />立即寄件</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        $(function () {
-            //搜索框点击弹出搜索按钮
-            $(".waybill-query-content .input").click(function () {
-                $(".waybill-query-btn-container").show();
-            })
-            //点击搜索判断跳转
-            $(".waybill-query-btn").click(function () {
-                var waybillCodes = $(".waybill-query-content .input input").val();
-                if (waybillCodes === "") {
-                    Toast('请填写快递单号', 2000);
-                } else {
-                    window.location.href = "../html/search.html?waybillCodes=" + waybillCodes;
-                }
-
-            })
-
-
-        })
-    </script>
-    <div class="container">
-        <div class="row core-business-title">
-            <h2>核心业务</h2>
-            <h3>高校精英强强联手打造</h3>
-            <h3>以留学生利益为核心物流一体化服务</h3>
-        </div>
-        <div class="row core-businessDiv">
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"> <img src="../img/img2.png" class="img-fluid center-block"  /><span>回国行李</span></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><img src="../img/img3.png" class="img-fluid center-block"  /><span>境内搬家</span></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><img src="../img/img4.png" class="img-fluid center-block" /><span>宠物回国</span></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><img src="../img/img5.png" class="img-fluid center-block" /><span>奢侈品专线</span></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><img src="../img/img6.png" class="img-fluid center-block" /><span>中美转运</span></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><img src="../img/img7.png" class="img-fluid center-block" /><span> 免税州服务</span></div>
-            </div>
-
-        </div>
-    </div>
-    <div class="cover-container">
-        <img src="../img/ruler-cover.png" />
-    </div>
-
-
-    <div class="container">
-        <div class="row core-business-title">
-            <h2>西游寄全球物流</h2>
-            <h3>全球首家留学生自创物流平台</h3>
-            <h3>各大校友跨刀合作 各专多长</h3>
-        </div>
-        <div class="row solution-wrapper">
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item ">
-                <div class="solution-item-img">
-                    <img src="../img/company1.jpg" class="img-fluid" />
-                </div>
-                <div class="solution-item-text">
-                    <h2>Mckinsey&Company</h2>
-                    <h3>联手Fedex, UPS, USPS, 京东物流和顺丰五家国际快递巨头，
-                        缔造留学生专享的低廉，高效物流渠道</h3>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item">
-                <div class="solution-item-img">
-                    <img src="../img/company2.jpg" class="img-fluid" />
-                </div>
-                <div class="solution-item-text">
-                    <h2>Harvard Law School & Minnesota Law School & 中国政法大学</h2>
-                    <h3>法律顾问。跨境物流涉及海关法，商检法，知识产权法等各项法律。来自中美两国法律专业的校友发挥专业特长，以合法方式将风险和税费合理最低化。</h3>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 solution-item ">
-                <div class="solution-item-img">
-                    <img src="../img/company3.png" class="img-fluid" />
-                </div>
-                <div class="solution-item-text">
-                    <h2>Facebook</h2>
-                    <h3>技术Backup.行李邮寄过程中客户个人信息极易被泄露盗取。四位来自FACABOOK校友，从前端到后台实时监护，保障每一个用户的隐私安全。</h3>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="cover-container">
-        <img src="../img/cover1.png " class="img-fluid" />
-    </div>
-
-    <div class="news-container ">
-        <div class="container">
-            <div class="row core-business-title">
-                <h2>公告资讯</h2>
-
-            </div>
+    <section class="about">
+        <img src="../img/banner3.png" class="img-fluid" />
+        <div class="container" style="margin:30px auto;">
             <div class="row">
-                <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                    <a class="news-item-box" href="../html/news.html?contentId=0">
-                        <h2>紧急新闻</h2>
-                        <p class="abstract">两大行李快递公司Towhere及Luggageasy老友寄，其共用仓库的负责人HAO
-                            LIU确诊新冠肺炎。Fedex中国已收到通告，将对两家快递公司的行李进行严查消毒。也希望通过这两个公司进行邮寄的同学在收到行李后做好防护措施。（注：Towhere又以Fedex行李快递总代理自称。公司真实注册名字为：）
-                        </p>
-                        <p class="date">西游寄</p>
-                        <p class="date">12/01/2020</p>
-                    </a>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                    <div class="plan-item">
+                        <img src="../img/Contraband1.png" class="img-fluid" />
+                        <h4>食品类</h4>
+                        <p>1）人参、花旗参、海参、猫粮、狗粮、肉类制品、奶制品、蛋类制品等动植物产品</p>
+                        <p>2）非零售包装的产品（如：茶叶、杏干、药、咖啡豆等）</p>
+                        <p>3）植物类（烟叶、种子类如：大米、豆类等）</p>
+                        <p>4）处方药及非处方药（胃药、感冒灵、连花清瘟、中草药等）</p>
+                    </div>
                 </div>
-                <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                    <a class="news-item-box" href="../html/news.html?contentId=1">
-                        <h2>华北地区申报政策更新</h2>
-                        <p class="abstract">
-                            北京海关总署最新通知：由于疫情的有效缓解，华北地区同学在邮寄行李回国时，需要邮寄护照原件来核实身份。之前临时颁发的疫情期间宽容性政策（无需护照原件）取消。华南及华东地区同学依然可以凭借个人证件扫描件进行清关事宜。
-                        </p>
-                        <p class="date">西游寄</p>
-                        <p class="date">10/01/2020</p>
-                    </a>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                    <div class="plan-item">
+                        <img src="../img/Contraband2.png" class="img-fluid" />
+                        <h4>管制类</h4>
+                        <p>武器、弹药、管制刀具、仿真武器、打火机、易燃易爆物品、放射性元素、烈性毒药、毒品、生化制品&传染性物品、专业的实验仪器、设备等</p>
+                    </div>
                 </div>
-
-                <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                    <a class="news-item-box" href="../html/news.html?contentId=2">
-                        <h2>加拿大行李快递</h2>
-                        <p class="abstract">西游寄加拿大回国行李路线正式开通上线。同时加拿大地区的宠物回国事宜也顺利开展。所有的邮寄流程和美国一致，大家可以加官方客服进行咨询了解。 </p>
-                        <p class="date">西游寄</p>
-                        <p class="date">10/30/2020</p>
-                    </a>
+                <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 ">
+                    <div class="plan-item">
+                        <img src="../img/Contraband3.png" class="img-fluid" />
+                        <h4>特殊类</h4>
+                        <p>1）土壤、标本、黄金（金砖、金条）、活体动物及昆虫（如：蚂蚁、观赏鱼等）</p>
+                        <p>2）超过20本以上图书、危害国家安全和社会政治稳定以及淫秽的出版物、宣传品、印刷品、妨害公共卫生的物品</p>
+                        <p>3）货币（纸币、硬币）</p>
+                    </div>
                 </div>
-                <div class="news-item col-lg-6 col-md-6 col-xs-12">
-                    <a class="news-item-box" href="../html/news.html?contentId=3">
-                        <h2>校园代理招募</h2>
-                        <p class="abstract">
-                            作为全美首家留学生自创物流平台，我们热忱邀请各大高校精英加入我们的团队，以更好地向广大留学生提供更为优质的服务。有意向的同学可以发邮件到jewel@fedexglobaluggage.com
-                        </p>
-                        <p class="date">西游寄</p>
-                        <p class="date">12/05/2020</p>
-                    </a>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                    <div class="plan-item">
+                        <img src="../img/Contraband4.png" class="img-fluid" />
+                        <h4>高奢及非个人自用旧物</h4>
+                        <p>1）不能邮寄过量的新物品回国（eg. 十几双新鞋子、十几瓶新化妆品等），全新未拆封物品被查验后可能被缴纳进缉私房或作销毁处理，影响清关时效并产生额外费用，建议走海淘回国专线。</p>
+                        <p>2）高奢物品基本会被海关缴税。在邮寄时建议进行多箱混装，并且与清关组客服提前说明，以便我们技巧性申报降低税费；或建议直接走奢侈品包税专线。</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--尾部-->
     <footer class="footer">
         <section class="container" id="footerContainer">
             <div>
@@ -494,6 +323,13 @@
             </div>
         </section>
     </footer>
+
+
+
+
+
 </body>
+
+
 
 </html>

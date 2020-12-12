@@ -7974,7 +7974,7 @@ body.nav-active {
 .title6{font-size:20px;padding:10px;color:#fff;}
 @media (min-width: 992px){
   .col-md-1-5{
-    width: 12.5% !important;
+    width: 11.1% !important;
 }
 .col-md-2-5{
   width: 20% !important;
@@ -7983,7 +7983,7 @@ body.nav-active {
 }
 @media (min-width: 1200px){
   .col-lg-1-5{
-    width: 12.5% !important;
+    width: 11.1% !important;
 }
 .col-lg-2-5{
   width: 20% !important;
@@ -8465,6 +8465,32 @@ input::-webkit-input-placeholder{
   line-height:36px;
 }
 .footer-middle ul li a{color:#fff !important;}
+.plan-item{
+  height: 400px;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 8px 0 #dbdbdb;
+  box-shadow: 0 2px 8px 0 #dbdbdb;
+  margin:15px 0;
+}
+.plan-item h4{
+  font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin: 0;
+    padding: 25px 20px 0;
+    line-height: 25px;
+    font-family: PingFangSC-Medium;
+    font-weight: 550;
+}
+.plan-item p{
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+  padding: 10px 20px 0;
+  line-height: 20px;
+}
 @media (width: 768px){
   .nav>li>a {
     position: relative;
@@ -8472,4 +8498,7 @@ input::-webkit-input-placeholder{
     padding: 10px 0 !important;
 }
 
+}
+@media (max-width: 992px){
+  
 }
