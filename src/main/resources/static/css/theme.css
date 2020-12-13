@@ -8369,6 +8369,35 @@ body.nav-active {
 .newsHeader p{color: #888;}
 .newsHeader b{font-weight: normal;}
 .news-detail-wrap {margin:60px 0;color:#666;line-height:24px;}
+.insur-indent{
+  text-indent: 2em;
+}
+.insure-item p a{
+  color:#c0463f !important;
+  text-decoration:underline !important;
+  cursor: pointer;
+}
+.insure-item p em{
+  width:70px;display:inline-block;
+}
+.insure-hidden{
+  display: none;;
+}
+.insure-show{
+  display: block;
+}
+.insure-item h3{color:#000;}
+.insure-item h4{color:#f93b30;}
+.insure-item .news-content{word-break:break-all;}
+.insure-item .news-content a{color:#63c8fc !important;}
+.insure-list ul li{list-style-type:disc !important; color:#000!important;}
+.insure-list ul{
+  
+  width:90%;
+}
+.insure-list{padding-left:20px;}
+.insure-list ul .current-insure a{color:#c82f2a !important;}
+
 @media (max-width: 992px){
   .newsContent{min-height:400px;}
   .core-business-item{
@@ -8459,6 +8488,10 @@ input::-webkit-input-placeholder{
     left: 50%;
     margin-left: -600px;
 }
+.insure-list,.insure-item {
+  -webkit-box-shadow: 0 2px 8px 0 #dbdbdb;
+  box-shadow: 0 2px 8px 0 #dbdbdb;
+}
 }
 .about-font{
   font-size:16px;
@@ -8498,7 +8531,4 @@ input::-webkit-input-placeholder{
     padding: 10px 0 !important;
 }
 
-}
-@media (max-width: 992px){
-  
 }
