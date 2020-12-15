@@ -37,6 +37,14 @@
 <script src="../js/toast.js"></script>
 
 <body style="background-color: #fff">
+    <div class="topbar" style="background:#302e3d;padding:10px 0;color:#fff;">
+        <div class="container">
+            <span style="margin-left: 5px">当前浏览国家：</span>
+            <img width="23px" height="15px" style="margin-bottom: 1px" class="mr-10" src="../img/guide_ca.png" />
+            <span class="mr-10">美国</span>
+            <a class="switch-country" href="../html/country.html">切换</a>
+        </div>
+    </div>
     <!--头部文件-->
     <header class="header">
         <section style="background-color: #fff">
@@ -56,10 +64,10 @@
                         <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-                            <li value="1"><a><span>寄件流程</span></a></li>
-                            <li value="2"><span>费用时效</span></li>
-                            <li value="3"><span>打包手册</span></li>
-                            <li value="4"><span>马上咨询</span></li>
+                            <li value="1" class="process"><a><span>寄件流程</span></a></li>
+                            <li value="2" class="free"><span>费用时效</span></li>
+                            <li value="3" class="package"><span>打包手册</span></li>
+                            <li value="4" class="consult"><span>马上咨询</span></li>
                         </ul>
                     </div>
                     <div class="pull-left service-type">
@@ -68,38 +76,19 @@
                         <ul class="service-option hidden">
 
                             <li value="2" class="forbidden"><span>违禁物品</span></li>
-                            <li value="3"><span>费用时效</span></li>
+                            <li value="3" class="free"><span>费用时效</span></li>
                         </ul>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-                            <li value="1"><span>奢侈品专线</span></li>
-                            <li value="2"><span>免税州服务</span></li>
-                            <!--<li value="2"><span>中国->美国</span></li>
-                                <li value="3"><span>美国->中国</span></li>-->
+                            <li value="1" class="free"><span>奢侈品专线</span></li>
+                            <li value="2" class="free"><span>免税州服务</span></li>
                         </ul>
                     </div>
-                    <!--<div class="pull-left service-type">
-                            <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><span>服务介绍</span></li>
-                                <li value="2"><span>收费明细</span></li>
-                            </ul>
-                        </div>
-                        <div class="pull-left service-type">
-                            <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
-                                    src="../img/service/service_arrow_blue.png" /></div>
-                            <ul class="service-option hidden">
-                                <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                                <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                                <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                            </ul>
-                        </div>-->
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>宠物回国</span></div>
+                        <div id="currentContent" class="free"><span>宠物回国</span></div>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
@@ -126,9 +115,9 @@
                                     aria-expanded="false">回国行李 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>寄件流程</a></li>
-                                    <li><a>费用时效</a></li>
-                                    <li><a>打包手册</a></li>
+                                    <li><a href="../html/process.html">寄件流程</a></li>
+                                    <li><a href="../html/free.html">费用时效</a></li>
+                                    <li><a href="../html/package.html">打包手册</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -137,7 +126,7 @@
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../html/contraband.html">违禁物品</a></li>
-                                    <li><a>费用时效</a></li>
+                                    <li><a href="../html/free.html">费用时效</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -145,35 +134,12 @@
                                     aria-expanded="false">海淘转运 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>奢侈品专线</a></li>
-                                    <li><a>免税州服务</a></li>
-                                    <!--<li><a>中国->美国</a></li>
-                                        <li><a>美国->中国</a></li>-->
+                                    <li><a href="../html/free.html">奢侈品专线</a></li>
+                                    <li><a href="../html/free.html">免税州服务</a></li>
                                 </ul>
                             </li>
-                            <!--<li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                        aria-expanded="false">免税州服务 <img style="float:right" width="18"
-                                            src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a>服务介绍</a></li>
-                                        <li><a>收费明细</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                        aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
-                                            src="../img/service/service_arrow_blue.png" /></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a>回国快递</a></li>
-                                        <li><a>境内快递</a></li>
-                                        <li><a> 海淘转运</a></li>
-
-                                    </ul>
-                                </li>-->
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">宠物回国 </a>
+                                <a href="../html/free.html">宠物回国 </a>
                             </li>
                             <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
                         </ul>
@@ -217,11 +183,23 @@
             $("#homePage").click(function () {
                 window.location.href = "../html/index.html"
             })
-            $(".aboutUs").click(function () {
-                window.location.href = "../html/about.html"
+            $(".process").click(function () {
+                window.location.href = "../html/process.html"
+            })
+            $(".free").click(function () {
+                window.location.href = "../html/free.html"
+            })
+            $(".package").click(function () {
+                window.location.href = "../html/package.html"
+            })
+            $(".consult").click(function () {
+                window.location.href = "../html/consult.html"
             })
             $(".forbidden").click(function () {
                 window.location.href = "../html/contraband.html"
+            })
+            $(".aboutUs").click(function () {
+                window.location.href = "../html/about.html"
             })
 
         }
@@ -382,6 +360,23 @@
         if (r != null) return unescape(r[2]);
         return null; //返回参数值  
     }
+</script>
+<script>
+    $(function () {
+        if (localStorage.country) {
+            var country = localStorage.getItem("country");
+            if (country === "us") {
+                $(".topbar .mr-10").html("美国");
+                $(".topbar").find('img').attr("src", "../img/guide_us.png");
+            } else {
+                $(".topbar .mr-10").html("加拿大");
+                $(".topbar").find('img').attr("src", "../img/guide_ca.png");
+            }
+        } else {
+            $(".topbar .mr-10").html("美国");
+            $(".topbar").find('img').attr("src", "../img/guide_us.png");
+        }
+    })
 </script>
 
 
