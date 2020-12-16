@@ -10383,6 +10383,9 @@ body.nav-active {
 }
 
 @media (max-width: 992px) {
+  .package-item{
+    margin-bottom:30px;
+  }
   .newsContent {
     min-height: 400px;
   }
@@ -10586,6 +10589,9 @@ body.nav-active {
 }
 
 @media (min-width: 1200px) {
+  .col-lg-2-5{
+    width:20%;
+  }
   .waybill-query {
     width: 1200px;
     /* margin: 0px auto; */
@@ -10600,6 +10606,9 @@ body.nav-active {
   .insure-item {
     -webkit-box-shadow: 0 2px 8px 0 #dbdbdb;
     box-shadow: 0 2px 8px 0 #dbdbdb;
+  }
+  .package-item{
+    margin-bottom:90px;
   }
 }
 
@@ -10659,4 +10668,12 @@ body.nav-active {
 
 .switch-country {
   color: #19a0ff !important;
+}
+.currentBox1{
+  padding:30px;
+  display: block;
+}
+.currentBox1 p{
+  font-size:16px;
+  line-height:36px;
 }
