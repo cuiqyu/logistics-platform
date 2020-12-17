@@ -10383,6 +10383,12 @@ body.nav-active {
 }
 
 @media (max-width: 992px) {
+  .insure-item h4{
+    padding:10px 0;
+  }
+  .insure-item .news-content{
+    line-height:32px;
+  }
   .package-item{
     margin-bottom:30px;
   }
@@ -10430,7 +10436,7 @@ body.nav-active {
   }
 
   .footer-middle ul li {
-    padding: 0 10px;
+    padding: 0 8px;
     font-size: 14px;
   }
 
@@ -10676,4 +10682,7 @@ body.nav-active {
 .currentBox1 p{
   font-size:16px;
   line-height:36px;
+}
+.free-wrapper p a{
+  color: #63c8fc !important;
 }
