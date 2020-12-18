@@ -10686,3 +10686,9 @@ body.nav-active {
 .free-wrapper p a{
   color: #63c8fc !important;
 }
+.package h6{
+  padding:20px 0;color:#333;font-size:24px;
+}
+.package p{
+  line-height:28px;
+}
