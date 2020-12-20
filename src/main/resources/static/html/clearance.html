@@ -161,8 +161,8 @@
             $(this).find('.flow-content').toggleClass('hidden')
         })
         if ((!navigator.userAgent.match(
-                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-            ))) {
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
@@ -206,26 +206,29 @@
         }
     </script>
     <section class="about">
-        <img src="../img/banner4.jpg" class="img-fluid" />
+        <img src="../img/banner7.jpg" class="img-fluid" />
         <div class="container">
-            <div class="aboutHeader text-center">
-                <h3>保险条款</h3>
-                <div class="service-separate"></div>
+            <div class="news-detail-wrap col-lg-12 col-md-12 col-sm-12 col-xs-12 about-font time-vertical">
+                <p class="news-content">本人回国时，在入境中国的第一个机场旅检处领取<span
+                        style="color:#ff0000">《中华人民共和国海关入境旅客行李物品申报单》</span>，填写完整后，<span
+                        style="color:#ff0000">走“红色申报通道”，找海关人员盖章。</span>参考模板（见下图）。
+                    (如使用归途专线则无需清关。如寄到香港、澳门等无需清关的国家则无需了解清关流程)。</p>
+                <p class="news-content"> 尽量在机场就将申报单快递走（提前找客服询问邮寄地址）并确保申报表上包含以下信息：</p>
+                <p class="news-content"> a. 申报单上有海关签章；
+                <p class="news-content"> b.（不一定需要) 可能会有海关提供的关封信息，如果有，请不要私自拆开。</p>
+                <p class="news-content"> c.（不一定需要) 有批注“已验放价值xxxxxxx元人民币的物品”。</p>
+
             </div>
-            <div class="news-detail-wrap col-lg-12 col-md-12 col-sm-12 col-xs-12 about-font ">
-                <p class="news-content insur-indent">该网页所有保险条款是指委托西游寄物流公司（Super Express）寄送货物的客户与西游寄国际物流公司之间声明的双方权利和义务。
-                    本条款内容（包括协议正文及本网站已发布或将来可能发布的各类规则，所有规则均为协议不可分割的一部分）与协议正文具有同等法律效力，是寄件用户与西游寄物流公司（Deer
-                    Express）订立的完整服务协议。用户在确认本条款后，委托西游寄国际物流公司进行承运，付款发运后，保险条款在双方之间即刻产生法律效力。</p>
-                <p class="news-content insur-indent">
-                    该保险条款仅适用于运输环节发生的由于运输不当而造成行李或包裹的损坏和丢失的情况，但对于易碎物品、易融物品、原包装不当所发生的破损，或因如遇天气原因，酷热、多雨、台风等不可抗力原因造成的内件破损不予理赔。
+            <div class="news-detail-wrap col-lg-12 col-md-12 col-sm-12 col-xs-12 about-font time-vertical">
+                <div class="aboutHeader text-center">
+                    <h3 style="color:#ff0000">公司简介<img src="../img/clearanceTitle.png" class="img-fluid"
+                            style="width:50px;padding-left:6px;" /></h3>
+                </div>
+                <p class="news-content">
+                    由于深圳海关政策变动，行李在深圳海关清关的同学(即收件地址为华南地区的同学)，行李到达国内后，需要配合FedEx中国工作人员，自行联系FedEx中国工作人员建议的第三方清关公司，之后与清关公司一起完成清关工作，可能额外产生的清关服务费用为200-300人民币(不含关税)。
                 </p>
-                <p class="news-content insur-indent">本条款只适用于邮寄物品中发生丢失或者破损的物品本身，不适用于运输时效。</p>
-            </div>
-            <div class="news-detail-wrap col-lg-12 col-md-12 col-sm-12 col-xs-12 about-font insure-item">
-                <p><a href="../html/insuranceItem.html"><img src="../img/insure_icon.png"
-                            style="width:40px;margin-right:30px;" />回国行李保险条款</a></p>
-                <p><a href="../html/insuranceItem.html"><em></em>美国境内行李保险条款</a></p>
-                <p><a href="../html/insuranceItem.html"><em></em>国际个人包裹及奢侈品专线保险条款</a></p>
+                <p class="news-content"><span style="color:#ff0000">注**
+                    </span>同时如果您可以提供华北或者华东地区的地址，可以选择寄送到那些地址以避免额外的清关服务费，这些地区FedEx中国可以正常提供免费的清关服务，或者升级归途专线可以免清关。</p>
 
             </div>
 
@@ -242,8 +245,8 @@
 
 
 
-     <!--尾部-->
-     <footer class="footer">
+    <!--尾部-->
+    <footer class="footer">
         <section class="container" id="footerContainer">
             <div>
                 <div id="guideList" class="guide-list">
@@ -308,6 +311,7 @@
 
 
 </body>
+
 <script>
     $(function () {
         if (localStorage.country) {
@@ -325,6 +329,5 @@
         }
     })
 </script>
-
 
 </html>
