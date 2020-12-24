@@ -325,8 +325,8 @@
             data: JSON.stringify({
                 waybillNumber: billNumber
             }),
-            url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
-            //url:"/logistics/service/logisticsinfo/getBywaybillNumber",
+            //url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
+            url:"/logistics/service/logisticsinfo/getBywaybillNumber",
             success: function (data) {
                 console.log(JSON.stringify(data))
                 var list = data.data;
