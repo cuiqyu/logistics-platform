@@ -74,10 +74,10 @@
             <!--            <a class="btn btn-primary single disabled" onclick="$.operate.edit()" shiro:hasPermission="logistics:expressDelivery:edit">
                             <i class="fa fa-edit"></i> 修改
                         </a>-->
-            <!--            <a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()"
+                        <a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()"
                            shiro:hasPermission="logistics:expressDelivery:remove">
                             <i class="fa fa-remove"></i> 删除
-                        </a>-->
+                        </a>
             <!--            <a class="btn btn-primary single disabled" onclick="$.operate.edit()" shiro:hasPermission="logistics:expressDelivery:edit">
                             <i class="fa fa-edit"></i> 录入单号
                         </a>-->
@@ -101,7 +101,7 @@
             url: prefix + "/list",
 //            createUrl: prefix + "/add",
             updateUrl: prefix + "/edit/{id}",
-//            removeUrl: prefix + "/remove",
+           removeUrl: prefix + "/remove",
             exportUrl: prefix + "/export",
             modalName: "物流单号",
             columns: [
@@ -201,6 +201,7 @@
                         } else {
                             actions.push('<a class="btn btn-success btn-xs ' + editFlag + '" href="javascript:void(0)" onclick="viewLogisticsRecords(\'' + row.waybillNumber + '\')"><i class="fa fa-edit"></i>查询物流记录</a> ');
                         }
+                        actions.push('<a class="btn btn-danger btn-xs ' + removeFlag + '" href="javascript:void(0)" onclick="$.operate.remove(\'' + row.id + '\')"><i class="fa fa-remove"></i>删除</a>');
                         return actions.join('');
                     }
                 }]
