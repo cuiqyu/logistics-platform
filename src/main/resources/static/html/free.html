@@ -3,24 +3,28 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>西游寄-美国回国行李快递服务</title>
+    <title>西游寄-美国 加拿大回国快递服务</title>
     <meta name="keywords"
-        content="回国行李 分离运输行李 分运行李 回国行李空运 联邦快递 毕业搬家 毕业回国行李 空运行李 免费上门取件 FedEx空运 上门取件 送货上门 ToWhere全球快递 七海国际 海龙海运 西游寄快递 SuperEx西游寄速运 快递行李 留学回国快递 回国快递 美国海运 美国空运 寄快递回中国 行李海运 国际行李快递 中国行李快递 中国学生行李 寄送行李回国 Towhere 邮差小马 postpony letslabel 嘉迅国际速递 Deer Express" />
+        content="西游寄(SuperEx)全球首家留学生自创物流平台。Fedex中国独家授权总代理，$3000高额理赔。覆盖美加，互通全球。提供从回国行李到宠物运输一体化服务。" />
     <meta name="description"
-        content="西游寄(SuperEx)与联邦快递(FedEx)合作为美国的留学生提供美国寄往中国的回国行李快递服务。小鹿不仅提供安全可靠的优质运输服务，更有令人心动的价格，寄得越多优惠更多，最低可至$2.6/lb，而且，免费上门取件！免费仓储！免费协助清关！免费加固包裹！" />
+        content="西游寄(SuperEx)全球首家留学生自创物流平台。Fedex中国独家授权总代理，$3000高额理赔。覆盖美加，互通全球。提供从回国行李到宠物运输一体化服务。" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="西游寄SuperEx-美国回国行李快递服务" />
     <meta property="og:description"
-        content="西游寄(SuperEx)与联邦快递(FedEx)合作为美国的留学生提供美国寄往中国的回国行李快递服务。小鹿不仅提供安全可靠的优质运输服务，更有令人心动的价格，寄得越多优惠更多，最低可至$2.6/lb，而且，免费上门取件！免费仓储！免费协助清关！免费加固包裹！" />
+        content="西游寄(SuperEx)全球首家留学生自创物流平台。Fedex中国独家授权总代理，$3000高额理赔。覆盖美加，互通全球。提供从回国行李到宠物运输一体化服务。" />
     <meta property="og:url" content="https://us.deerex.com/service/service.html?status=1&type=1" />
     <meta property="og:site_name" content="西游寄SuperEx" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta content="user-scalable=no" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <noscript>
+    <!-- <noscript>
         <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=801664066698082&ev=PageView&noscript=1" />
-    </noscript>
+    </noscript>-->
 </head>
 <link rel="shortcut icon" href="../img/newfavicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="../css/theme.css">
@@ -30,14 +34,24 @@
 <script src="../js/libs/jquery-1.11.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
+<script src="../js/toast.js"></script>
 
 <body style="background-color: #fff">
+    <div class="topbar" style="background:#302e3d;padding:10px 0;color:#fff;">
+        <div class="container">
+            <span style="margin-left: 5px">当前浏览国家：</span>
+            <img width="23px" height="15px" style="margin-bottom: 1px" class="mr-10" src="../img/guide_ca.png" />
+            <span class="mr-10">美国</span>
+            <a class="switch-country" href="../html/country.html">切换</a>
+        </div>
+    </div>
+    <!--头部文件-->
     <header class="header">
         <section style="background-color: #fff">
             <div class="container" style="padding-left: 0;padding-right: 0;">
 
-                <h1 class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
-                    <a class="logo">
+                <h1 class="col-lg-2 col-md-2 col-sm-2 col-xs-8">
+                    <a class="logo" href="../html/index.html">
                         <img src="../img/newlogo.png" class="img-fluid" title="西游寄速运" alt="西游寄速运">
                     </a>
                 </h1>
@@ -50,10 +64,10 @@
                         <div id="currentContent"><span>回国行李</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-                            <li value="1"><a><span>寄件流程</span></a></li>
-                            <li value="2"><span>费用时效</span></li>
-                            <li value="3"><span>打包手册</span></li>
-                            <li value="4"><span>马上咨询</span></li>
+                            <li value="1" class="process"><a><span>寄件流程</span></a></li>
+                            <li value="2" class="free"><span>费用时效</span></li>
+                            <li value="3" class="package"><span>打包手册</span></li>
+                            <li value="4" class="consult"><span>马上咨询</span></li>
                         </ul>
                     </div>
                     <div class="pull-left service-type">
@@ -61,44 +75,23 @@
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
 
-                            <li value="2"><span>违禁物品</span></li>
-                            <li value="3"><span>费用时效</span></li>
+                            <li value="2" class="forbidden"><span>违禁物品</span></li>
+                            <li value="3" class="free"><span>费用时效</span></li>
                         </ul>
                     </div>
                     <div class="pull-left service-type">
                         <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
-
-                            <li value="2"><span>中国->美国</span></li>
-                            <li value="3"><span>美国->中国</span></li>
+                            <li value="1" class="free"><span>奢侈品专线</span></li>
+                            <li value="2" class="free"><span>免税州服务</span></li>
                         </ul>
                     </div>
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>免税州服务</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><span>服务介绍</span></li>
-                            <li value="2"><span>收费明细</span></li>
-                        </ul>
+                        <div id="currentContent" class="free"><span>宠物回国</span></div>
                     </div>
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>奢侈品专线</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="pull-left service-type">
-                        <div id="currentContent"><span>宠物回国</span><img style="margin-left: 5px" width="18"
-                                src="../img/service/service_arrow_blue.png" /></div>
-                        <ul class="service-option hidden">
-                            <li value="1"><a href="../html/search/search.html?type=1"><span>回国快递</span></a></li>
-                            <li value="2"><a href="../html/search/search.html?type=2"><span>境内快递</span></a></li>
-                            <li value="3"><a href="../html/search/search.html?type=3"><span>海淘转运</span></a></li>
-                        </ul>
+                        <div id="currentContent" class="aboutUs"><span>关于我们</span></div>
                     </div>
                 </div>
                 <div class="hidden-lg  hidden-md col-sm-4 col-xs-4">
@@ -113,18 +106,19 @@
 
                     </div>
                 </div>
-                <div class="hidden-lg  hidden-md col-sm-12 col-xs-12">
+                <div class="hidden-lg  hidden-md col-sm-10 col-xs-12">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a>首页 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="../html/index.html">首页 <span class="sr-only">(current)</span></a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">回国行李 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>寄件流程</a></li>
-                                    <li><a>费用时效</a></li>
-                                    <li><a>打包手册</a></li>
+                                    <li><a href="../html/process.html">寄件流程</a></li>
+                                    <li><a href="../html/free.html">费用时效</a></li>
+                                    <li><a href="../html/package.html">打包手册</a></li>
+                                    <li><a href="../html/onPlaceorder.html">马上咨询</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -132,8 +126,8 @@
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>违禁物品</a></li>
-                                    <li><a>费用时效</a></li>
+                                    <li><a href="../html/contraband.html">违禁物品</a></li>
+                                    <li><a href="../html/free.html">费用时效</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -141,40 +135,14 @@
                                     aria-expanded="false">海淘转运 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>中国->美国</a></li>
-                                    <li><a>美国->中国</a></li>
+                                    <li><a href="../html/free.html">奢侈品专线</a></li>
+                                    <li><a href="../html/free.html">免税州服务</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">免税州服务 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>服务介绍</a></li>
-                                    <li><a>收费明细</a></li>
-                                </ul>
+                                <a href="../html/free.html">宠物回国 </a>
                             </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">奢侈品专线 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>回国快递</a></li>
-                                    <li><a>境内快递</a></li>
-                                    <li><a> 海淘转运</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">宠物回国 <img style="float:right" width="18"
-                                        src="../img/service/service_arrow_blue.png" /></a>
-                                <ul class="dropdown-menu">
-                                    <li><a>回国快递</a></li>
-                                    <li><a>境内快递</a></li>
-                                    <li><a> 海淘转运</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="../html/about.html">关于我们 <span class="sr-only">(current)</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -194,7 +162,7 @@
         })
         if ((!navigator.userAgent.match(
                 /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-                ))) {
+            ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
@@ -202,7 +170,7 @@
             $('.service-type').mouseleave(function () {
                 $(this).find('.service-option').addClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src",
-                "../img/service/service_arrow_blue.png");
+                    "../img/service/service_arrow_blue.png");
             })
 
             $('.service-content').hover(function () {
@@ -211,18 +179,31 @@
             $('.service-content').mouseleave(function () {
                 $(this).find('.flow-content').addClass('hidden')
             })
-        }
-        $(function () {
+
+            //导航跳转
             $("#homePage").click(function () {
                 window.location.href = "../html/index.html"
             })
-            $(".search").click(function () {
-                var billNumber = $("#search-input").val();
-                console.log(billNumber);
-                fn(billNumber);
-
+            $(".process").click(function () {
+                window.location.href = "../html/process.html"
             })
-        })
+            $(".free").click(function () {
+                window.location.href = "../html/free.html"
+            })
+            $(".package").click(function () {
+                window.location.href = "../html/package.html"
+            })
+            $(".consult").click(function () {
+                window.location.href = "../html/onPlaceorder.html"
+            })
+            $(".forbidden").click(function () {
+                window.location.href = "../html/contraband.html"
+            })
+            $(".aboutUs").click(function () {
+                window.location.href = "../html/about.html"
+            })
+
+        }
     </script>
 
     <div class="service-top"
@@ -235,7 +216,7 @@
                         <li class="new-tab-item-two active" data-index="0">物流服务 </li>
                     </ul>
                     <div class="box">
-                        <ul class="boxTopBar hidden-xs">
+                        <ul class="boxTopBar hidden-xs hidden-sm">
                             <li class="boxTopBar-item boxTopBar-current col-lg-1-5 col-md-1-5 hidden-xs text-center">
                                 行李回国
                             </li>
@@ -244,11 +225,13 @@
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">美中海淘</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">中美转运</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">奢侈品专线</li>
+                            <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">免税州代收</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">宠物运输</li>
                             <li class="boxTopBar-item col-lg-1-5 col-md-1-5  hidden-xs text-center">必看 Q&A</li>
                         </ul>
 
-                        <div class="boxBig hidden-xs">
+                        <div class="boxBig hidden-xs hidden-sm">
+                            <!--行李回国-->
                             <div class="boxContent currentBox">
                                 <table class="table1">
                                     <tr>
@@ -257,7 +240,8 @@
                                         <th> 运输时效 </th>
                                     </tr>
                                     <tr>
-                                        <td>自助清关 </td>
+                                        <td><a style="color: #63c8fc !important;text-decoration: underline !important;cursor: pointer;font-size: 16px !important;"
+                                                href="../html/clearance.html">自助清关</a> </td>
                                         <td>取件费15/箱 ＋重量*3.8/磅 </td>
                                         <td> 2-3个工作日至中国海关 </td>
                                     </tr>
@@ -278,7 +262,7 @@
                                 <div class="tips">
                                     <h3>快递计费说明：</h3>
                                     <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
-                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inc) ÷139</p>
+                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
                                     <p><em></em>1cm=0.39 inch</p>
                                     <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
                                     <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
@@ -290,14 +274,23 @@
                                     <p><em></em>需要更耐心的等待。希望大家共同配合，互相体谅。</p>
                                 </div>
                             </div>
-
+                            <!--境内快递-->
                             <div class="boxContent">
-                                <table class="table1">
+                                <table class="table2">
                                     <tr>
-                                        <td style="text-align: left;padding-left:20px;">境内运费=取件费15/箱 ＋重量*1.9/磅</td>
+                                        <th colspan="2">运费及时效</th>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: left;padding-left:20px;">运输时效： 3-5个工作日</td>
+                                        <td>8磅以内</td>
+                                        <td>大于8磅</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>$15</b></td>
+                                        <td> <b>$1.9/磅</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2-3个工作日</td>
+                                        <td>2-3个工作日</td>
                                     </tr>
                                 </table>
                                 <h5>注：部分偏远地区需加时</h5>
@@ -312,7 +305,7 @@
                                     <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
                                 </div>
                             </div>
-
+                            <!--文件速递-->
                             <div class="boxContent">
                                 <table class="table2">
                                     <tr>
@@ -343,7 +336,7 @@
 
                                 </div>
                             </div>
-
+                            <!--美中海淘-->
                             <div class="boxContent">
                                 <table class="table2">
                                     <tr>
@@ -376,7 +369,12 @@
                                     </tr>
                                     <tr>
                                         <td>IPad/手机/电脑 </td>
-                                        <td><b>$100-200 /磅 </b></td>
+                                        <td><b>$100-200</b></td>
+                                        <td>10-14个工作日</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple Watch </td>
+                                        <td><b>$55</b></td>
                                         <td>10-14个工作日</td>
                                     </tr>
                                 </table>
@@ -394,7 +392,7 @@
                                     <p>8.普通货物免费保险=运费价格*3，最高理赔$100</p>
                                 </div>
                             </div>
-
+                            <!--中美转运-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -407,6 +405,11 @@
                                         <td><b>42RMB/KG</b></td>
                                         <td>10-12个工作日</td>
                                     </tr>
+                                    <tr>
+                                        <td>Fedex空运</td>
+                                        <td><b>66RMB/KG </b></td>
+                                        <td> 5-7个工作日</td>
+                                    </tr>
                                 </table>
                                 <h5></h5>
                                 <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
@@ -418,15 +421,13 @@
                                     <p>2.重量达18kg即可起运</p>
                                     <p>3.支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
                                     <p>4.下单前联系客服领取仓库地址，每周二/三视天气情况发船</p>
-                                    <p>5.
-                                        可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。<em></em>带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
+                                    <p>5.快船可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
                                         RMB/票，木质商检400 RMB/票。</p>
                                     <p>6. 拒收产品类：液体、胶体类不可大于350g（100ml）/支（瓶）； 纯电池类，易燃易爆品，E 烟斗，水烟斗均属于不可邮寄范畴。</p>
-
+                                    <p>7. 空运不可以邮寄带有锂电池等易燃易爆物品，食品类不可以邮寄含有肉质的；不接受液体</p>
                                 </div>
                             </div>
-
-
+                            <!--奢侈品专线-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -450,6 +451,53 @@
                                 </div>
                             </div>
 
+
+                            <!--免税州代收-->
+                            <div class="boxContent">
+                                <table class="table3">
+                                    <tr>
+                                        <td>产品类型</td>
+                                        <td>价格</td>
+                                    </tr>
+                                    <tr>
+                                        <td>衣物/护肤品/保健品/二线包类/普通表</td>
+                                        <td><b>$1.5/磅</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机/IPAD</td>
+                                        <td><b>$20/件</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>电脑/大型电器：（15磅以下）</td>
+                                        <td><b>$40/件</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>一线奢侈品</td>
+                                        <td><b>$6/磅</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高价表（购买价>$800）</td>
+                                        <td><b>$30/只</b></td>
+                                    </tr>
+                                </table>
+                                <h5></h5>
+                                <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                <div class="tips">
+                                    <h3>快递计费说明：</h3>
+                                    <p>1.最低收费标准：护肤品/鞋/衣服/二线包类/普通表类按重量收费, 最低收费为6美元。即多个订单入库后，合并重量计费，不足4磅按4磅计算；
+                                        一线奢侈品不足4磅按4磅计算，即最低消费$24</p>
+                                    <p>2. 需要SIGNATURE的贵重物品名字写: Pingwei Wang</p>
+                                    <p>3. 支付方式：接受人民币（支付宝微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                    <p>4. 免税州寄件前联系客服索要仓库地址，订单发运后将对应的TRACKING NUMBER发给客服；</p>
+                                    <p>5. 免税州代收件每周五转运回纽约法拉盛，可自行前往提取；送件费$20/箱，需提前预约。</p>
+                                    <p>6. 外州客人可以通过境内邮寄的方式来收取货物，费用参考境内运费标准。</p>
+                                    <p>7. 海淘客户可以使用我们的中美海淘渠道来寄件，具体费用参考海淘收费标准。</p>
+                                    <p>8. 需要代下单的客户可以联系客服，代下费$5/单</p>
+
+                                </div>
+                            </div>
+
+                            <!--宠物运输-->
                             <div class="boxContent">
                                 <table class="table3">
                                     <tr>
@@ -480,7 +528,7 @@
                                 </div>
                             </div>
 
-
+                            <!--必看Q&A-->
                             <div class="boxContent">
                                 <div class="Q-container">
                                     <h3><b>1.</b><img src="../img/search/Q.png" /><i>为什么有些公司没有取件费?</i></h3>
@@ -511,7 +559,139 @@
 
                                     </div>
 
-                                    </p>
+                                    <h3><b>3.</b><img src="../img/search/Q.png" /><i>我已经在国内，但是行李还在美国，怎么办？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>可以选择我们的代清关模式。无论本人回国多久，代清关模式都可以将行李合法寄回国内。</p>
+                                            <p>您只需要将行李的具体物品清单交给我们，后续会有专门的客服跟进清关。另外，NY,NJ以及MA地区我们提供上门打包服务。</p>
+                                            <p>其余地区的同学需要找朋友帮忙上门收拾，后续我们会帮忙预约上门取件并提供代清关服务。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>4.</b><img src="../img/search/Q.png" /><i>预约上门取件时，会帮忙打包称重吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>由于COVID-19的原因，取件人员只负责取件，并不负责打包以及称重收费等事宜。</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <h3><b>5.</b><img src="../img/search/Q.png" /><i>清关会有关税产生吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>根据中华人民共和国海关法，中国公民依法享受5000RMB的免税额度。</p>
+                                            <p>因此自助清关的同学在申报时，尽量将申报额度折旧从低申报。</p>
+                                            <p> 如果行李中有较多奢侈品，可以选择代清关模式，我们会将税费最低化以保障留学生的切身利益。</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <h3><b>6.</b><img src="../img/search/Q.png" /><i>回国的时候通过澳门/香港/台湾转机的，要在哪里填写申报单？</i>
+                                    </h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>这种情况下，行李申报单必须在从香港/澳门/台湾进入中国内地的时候，在中国的入境海关填写。</p>
+                                            <p>例如，美国的飞机在香港降落，然后乘坐火车回深圳，就必须在进入深圳的时候，在深圳海关填写行李申报表。</p>
+                                            <p>香港/澳门/台湾的海关是独立于中国海关的，在香港/澳门/台湾填写的行李申报单不得为进入中国大陆的行李的申报所用。</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <h3><b>7.</b><img src="../img/search/Q.png" /><i>我住的地方比较村，也可以上门取件吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p> 当然可以。Fedex覆盖了美国以及加拿大99%的区域，及时是阿拉斯加山脉底下的小村落，都可以安排上门取件。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>8.</b><img src="../img/search/Q.png" /><i>我有小伙伴也要邮寄，可以拼单吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>当然可以。只要寄件地址是同一个地方（EG.同一栋楼），就可以拼单。</p>
+                                            <p>另外，NYC,NJ,VA还享受同城即可拼单的福利。</p>
+                                            <p> 拼单优惠价私戳客服小姐姐了解哦。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>9.</b><img src="../img/search/Q.png" /><i>回国航班分多段，应该在申报单上填报哪一趟？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>应该在申报单上填写最后一段航班的航班号。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>10.</b><img src="../img/search/Q.png" /><i>预约取件有什么需要注意的地方？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>NYC, NJ, VA由华人师傅上门取件。上门前会电话或短信联系，大家记得查看信息以及不要错过陌生电话。</p>
+                                            <p>其他地区我们暂时由LOCAL FEDEX工作人员上门取件。由于疫情期间全程采取无接触取件方式，建议大家将行李放在FRONT
+                                                DESK/PACKAGE ROOM/HOUSE门口。</p>
+                                            <p>为了防止行李丢失，建议大家用马克笔将运单第一张以TRK#开头的总单号写在箱子上。</p>
+                                            <p>如果取件不成功，可以让客服再次预约取件。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>11.</b><img src="../img/search/Q.png" /><i>国内的收件地址可以填家以外的地址吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>当然可以，地址可以是任意地址，但是收件人必须是填回国一年内人员的名字。行李在国内投递的时候，可以由他人代行李主人在收件地址进行签收。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>12.</b><img src="../img/search/Q.png" /><i>我需要去国内的海关取行李吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>不需要，行李会在清关结束后再次加固后送货上门。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>13.</b><img
+                                            src="../img/search/Q.png" /><i>支付方式都有什么？我在什么时候付钱？上门取件的时候不用缴费吗？</i></h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p>美国支持支付宝/微信/Venmo和Zelle，加拿大仅支持支付宝/微信。NYC, NJ,
+                                                VA入库称重后付款；其他地区同学在取件发运后按照体积重预付运费，等实际账单出来后多退少补。</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h3><b>14.</b><img
+                                            src="../img/search/Q.png" /><i>我使用的纸箱上面都印有长宽高尺寸，为什么测出来的长宽高跟箱子上面写的不一样？</i>
+                                    </h3>
+                                    <div class="Q-content">
+                                        <img src="../img/search/A.png" />
+                                        <div>
+                                            <p> 纸箱上标的尺寸是内径，箱子入库后将使用专业的光学扫描仪器去对整个箱子进行扫描测距，在每一个方向上会选取距离最远的两个点进行测量。</p>
+                                            <p>如果箱子装满以后，箱体向外鼓出，测量的距离将会是最鼓出来的两点之间的距离。</p>
+                                            <p>另外，国际运输采用向上取整的方式。</p>
+                                            <p>举个栗子：打包好纸箱后测量出來的长度是 18.3 inch, 于是将箱子进行挤压处理，认为四舍五入就是18 inch;</p>
+                                            <p>实际入库之后，在机场行李专门的光学系统下量出來一定是 19 inch而不是 18 inch。</p>
+                                        </div>
+
+                                    </div>
+
+
 
                                 </div>
                             </div>
@@ -526,54 +706,55 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                          境内快递
+                                            行李回国
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseOne" class="panel-collapse collapse in">
+                                <div id="collapseOne" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="free-wrapper">
                                             <table class="table1">
-                                                    <tr>
-                                                        <th>服务类型 </th>
-                                                        <th>计费公式 </th>
-                                                        <th> 运输时效 </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>自助清关 </td>
-                                                        <td>取件费15/箱 ＋重量*3.8/磅 </td>
-                                                        <td> 2-3个工作日至中国海关 </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>代清关</td>
-                                                        <td> 取件费15/箱+重量*4.5/磅+清关费20/箱 </td>
-                                                        <td>2-3个工作日至中国海关</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>急速包税 </td>
-                                                        <td>取件费15/箱＋重量*6.5/磅</td>
-                                                        <td>10-14个工作日门到门</td>
-                                                    </tr>
-                
-                                                </table>
-                                                <h5>注：部分偏远地区需加时</h5>
-                                                <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
-                                                <div class="tips">
-                                                    <h3>快递计费说明：</h3>
-                                                    <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
-                                                    <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inc) ÷139</p>
-                                                    <p><em></em>1cm=0.39 inch</p>
-                                                    <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
-                                                    <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
-                                                    <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
-                                                    <p>5. 清关时效：自助清关在申报单邮寄至海关处后七个工作日左右完成清关。</p>
-                                                    <p><em></em>代清关由于需要补报申报单，清关时效延长至14个工作日。</p>
-                                                    <p><em></em>另外华南地区隶属广州海关，清关速度全国最慢，时效在1个月左右，建议华南地区同学选择代清关模式。</p>
-                                                    <p><em></em>我们会尽量和海关协调催促清关进度，但是无法控制整个进程，尤其是行李中有特殊或高奢物品的行李，</p>
-                                                    <p><em></em>需要更耐心的等待。希望大家共同配合，互相体谅。</p>
-                                                </div>
+                                                <tr>
+                                                    <th>服务类型 </th>
+                                                    <th>计费公式 </th>
+                                                    <th> 运输时效 </th>
+                                                </tr>
+                                                <tr>
+                                                    <td> <a style="color: #63c8fc !important;text-decoration: underline !important;cursor: pointer;font-size:14px !important;"
+                                                            href="../html/clearance.html">自助清关</a> </td>
+                                                    <td>取件费15/箱 ＋重量*3.8/磅 </td>
+                                                    <td> 2-3个工作日至中国海关 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>代清关</td>
+                                                    <td> 取件费15/箱+重量*4.5/磅+清关费20/箱 </td>
+                                                    <td>2-3个工作日至中国海关</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>急速包税 </td>
+                                                    <td>取件费15/箱＋重量*6.5/磅</td>
+                                                    <td>10-14个工作日门到门</td>
+                                                </tr>
+
+                                            </table>
+                                            <h5>注：部分偏远地区需加时</h5>
+                                            <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                            <div class="tips">
+                                                <h3>快递计费说明：</h3>
+                                                <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
+                                                <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
+                                                <p><em></em>1cm=0.39 inch</p>
+                                                <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
+                                                <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
+                                                <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                                <p>5. 清关时效：自助清关在申报单邮寄至海关处后七个工作日左右完成清关。</p>
+                                                <p><em></em>代清关由于需要补报申报单，清关时效延长至14个工作日。</p>
+                                                <p><em></em>另外华南地区隶属广州海关，清关速度全国最慢，时效在1个月左右，建议华南地区同学选择代清关模式。</p>
+                                                <p><em></em>我们会尽量和海关协调催促清关进度，但是无法控制整个进程，尤其是行李中有特殊或高奢物品的行李，</p>
+                                                <p><em></em>需要更耐心的等待。希望大家共同配合，互相体谅。</p>
                                             </div>
-                
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -581,15 +762,40 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                            点击我进行展开，再次点击我进行折叠。第 2 部分
+                                            境内快递
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                        vice lomo.
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table2">
+                                            <tr>
+                                                <th colspan="2">运费及时效</th>
+                                            </tr>
+                                            <tr>
+                                                <td>8磅以内</td>
+                                                <td>大于8磅</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>$15</b></td>
+                                                <td> <b>$1.9/磅</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2-3个工作日</td>
+                                                <td>2-3个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5>注：部分偏远地区需加时</h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>快递计费说明：</h3>
+                                            <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
+                                            <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
+                                            <p><em></em>1cm=0.39 inch</p>
+                                            <p>2. 超重费用：重量大于50磅将产生$24/箱的超重费；大于70磅将产生$75/箱的超重费；大于100磅将产生$150/箱的超重费</p>
+                                            <p>3. 行李箱：行李箱额外征收$12的HANDLE FEE</p>
+                                            <p>4. 支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -597,15 +803,462 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                            点击我进行展开，再次点击我进行折叠。第 3 部分
+                                            文件速递
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                        vice lomo.
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table2">
+                                            <tr>
+                                                <th colspan="2">运费及时效</th>
+                                            </tr>
+                                            <tr>
+                                                <td>美国境内</td>
+                                                <td>美国→中国</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>$25</b></td>
+                                                <td> <b>$42</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2-3个工作日</td>
+                                                <td>5-7个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>注意事项：</h3>
+                                            <p>1.文件快递由于类型特殊，所以无法以重量来计算价格。以上价格为单份文件重量在4磅以内的价格。</p>
+                                            <p>2.以上价格不包括每份文件的取件费（$15/份）</p>
+                                            <p>3.自行投递的文件不收取取件费。</p>
+                                            <p>4.流程：联系客服生成运单后，将运单一式两份，一份放在文件内部，一份贴在文件外部，等待快递上门取件。</p>
+                                            <p>5.支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            美中海淘
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table2">
+                                            <tr>
+                                                <th colspan="3">包税渠道</th>
+                                            </tr>
+                                            <tr>
+                                                <td>产品类型</td>
+                                                <td>价格</td>
+                                                <td>时效</td>
+                                            </tr>
+                                            <tr>
+                                                <td>衣物/护肤品/保健品</td>
+                                                <td><b>$6.5/磅</b></td>
+                                                <td>10-14个工作</td>
+                                            </tr>
+                                            <tr>
+                                                <td>普通电子产品</td>
+                                                <td><b>$8/磅</b></td>
+                                                <td>14-17个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>滑雪板/乐器/AIRPODS</td>
+                                                <td><b>$8/磅</b></td>
+                                                <td>17-20个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>液体奶/奶粉</td>
+                                                <td><b>$4/磅 </b></td>
+                                                <td>10-14个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IPad/手机/电脑 </td>
+                                                <td><b>$100-200 </b></td>
+                                                <td>10-14个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apple Watch </td>
+                                                <td><b>$55</b></td>
+                                                <td>10-14个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5>注：部分偏远地区需加时</h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>快运计费说明：</h3>
+                                            <p>1.除了特大件，一般物品计费重量以实际重量为标准核算，不计算体积重量。</p>
+                                            <p>2.海淘件2磅起运，不足2磅按2磅计算。</p>
+                                            <p>3.普通电子产品指的是：洗脸仪/剃须刀/相机等价值较低的电子产品（不含发票和锂电池）</p>
+                                            <p>4.计费重量进位规则：四舍五入，向上取整</p>
+                                            <p>5.IPAD价值$800以下运费$100, 价值 $800以上运费$150</p>
+                                            <p>6.电脑收费基准和IPAD一样，另外超过重量超过10LB的电脑额外征收$9/磅的运费。</p>
+                                            <p>7.价值$800以上的IPAD和电脑免费保险$800，$800以下的免费保费=价值*3%</p>
+                                            <p>8.普通货物免费保险=运费价格*3，最高理赔$100</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                            中美转运
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table3">
+                                            <tr>
+                                                <td>运输方式</td>
+                                                <td>运费</td>
+                                                <td>时效</td>
+                                            </tr>
+                                            <tr>
+                                                <td>快船</td>
+                                                <td><b>42RMB/KG</b></td>
+                                                <td>10-12个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fedex空运</td>
+                                                <td><b>66RMB/KG </b></td>
+                                                <td> 5-7个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>备注：</h3>
+                                            <p>1.计费重量：取体积重量与实际重量两者的较大值；</p>
+                                            <p><em></em>体积重量=长(inch) x 宽(inch) x 高(inch) ÷139</p>
+                                            <p><em></em>1cm=0.39 inch</p>
+                                            <p>2.重量达18kg即可起运</p>
+                                            <p>3.支付方式：接受人民币（支付宝/微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                            <p>4.下单前联系客服领取仓库地址，每周二/三视天气情况发船</p>
+                                            <p>5.快船可邮寄物品：成人用品，液体，粉末等敏感货；接受儿童玩具、铝笔、食品、管制刀具、带有液体、粉末类、激光笔、头盔等产品。带磁产品需磁检（走货前请提前做好产品咨询）。磁检费450
+                                                RMB/票，木质商检400 RMB/票。</p>
+                                            <p>6. 拒收产品类：液体、胶体类不可大于350g（100ml）/支（瓶）； 纯电池类，易燃易爆品，E 烟斗，水烟斗均属于不可邮寄范畴。</p>
+                                            <p>7. 空运不可以邮寄带有锂电池等易燃易爆物品，食品类不可以邮寄含有肉质的；不接受液体</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                            奢侈品专线
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table3">
+                                            <tr>
+                                                <td>运输方式</td>
+                                                <td>运费</td>
+                                                <td>时效</td>
+                                            </tr>
+                                            <tr>
+                                                <td>空运</td>
+                                                <td><b>保价*10%</b></td>
+                                                <td>14-18个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>备注：</h3>
+                                            <p>1.运费计算举例： 爱马仕包包保价3000美金，运费=3000*10%=300美金，如若丢失，理赔3000美金；
+                                                保价2000美金，运费=2000*10%=200美金，如若丢失，理赔3000美金；
+                                            </p>
+                                            <p>2.以上收费标准针对于4LB以内的货物，超过4LB的货物额外征收$8/磅的运费。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseNight">
+                                            免税州代收
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseNight" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table3">
+                                            <tr>
+                                                <td>产品类型</td>
+                                                <td>价格</td>
+                                            </tr>
+                                            <tr>
+                                                <td>衣物/护肤品/保健品/二线包类/普通表</td>
+                                                <td><b>$1.5/磅</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>手机/IPAD</td>
+                                                <td><b>$20/件</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>电脑/大型电器：（15磅以下）</td>
+                                                <td><b>$40/件</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>一线奢侈品 </td>
+                                                <td><b> $6/磅</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>高价表（购买价>$800）</td>
+                                                <td><b>$30/只</b></td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1" href="../html/onPlaceorder.html">去寄件 >></a>
+                                        <div class="tips">
+                                            <h3>快递计费说明：</h3>
+                                            <p>1.最低收费标准：护肤品/鞋/衣服/二线包类/普通表类按重量收费, 最低收费为6美元。即多个订单入库后，合并重量计费，不足4磅按4磅计算；
+                                                一线奢侈品不足4磅按4磅计算，即最低消费$24</p>
+                                            <p>2. 需要SIGNATURE的贵重物品名字写: Pingwei Wang</p>
+                                            <p>3. 支付方式：接受人民币（支付宝微信）以及美元（VENMO/PAYPAL）的付款方式</p>
+                                            <p>4. 免税州寄件前联系客服索要仓库地址，订单发运后将对应的TRACKING NUMBER发给客服；</p>
+                                            <p>5. 免税州代收件每周五转运回纽约法拉盛，可自行前往提取；送件费$20/箱，需提前预约。</p>
+                                            <p>6. 外州客人可以通过境内邮寄的方式来收取货物，费用参考境内运费标准。</p>
+                                            <p>7. 海淘客户可以使用我们的中美海淘渠道来寄件，具体费用参考海淘收费标准。</p>
+                                            <p>8. 需要代下单的客户可以联系客服，代下费$5/单</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                                            宠物运输
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <table class="table3">
+                                            <tr>
+                                                <td>宠物文件及机票</td>
+                                                <td>费用 </td>
+                                                <td>清关时效</td>
+                                            </tr>
+                                            <tr>
+                                                <td>自理</td>
+                                                <td><b>$1200</b></td>
+                                                <td>2-3个工作日</td>
+                                            </tr>
+                                            <tr>
+                                                <td>代办</td>
+                                                <td><b>$4000</b></td>
+                                                <td>2-3个工作日</td>
+                                            </tr>
+                                        </table>
+                                        <h5></h5>
+                                        <a class="btn1">去咨询 >></a>
+                                        <div class="tips">
+                                            <h3>宠物回国准备清单：</h3>
+                                            <p>1.两针狂犬疫苗（两针疫苗均需要在一年内一个月以上，两针间隔需大于30天）</p>
+                                            <p>2.注射犬瘟热DHPP、或猫三联fvrcp疫苗 （疫苗需要在一年内14天以上）</p>
+                                            <p>3.注射宠物芯片(IOS的15位数芯片)</p>
+                                            <p>4.狂犬抗体测试（血清报告）</p>
+                                            <p>5.出发前10天内您需要到宠物医院办理健康证明，到当地动物检疫农业局盖章</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                                            必看 Q&A
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseEight" class="panel-collapse collapse">
+                                    <div class="panel-body free-wrapper">
+                                        <div class="Q-container">
+                                            <h3><b>1.</b><img src="../img/search/Q.png" /><i>为什么有些公司没有取件费?</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>羊毛出在羊身上。</p>
+                                                    <p>首先，FEDEX上门PICKUP本身就不需要取件费。因此，个别快递以此为营销策略.世上没有免费的午餐，也没有无故亏本的商家。
+                                                    </p>
+                                                    <p>其次，我们在尽可能多的地方安排华人师傅取件，其他无法安排华人取件的地方，包裹一律先寄回就近仓库。这其中PAY给华人师傅的取件费以及境内段运费，就是我们向各位同学收取的取件费。
+                                                    </p>
+                                                    <p>这样做的目的，是为了确保箱子能在回国之前就被完整加固一次。经由我们加固的箱子，没有十分钟根本拆不完。一来完整保护了行李，二来，如此密封的箱子，也不易被海关开箱查验。
+                                                    </p>
+                                                    <p>实际上$15一箱的取件费基本cover不全我们的人工成本，但是我们经过多次的推敲抉择，最后决定以大家的实际利益为前提，坚持应用这种方式，以最大程度地保护大家的权益。
+                                                    </p>
+                                                    <p>我们深深明白，一箱几十磅的行李，不仅仅是海关眼中的货物，更承载着留学生涯里许多沉甸甸的回忆。</p>
+                                                </div>
+
+                                            </div>
+
+
+                                            <h3><b>2.</b><img src="../img/search/Q.png" /><i>关于保险</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>正因为不计成本地采取以上的取件模式，因此我们可以自信地送出一箱$700，最高$3000的免费保险。（免费需要加重）</p>
+                                                    <p>全美独此一家，相较于其他快递TOTAL $200的保险，诚意十足。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>3.</b><img src="../img/search/Q.png" /><i>我已经在国内，但是行李还在美国，怎么办？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>可以选择我们的代清关模式。无论本人回国多久，代清关模式都可以将行李合法寄回国内。</p>
+                                                    <p>您只需要将行李的具体物品清单交给我们，后续会有专门的客服跟进清关。另外，NY,NJ以及MA地区我们提供上门打包服务。</p>
+                                                    <p>其余地区的同学需要找朋友帮忙上门收拾，后续我们会帮忙预约上门取件并提供代清关服务。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>4.</b><img src="../img/search/Q.png" /><i>预约上门取件时，会帮忙打包称重吗？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>由于COVID-19的原因，取件人员只负责取件，并不负责打包以及称重收费等事宜。</p>
+                                                </div>
+
+                                            </div>
+
+
+                                            <h3><b>5.</b><img src="../img/search/Q.png" /><i>清关会有关税产生吗？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>根据中华人民共和国海关法，中国公民依法享受5000RMB的免税额度。</p>
+                                                    <p>因此自助清关的同学在申报时，尽量将申报额度折旧从低申报。</p>
+                                                    <p> 如果行李中有较多奢侈品，可以选择代清关模式，我们会将税费最低化以保障留学生的切身利益。</p>
+                                                </div>
+
+                                            </div>
+
+
+                                            <h3><b>6.</b><img
+                                                    src="../img/search/Q.png" /><i>回国的时候通过澳门/香港/台湾转机的，要在哪里填写申报单？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>这种情况下，行李申报单必须在从香港/澳门/台湾进入中国内地的时候，在中国的入境海关填写。</p>
+                                                    <p>例如，美国的飞机在香港降落，然后乘坐火车回深圳，就必须在进入深圳的时候，在深圳海关填写行李申报表。</p>
+                                                    <p>香港/澳门/台湾的海关是独立于中国海关的，在香港/澳门/台湾填写的行李申报单不得为进入中国大陆的行李的申报所用。</p>
+                                                </div>
+
+                                            </div>
+
+
+                                            <h3><b>7.</b><img src="../img/search/Q.png" /><i>我住的地方比较村，也可以上门取件吗？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p> 当然可以。Fedex覆盖了美国以及加拿大99%的区域，及时是阿拉斯加山脉底下的小村落，都可以安排上门取件。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>8.</b><img src="../img/search/Q.png" /><i>我有小伙伴也要邮寄，可以拼单吗？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>当然可以。只要寄件地址是同一个地方（EG.同一栋楼），就可以拼单。</p>
+                                                    <p>另外，NYC,NJ,VA还享受同城即可拼单的福利。</p>
+                                                    <p> 拼单优惠价私戳客服小姐姐了解哦。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>9.</b><img src="../img/search/Q.png" /><i>回国航班分多段，应该在申报单上填报哪一趟？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>应该在申报单上填写最后一段航班的航班号。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>10.</b><img src="../img/search/Q.png" /><i>预约取件有什么需要注意的地方？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>NYC, NJ, VA由华人师傅上门取件。上门前会电话或短信联系，大家记得查看信息以及不要错过陌生电话。</p>
+                                                    <p>其他地区我们暂时由LOCAL FEDEX工作人员上门取件。由于疫情期间全程采取无接触取件方式，建议大家将行李放在FRONT
+                                                        DESK/PACKAGE ROOM/HOUSE门口。</p>
+                                                    <p>为了防止行李丢失，建议大家用马克笔将运单第一张以TRK#开头的总单号写在箱子上。</p>
+                                                    <p>如果取件不成功，可以让客服再次预约取件。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>11.</b><img src="../img/search/Q.png" /><i>国内的收件地址可以填家以外的地址吗？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>当然可以，地址可以是任意地址，但是收件人必须是填回国一年内人员的名字。行李在国内投递的时候，可以由他人代行李主人在收件地址进行签收。
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>12.</b><img src="../img/search/Q.png" /><i>我需要去国内的海关取行李吗？</i></h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>不需要，行李会在清关结束后再次加固后送货上门。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>13.</b><img
+                                                    src="../img/search/Q.png" /><i>支付方式都有什么？我在什么时候付钱？上门取件的时候不用缴费吗？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p>美国支持支付宝/微信/Venmo和Zelle，加拿大仅支持支付宝/微信。NYC, NJ,
+                                                        VA入库称重后付款；其他地区同学在取件发运后按照体积重预付运费，等实际账单出来后多退少补。</p>
+                                                </div>
+
+                                            </div>
+
+                                            <h3><b>14.</b><img
+                                                    src="../img/search/Q.png" /><i>我使用的纸箱上面都印有长宽高尺寸，为什么测出来的长宽高跟箱子上面写的不一样？</i>
+                                            </h3>
+                                            <div class="Q-content">
+                                                <img src="../img/search/A.png" />
+                                                <div>
+                                                    <p> 纸箱上标的尺寸是内径，箱子入库后将使用专业的光学扫描仪器去对整个箱子进行扫描测距，在每一个方向上会选取距离最远的两个点进行测量。
+                                                    </p>
+                                                    <p>如果箱子装满以后，箱体向外鼓出，测量的距离将会是最鼓出来的两点之间的距离。</p>
+                                                    <p>另外，国际运输采用向上取整的方式。</p>
+                                                    <p>举个栗子：打包好纸箱后测量出來的长度是 18.3 inch, 于是将箱子进行挤压处理，认为四舍五入就是18 inch;</p>
+                                                    <p>实际入库之后，在机场行李专门的光学系统下量出來一定是 19 inch而不是 18 inch。</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -633,47 +1286,57 @@
         })
     </script>
 
+    <!--尾部-->
     <footer class="footer">
         <section class="container" id="footerContainer">
             <div>
                 <div id="guideList" class="guide-list">
                     <div class="clearfix row">
-                        <div class="bd_none item col-lg-2 col-md-6 col-xs-12">
-                            <img src="../img/newlogo1.png" class="img-fluid" alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" />
+                        <div class="bd_none item col-lg-2 col-md-2 col-xs-12">
+                            <a href="../html/index.html"> <img src="../img/newlogo1.png" class="img-fluid"
+                                    alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" /></a>
 
                         </div>
                         <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
                             <ul>
-                                <li>关于我们</li>
-                                <li>代理招募</li>
-                                <li>隐私协议</li>
-                                <li>服务细则</li>
-                                <li>联系客服</li>
+                                <li><a href="../html/about.html">公司简介</a></li>
+                                <li><a href="../html/about.html">合作伙伴</a></li>
+                                <li><a href="../html/about.html">加入我们</a></li>
+                                <li><a href="../html/about.html">服务细则</a></li>
+                                <li><a href="../html/about.html">联系客服</a></li>
                             </ul>
                             <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
                             <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
+                            <h3>西游寄客服专线 718-406-5453</h3>
                         </div>
-                        <div class="footer-right item col-lg-4 col-md-6 col-xs-12">
-                            <div class="item col-lg-6 col-md-6 col-xs-7">
+                        <div class="footer-right item col-lg-4 col-md-4 col-xs-12">
+                            <!--<div class="item col-lg-6 col-md-6 col-xs-7">
                                 <h3>西游寄客服专线 </h3>
                                 <h2>718-406-5453</h2>
                                 <h4>美东时间周一~周五</h4>
                                 <h4> 11:00 a.m ~ 5:00 p.m</h4>
-                            </div>
+                            </div>-->
 
-                            <div class="item col-lg-3 col-md-6 col-xs-2">
-                                <div style="margin-right:5px">
+                            <div class="item col-lg-4 col-md-4 col-xs-4">
+                                <div class="text-center" style="margin-left:5px">
                                     <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
                                         title="西游寄微信客服二维码" />
                                 </div>
-                                <span style="padding-top:10px;">中国客服</span>
+                                <span class="text-center">中国客服</span>
                             </div>
-                            <div class="item col-lg-3 col-md-6 col-xs-2">
+                            <div class="item col-lg-4 col-md-4 col-xs-4">
                                 <div style="margin-left:5px">
                                     <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
                                         title="西游寄微信客服二维码" />
                                 </div>
                                 <span style="padding-top:10px;">中国客服</span>
+                            </div>
+                            <div class="item col-lg-4 col-md-4 col-xs-4">
+                                <div class="text-center" style="margin-left:5px">
+                                    <img src="../img/qrcon3.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄微信客服二维码" />
+                                </div>
+                                <span class="text-center">美国客服</span>
                             </div>
                         </div>
 
@@ -684,113 +1347,27 @@
             </div>
         </section>
     </footer>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-822562240"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-822562240');
-        gtag('config', 'UA-111709083-1');
-
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '801664066698082');
-        fbq('track', 'PageView');
-    </script>
 
 
 
 </body>
-<script type="text/javascript">
-    function fn(billNumber) {
-        $.ajax({
-            type: 'post',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            data: JSON.stringify({
-                waybillNumber: billNumber
-            }),
-            url: "http://fedexglobaluggage.com/logistics/service/logisticsinfo/getBywaybillNumber",
-            // url:"/logistics/service/logisticsinfo/getBywaybillNumber",
-            success: function (data) {
-                console.log(JSON.stringify(data))
-                var list = data.data;
-                if (list.length !== 0) {
-                    var str = "";
-                    //<span class="signed">'+list[i].recordStatusStr+'</span>
-                    list.sort(function (a, b) {
-                        return Date.parse(b.recordDate) - Date.parse(a.recordDate); //时间最近放最上面
-                    });
-                    for (var i = 0; i < list.length; i++) {
-                        str +=
-                            '<ul class="route"><li class="route-status-text"></li><li class="route-status-icon">' +
-                            (i === 0 ? '<img src="../../img/search/status-transported.png" />' :
-                                '<img src="../../img/search/status-transporting.png" />') +
-                            '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate +
-                                '</i>' : '<span>' + list[i].recordDate + '</span>') +
-                            '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr +
-                                '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
-                    }
-                    $(".route-list").html(str);
-                } else {
-                    $(".route-list").html(
-                        '<ul class="route"><li class="route-status-text"></li><i class="none">当前快递单号不存在，请重新输入正确的快递单号</i></ul>'
-                        );
-                }
-            }
-
-        })
-    }
+<script>
     $(function () {
-        var waybillCodes = getUrlParam("waybillCodes");
-        $("#search-input").val(waybillCodes);
-        fn(waybillCodes);
-
-
-        var cookieName = 'x_o=';
-        $('.goPackage').click(function () {
-            var goHref = $(this).attr('go');;
-            if (document.cookie.indexOf(cookieName) > -1) {
-                location.href = goHref;
-                return;
+        if (localStorage.country) {
+            var country = localStorage.getItem("country");
+            if (country === "us") {
+                $(".topbar .mr-10").html("美国");
+                $(".topbar").find('img').attr("src", "../img/guide_us.png");
+            } else {
+                $(".topbar .mr-10").html("加拿大");
+                $(".topbar").find('img').attr("src", "../img/guide_ca.png");
             }
-            $('#loginDialog').attr('goHref', goHref).click();
-        });
-
+        } else {
+            $(".topbar .mr-10").html("美国");
+            $(".topbar").find('img').attr("src", "../img/guide_us.png");
+        }
     })
-    $('#passageway').hover(switchShow, switchShow)
-
-    function switchShow() {
-        $('#qr-code').toggle()
-    }
-
-    function getUrlParam(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
-        var r = window.location.search.substr(1).match(reg); //匹配目标参数   
-        if (r != null) return unescape(r[2]);
-        return null; //返回参数值  
-    }
 </script>
 
 
