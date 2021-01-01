@@ -161,8 +161,8 @@
             $(this).find('.flow-content').toggleClass('hidden')
         })
         if ((!navigator.userAgent.match(
-                /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-            ))) {
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        ))) {
             $('.service-type').mouseenter(function () {
                 $(this).find('.service-option').removeClass('hidden');
                 $(this).find('#currentContent').find('img').attr("src", "../img/service/service_arrow.png");
@@ -272,6 +272,14 @@
                 }
 
             })
+            if ($(window).width() <= 786) {
+                $(".bgCover1").show();
+                $(".bgCover").hide();
+
+            } else {
+                $(".bgCover").show();
+                $(".bgCover1").hide();
+            }
 
 
         })
@@ -285,27 +293,28 @@
         <div class="row core-businessDiv">
             <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="core-business-item"><a href="../html/process.html"> <img src="../img/img2.png"
-                        class="img-fluid center-block" /><span>回国行李</span></a></div>
+                            class="img-fluid center-block" /><span>回国行李</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img3.png"
-                        class="img-fluid center-block" /><span>境内搬家</span></a></div>
+                            class="img-fluid center-block" /><span>境内搬家</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img4.png"
-                        class="img-fluid center-block" /><span>宠物回国</span></a></div>
+                            class="img-fluid center-block" /><span>宠物回国</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img5.png"
-                        class="img-fluid center-block" /><span>奢侈品专线</span></a></div>
+                            class="img-fluid center-block" /><span>奢侈品专线</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img6.png"
-                        class="img-fluid center-block" /><span>中美转运</span></a></div>
+                            class="img-fluid center-block" /><span>中美转运</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><a href="../html/free.html"><img src="../img/img7.png" class="img-fluid center-block" /><span>
-                        免税州服务</span></a></div>
+                <div class="core-business-item"><a href="../html/free.html"><img src="../img/img7.png"
+                            class="img-fluid center-block" /><span>
+                            免税州服务</span></a></div>
             </div>
 
         </div>
@@ -357,8 +366,116 @@
 
 
 
-    <div class="cover-container">
+    <div class="cover-container bgCover">
         <img src="../img/cover1.png " class="img-fluid" />
+    </div>
+    <div class="cover-container bgCover1">
+        <div class="container">
+            <div class="row">
+                <h3>覆盖美加 互通全球</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item ">
+                        <div class="title">
+                            <span class="prefix">
+                                5
+                            </span>
+                            <span class="name">
+                                大网络
+                            </span>
+                        </div>
+                        <p class="desc">
+                            全球唯一拥有：回国行李，宠物运输、
+                            免税州服务，海淘转运，B2B五大网路。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item ">
+                        <div class="title">
+                            <span class="prefix">
+                                100%
+                            </span>
+                            <span class="name">
+                                覆盖
+                            </span>
+                        </div>
+                        <p class="desc">
+                            行李及宠物运输网络覆盖中国、
+                            日本、澳洲、加拿大各级行政区。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item">
+                        <div class="title">
+                            <span class="prefix">
+                                600
+                            </span>
+                            <span class="name">
+                                个门店
+                            </span>
+                        </div>
+                        <p class="desc">
+                            全球运营合作超过600个门店。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item ">
+                        <div class="title">
+                            <span class="prefix">
+                                10
+                            </span>
+                            <span class="name">
+                                万留学生
+                            </span>
+                        </div>
+                        <p class="desc">
+                            仅2020一年，为10万＋留学生提供过跨境快递服务。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item">
+                        <div class="title">
+                            <span class="prefix">
+                                4000
+                            </span>
+                            <span class="name">
+                                万平方米
+                            </span>
+                        </div>
+                        <p class="desc">
+                            运营仓储总面积超4000万平方米。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="bgCover1-item">
+                        <div class="title">
+                            <span class="prefix">
+                                3000
+                            </span>
+                            <span class="name">
+                                美金免费理赔
+                            </span>
+                        </div>
+                        <p class="desc">
+                            全球第一家也是唯一一家推出单箱理赔$700，最高理赔$3000。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="news-container ">
@@ -458,34 +575,43 @@
                                 <h4> 11:00 a.m ~ 5:00 p.m</h4>
                             </div>-->
 
-                            <div class="item col-lg-4 col-md-4 col-xs-4">
-                                <div class="text-center"  style="margin-left:5px">
+                            <div class="item col-lg-3 col-md-3 col-xs-3">
+                                <div class="text-center" style="margin-left:5px">
                                     <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
                                         title="西游寄微信客服二维码" />
                                 </div>
                                 <span class="text-center">中国客服</span>
                             </div>
-                            <div class="item col-lg-4 col-md-4 col-xs-4">
+                            <div class="item col-lg-3 col-md-3 col-xs-3">
                                 <div style="margin-left:5px">
                                     <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
                                         title="西游寄微信客服二维码" />
                                 </div>
                                 <span style="padding-top:10px;">中国客服</span>
                             </div>
-                            <div class="item col-lg-4 col-md-4 col-xs-4" >
+                            <div class="item col-lg-3 col-md-3 col-xs-3">
                                 <div class="text-center" style="margin-left:5px">
                                     <img src="../img/qrcon3.jpg" class="img-fluid" alt="西游寄微信客服二维码"
                                         title="西游寄微信客服二维码" />
                                 </div>
                                 <span class="text-center">美国客服</span>
                             </div>
+                            <div class="item col-lg-3 col-md-3 col-xs-3">
+                                <div class="text-center" style="margin-left:5px">
+                                    <img src="../img/qrcon4.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                        title="西游寄小红书客服二维码" />
+                                </div>
+                                <span class="text-center">小红书客服</span>
+                            </div>
                         </div>
+                       
+                    </div>
 
                     </div>
 
                 </div>
 
-            </div>
+            
         </section>
     </footer>
 </body>
