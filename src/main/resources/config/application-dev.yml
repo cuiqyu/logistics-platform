@@ -50,7 +50,7 @@ spring:
       master:
         url: jdbc:mysql://170.106.162.195:3306/logistics?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
         username: root
-        password:
+        password: LittleBaYo@123
       # 从库数据源
       slave:
         # 从数据源开关/默认关闭
