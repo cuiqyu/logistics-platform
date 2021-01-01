@@ -9834,8 +9834,8 @@ body.nav-active {
 
 .Q-container h3 {
   color: #E2231A;
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 28px;
   padding: 20px 0 0 0;
   vertical-align: middle;
 }
@@ -9845,19 +9845,24 @@ body.nav-active {
   font-size: 22px;
   padding-right: 10px;
 }
+.Q-container h3 img{
+  display: block;
+  float: left; 
+}
 
 .Q-container h3 i {
-  padding-left: 10px;
+  padding-left: 40px;
+  display: block;
 }
 
 .Q-content img {
   display: block;
   float: left;
-  margin: 0 10px 0 30px;
+  margin: 0 10px 0 0;
 }
 
 .Q-content div {
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .Q-content div p {
@@ -10710,4 +10715,7 @@ line-height:40px !important;
 }
 .news-content{
   word-break: break-all;
+}
+.panel-heading {
+  padding: 20px 15px !important;
 }
