@@ -10740,7 +10740,7 @@ line-height:40px !important;
   height: 32px;
   line-height: 32px;
   font-size: 28px;
-  margin-right: 4px;
+  margin-right: 10px;
   color: #e1251b;
 }
 .bgCover1-item .name{
@@ -10753,6 +10753,7 @@ line-height:40px !important;
   line-height: 18px;
   color: #c2c2c5;
   text-align: justify;
+  margin-top:10px;
 }
 .bgCover1 h3{
   padding-top: 18px;
@@ -10776,5 +10777,6 @@ line-height:40px !important;
   background-position: 50%;
   background-size: cover;
 }
+.footer-middle{margin-top:10px;}
 
 

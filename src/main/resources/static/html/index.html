@@ -37,6 +37,19 @@
 <script src="../js/toast.js"></script>
 
 <body style="background-color: #fff">
+    <div class="contentBgpackage"></div>
+    <div class="contentPackage"></div>
+    <div class="time"></div>
+    <div class="hide">
+        <div class="red-box" data-txt="">
+            <img src="../img/pocket.png" alt="">
+        </div>
+    </div>
+    <div class="pop-box">
+        <div class="pop-close"><img src="../img/colse.png"/></div>
+      <div class="pop-header"><img src="../img/pocketChat1.jpg"/></div>
+      <p>现在咨询 即可领取$10 </p>
+    </div>
     <div class="topbar" style="background:#302e3d;padding:10px 0;color:#fff;">
         <div class="container">
             <span style="margin-left: 5px">当前浏览国家：</span>
@@ -79,7 +92,7 @@
                         </ul>
                     </div>
                     <div class="pull-left service-type">
-                        <div id="currentContent"><span>海淘转运</span><img style="margin-left: 5px" width="18"
+                        <div id="currentContent"><span>美中海淘</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
                             <li value="1" class="free"><span>奢侈品专线</span></li>
@@ -131,7 +144,7 @@
                             </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">海淘转运 <img style="float:right" width="18"
+                                    aria-expanded="false">美中海淘 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../html/free.html">奢侈品专线</a></li>
@@ -387,7 +400,7 @@
                         </div>
                         <p class="desc">
                             全球唯一拥有：回国行李，宠物运输、
-                            免税州服务，海淘转运，B2B五大网路。
+                            免税州服务，美中海淘，文件速递五大网路。
                         </p>
                     </div>
 
@@ -543,77 +556,177 @@
 
 
 
-
-    <!--尾部-->
-    <footer class="footer">
-        <section class="container" id="footerContainer">
-            <div>
-                <div id="guideList" class="guide-list">
-                    <div class="clearfix row">
-                        <div class="bd_none item col-lg-2 col-md-2 col-xs-12">
-                            <a href="../html/index.html"> <img src="../img/newlogo1.png" class="img-fluid"
-                                    alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" /></a>
-
-                        </div>
-                        <div class="footer-middle item col-lg-6  col-md-6 col-xs-12">
-                            <ul>
-                                <li><a href="../html/about.html">公司简介</a></li>
-                                <li><a href="../html/about.html">合作伙伴</a></li>
-                                <li><a href="../html/about.html">加入我们</a></li>
-                                <li><a href="../html/about.html">服务细则</a></li>
-                                <li><a href="../html/about.html">联系客服</a></li>
-                            </ul>
-                            <p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>
-                            <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
-                            <h3>西游寄客服专线 718-406-5453</h3>
-                        </div>
-                        <div class="footer-right item col-lg-4 col-md-4 col-xs-12">
-                            <!--<div class="item col-lg-6 col-md-6 col-xs-7">
-                                <h3>西游寄客服专线 </h3>
-                                <h2>718-406-5453</h2>
-                                <h4>美东时间周一~周五</h4>
-                                <h4> 11:00 a.m ~ 5:00 p.m</h4>
-                            </div>-->
-
-                            <div class="item col-lg-3 col-md-3 col-xs-3">
-                                <div class="text-center" style="margin-left:5px">
-                                    <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
-                                        title="西游寄微信客服二维码" />
-                                </div>
-                                <span class="text-center">中国客服</span>
-                            </div>
-                            <div class="item col-lg-3 col-md-3 col-xs-3">
-                                <div style="margin-left:5px">
-                                    <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
-                                        title="西游寄微信客服二维码" />
-                                </div>
-                                <span style="padding-top:10px;">中国客服</span>
-                            </div>
-                            <div class="item col-lg-3 col-md-3 col-xs-3">
-                                <div class="text-center" style="margin-left:5px">
-                                    <img src="../img/qrcon3.jpg" class="img-fluid" alt="西游寄微信客服二维码"
-                                        title="西游寄微信客服二维码" />
-                                </div>
-                                <span class="text-center">美国客服</span>
-                            </div>
-                            <div class="item col-lg-3 col-md-3 col-xs-3">
-                                <div class="text-center" style="margin-left:5px">
-                                    <img src="../img/qrcon4.jpg" class="img-fluid" alt="西游寄微信客服二维码"
-                                        title="西游寄小红书客服二维码" />
-                                </div>
-                                <span class="text-center">小红书客服</span>
-                            </div>
-                        </div>
-                       
-                    </div>
+<!--尾部-->
+<footer class="footer">
+    <section class="container" id="footerContainer">
+        <div>
+            <div id="guideList" class="guide-list">
+                <div class="clearfix row">
+                    <div class="bd_none item col-lg-2 col-md-2 col-xs-12">
+                        <a href="../html/index.html"> <img src="../img/newlogo1.png" class="img-fluid"
+                                alt="西游寄微信公众号二维码" title="西游寄微信公众号二维码" /></a>
 
                     </div>
+                    <div class="footer-middle item col-lg-5  col-md-5 col-xs-12">
+                        <ul>
+                            <li><a href="../html/about.html">公司简介</a></li>
+                            <li><a href="../html/about.html">合作伙伴</a></li>
+                            <li><a href="../html/about.html">加入我们</a></li>
+                            <li><a href="../html/about.html">服务细则</a></li>
+                            <li><a href="../html/about.html">联系客服</a></li>
+                        </ul>
+                        <!--<p>仓库地址：563 Johnson Ave Brooklyn, NY, 11237</p>-->
+                        <p>美东时间每周一～周六 11:30 a.m ～ 7:00 p.m</p>
+                        <h3>西游寄客服专线 718-406-5453</h3>
+                    </div>
+                    <div class="footer-right item col-lg-5 col-md-5 col-xs-12">
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div style="margin-left:5px">
+                                <img src="../img/qrcon3.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄微信客服二维码" />
+                            </div>
+                            <span style="padding-top:10px;">美东区客服</span>
+                        </div>
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div class="text-center" style="margin-left:5px">
+                                <img src="../img/qrcon6.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄微信客服二维码" />
+                            </div>
+                            <span class="text-center">美东区客服</span>
+                        </div>
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div class="text-center" style="margin-left:5px">
+                                <img src="../img/qrcon4.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄小红书账号二维码" />
+                            </div>
+                            <span class="text-center">小红书账号</span>
+                        </div>
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div class="text-center" style="margin-left:5px">
+                                <img src="../img/qrcon1.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄微信客服二维码" />
+                            </div>
+                            <span class="text-center">亚太区客服</span>
+                        </div>
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div style="margin-left:5px">
+                                <img src="../img/qrcon2.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄微信客服二维码" />
+                            </div>
+                            <span style="padding-top:10px;">亚太区客服</span>
+                        </div>
+                        <div class="item col-lg-2 col-md-2 col-xs-4">
+                            <div style="margin-left:5px">
+                                <img src="../img/qrcon5.jpg" class="img-fluid" alt="西游寄微信客服二维码"
+                                    title="西游寄微信客服二维码" />
+                            </div>
+                            <span style="padding-top:10px;">亚太区客服</span>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
 
                 </div>
 
-            
-        </section>
-    </footer>
+            </div>
+
+        
+    </section>
+</footer>
+
+<style>
+    .contentBgpackage{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: #000;
+    z-index:1000;
+    left:0;
+    top:0;
+    right:0;
+    opacity:0.5;
+    filter:Alpha(opacity=50);
+    display:none;
+
+    }
+    .contentPackage {
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index:1001;
+    left:0;
+    top:0;
+    right:0;
+    display: block;
+	
+    
+}
+.red-box {
+	position:absolute;
+}
+.red-box img {
+	width:50px;
+	height:auto;
+	cursor:pointer;
+}
+.hide {
+	display:none;
+}
+.time {
+	position:absolute;
+	right:30px;
+	bottom:30px;
+	color:red;
+    font-size:20px;
+    display: none;
+}
+.pop-box{
+    left:50%;
+    top:50%;	
+transform: translate(-50%, -50%);
+position: fixed;
+    width:400px;
+    height:400px;
+    background: #fff;
+    z-index:1002;
+    display: none;
+}
+.pop-close{
+    position: absolute;
+    top:-60px;
+    right:-40px;
+    width:40px;
+    height:40px;
+    /*background: url(../img/cross2.png) no-repeat 0 0;
+    width: 20px;
+    height: 21px;
+    display: block;
+    top:-80px;
+    right:-40px;*/
+
+}
+.pop-header{
+margin:0 auto;
+width:95%;
+}
+.pop-box p{
+    font-size:18px;
+    color:red;
+    text-align: center;
+    
+
+}
+@media (max-width: 768px) {
+    .pop-box{  
+    width:70%;
+    height:40%;
+    }
+
+}
+
+
+</style>
 </body>
 <script>
     $(function () {
@@ -631,6 +744,91 @@
             $(".topbar").find('img').attr("src", "../img/guide_us.png");
         }
     })
+
+    $(function(){
+        $(".pop-close").click(function(){
+            $(".contentBgpackage").hide();
+            $(".pop-box").hide();
+        })
+    })
+
+
+    $(function() {
+    const $content = $('.contentPackage');
+    const $redBox = $('.red-box');
+    const redContentWidth = $content.width();
+    const redBoxWidth = $redBox.width();
+    const basePadding = 30;
+    const maxLeftPX = redContentWidth - redBoxWidth - basePadding * 2;
+
+    let zIndex = 1;
+    let timer;
+
+
+    function getRandom(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
+
+    function redBoxSpeed($el, time,i) {
+        
+        $el.animate({
+                top: '600px'
+            },
+            time * 1000,
+            function() {
+                $el.remove(); 
+                console.log(i); 
+                if(i==10){
+                    $(".pop-box").show();
+                }
+            }
+            
+        )
+        
+    }
+
+    function createRedBox(i) {
+        const $newNode = $redBox.clone(true);
+        $newNode.attr('data-txt', Math.random() * 100);
+        $newNode.css({
+            'z-index': zIndex++,
+            'left': getRandom(basePadding, maxLeftPX) + 'px',
+            'transform': 'rotate(' + getRandom(-30, 30) + 'deg)'
+        })
+        $content.append($newNode);
+        redBoxSpeed($newNode, 2,i);
+        
+    }
+
+
+    function createRedBoxRain() {
+        //let count = 120;
+        let count = 10;
+        var i=0;
+        timer = setInterval(() => {
+            if (count == 0) {
+                clearInterval(timer);
+            }else {
+                count--
+                $('.time').text(count + 's');
+                i++;
+                createRedBox(i);
+            }
+        }, 300)
+    }
+
+    function ready() {
+        createRedBoxRain();
+        localStorage.setItem("coupon","coupon");
+        
+    }
+   // $(".contentBgpackage").show();
+   // ready();
+    if (!localStorage.coupon) {
+        $(".contentBgpackage").show();
+    ready();
+    }
+})
 </script>
 
 </html>
