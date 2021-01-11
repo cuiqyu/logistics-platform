@@ -35,7 +35,98 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/toast.js"></script>
+<style>
+    .contentBgpackage{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: #000;
+    z-index:1000;
+    left:0;
+    top:0;
+    right:0;
+    opacity:0.5;
+    filter:Alpha(opacity=50);
+    display:none;
 
+    }
+    .contentPackage {
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index:1001;
+    left:0;
+    top:0;
+    right:0;
+    display: none;
+	
+    
+}
+.red-box {
+	position:absolute;
+}
+.red-box img {
+	width:50px;
+	height:auto;
+	cursor:pointer;
+}
+.hide {
+	display:none;
+}
+.time {
+	position:absolute;
+	right:30px;
+	bottom:30px;
+	color:red;
+    font-size:20px;
+    display: none;
+}
+.pop-box{
+    left:50%;
+    top:50%;	
+transform: translate(-50%, -50%);
+position: fixed;
+    width:400px;
+    height:400px;
+    background: #fff;
+    z-index:1002;
+    display: none;
+}
+.pop-close{
+    position: absolute;
+    top:-60px;
+    right:-40px;
+    width:40px;
+    height:40px;
+    /*background: url(../img/cross2.png) no-repeat 0 0;
+    width: 20px;
+    height: 21px;
+    display: block;
+    top:-80px;
+    right:-40px;*/
+
+}
+.pop-header{
+margin:0 auto;
+width:95%;
+}
+.pop-box p{
+    font-size:18px;
+    color:red;
+    text-align: center;
+    
+
+}
+@media (max-width: 768px) {
+    .pop-box{  
+    width:70%;
+    height:40%;
+    }
+
+}
+
+
+</style>
 <body style="background-color: #fff">
     <div class="contentBgpackage"></div>
     <div class="contentPackage"></div>
@@ -635,98 +726,7 @@
     </section>
 </footer>
 
-<style>
-    .contentBgpackage{
-    position: fixed;
-    width:100%;
-    height:100%;
-    background: #000;
-    z-index:1000;
-    left:0;
-    top:0;
-    right:0;
-    opacity:0.5;
-    filter:Alpha(opacity=50);
-    display:none;
 
-    }
-    .contentPackage {
-    position: fixed;
-    width:100%;
-    height:100%;
-    z-index:1001;
-    left:0;
-    top:0;
-    right:0;
-    display: block;
-	
-    
-}
-.red-box {
-	position:absolute;
-}
-.red-box img {
-	width:50px;
-	height:auto;
-	cursor:pointer;
-}
-.hide {
-	display:none;
-}
-.time {
-	position:absolute;
-	right:30px;
-	bottom:30px;
-	color:red;
-    font-size:20px;
-    display: none;
-}
-.pop-box{
-    left:50%;
-    top:50%;	
-transform: translate(-50%, -50%);
-position: fixed;
-    width:400px;
-    height:400px;
-    background: #fff;
-    z-index:1002;
-    display: none;
-}
-.pop-close{
-    position: absolute;
-    top:-60px;
-    right:-40px;
-    width:40px;
-    height:40px;
-    /*background: url(../img/cross2.png) no-repeat 0 0;
-    width: 20px;
-    height: 21px;
-    display: block;
-    top:-80px;
-    right:-40px;*/
-
-}
-.pop-header{
-margin:0 auto;
-width:95%;
-}
-.pop-box p{
-    font-size:18px;
-    color:red;
-    text-align: center;
-    
-
-}
-@media (max-width: 768px) {
-    .pop-box{  
-    width:70%;
-    height:40%;
-    }
-
-}
-
-
-</style>
 </body>
 <script>
     $(function () {
@@ -747,7 +747,7 @@ width:95%;
 
     $(function(){
         $(".pop-close").click(function(){
-            $(".contentBgpackage").hide();
+            $(".contentBgpackage,.contentPackage").hide();
             $(".pop-box").hide();
         })
     })
@@ -825,7 +825,7 @@ width:95%;
    // $(".contentBgpackage").show();
    // ready();
     if (!localStorage.coupon) {
-        $(".contentBgpackage").show();
+        $(".contentBgpackage,.contentPackage").show();
     ready();
     }
 })
