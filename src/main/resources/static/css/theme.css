@@ -9817,8 +9817,9 @@ body.nav-active {
 }
 
 .tips p {
-  line-height: 36px;
+  /*line-height: 36px;*/
   font-size: 16px;
+  line-height: 26px;
 }
 
 .tips em {
