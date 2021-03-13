@@ -61,6 +61,22 @@
                             <div class="guide-name">加拿大</div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="guide-box as">
+                            <div class="guide-country-common">
+                                <img style="margin-top: 70px" src="../img/guide_as.png" alt="澳洲境内" title="澳洲境内" />
+                            </div>
+                            <div class="guide-name">澳大利亚</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="guide-box ja">
+                            <div class="guide-country-common">
+                                <img style="margin-top: 70px" src="../img/guide_ja.png" alt="日本境内" title="日本境内" />
+                            </div>
+                            <div class="guide-name">日本</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,6 +168,14 @@
         });
         $(".ca").click(function () {
             localStorage.setItem("country", "ca");
+            window.location.href = "../html/index.html"
+        });
+        $(".as").click(function () {
+            localStorage.setItem("country", "as");
+            window.location.href = "../html/index.html"
+        });
+        $(".ja").click(function () {
+            localStorage.setItem("country", "ja");
             window.location.href = "../html/index.html"
         });
     })

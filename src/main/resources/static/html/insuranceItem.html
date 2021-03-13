@@ -70,7 +70,7 @@
                             <li value="4" class="consult"><span>马上咨询</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type">
+                    <div class="pull-left service-type innerPackage">
                         <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -79,7 +79,7 @@
                             <li value="3" class="free"><span>费用时效</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type">
+                    <div class="pull-left service-type innerPackage">
                         <div id="currentContent"><span>美中海淘</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -122,7 +122,7 @@
                                     
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown innerPackage">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
@@ -131,7 +131,7 @@
                                     <li><a href="../html/free.html">费用时效</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown innerPackage">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">美中海淘 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
@@ -552,9 +552,17 @@
             if (country === "us") {
                 $(".topbar .mr-10").html("美国");
                 $(".topbar").find('img').attr("src", "../img/guide_us.png");
-            } else {
+            } else if(country === "ca") {
                 $(".topbar .mr-10").html("加拿大");
                 $(".topbar").find('img').attr("src", "../img/guide_ca.png");
+            } else if(country === "as") {
+                $(".topbar .mr-10").html("澳大利亚");
+                $(".topbar").find('img').attr("src", "../img/guide_as.png");
+                $(".innerPackage").hide();
+            } else if(country === "ja") {
+                $(".topbar .mr-10").html("日本");
+                $(".topbar").find('img').attr("src", "../img/guide_ja.png");
+                $(".innerPackage").hide();
             }
         } else {
             $(".topbar .mr-10").html("美国");

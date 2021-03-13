@@ -173,7 +173,7 @@ width:95%;
                             <li value="4" class="consult"><span>马上咨询</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type">
+                    <div class="pull-left service-type innerPackage">
                         <div id="currentContent"><span>境内快递</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -182,7 +182,7 @@ width:95%;
                             <li value="3" class="free"><span>费用时效</span></li>
                         </ul>
                     </div>
-                    <div class="pull-left service-type">
+                    <div class="pull-left service-type innerPackage">
                         <div id="currentContent"><span>美中海淘</span><img style="margin-left: 5px" width="18"
                                 src="../img/service/service_arrow_blue.png" /></div>
                         <ul class="service-option hidden">
@@ -224,7 +224,7 @@ width:95%;
                                     <li><a href="../html/onPlaceorder.html">马上咨询</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown innerPackage">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">境内快递 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
@@ -233,7 +233,7 @@ width:95%;
                                     <li><a href="../html/free.html">费用时效</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown innerPackage">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">美中海淘 <img style="float:right" width="18"
                                         src="../img/service/service_arrow_blue.png" /></a>
@@ -399,11 +399,11 @@ width:95%;
                 <div class="core-business-item"><a href="../html/process.html"> <img src="../img/img2.png"
                             class="img-fluid center-block" /><span>回国行李</span></a></div>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
+            <div class="col-lg-4 col-md-4 col-xs-4 innerPackage">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img3.png"
                             class="img-fluid center-block" /><span>境内搬家</span></a></div>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
+            <div class="col-lg-4 col-md-4 col-xs-4 innerPackage">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img4.png"
                             class="img-fluid center-block" /><span>宠物回国</span></a></div>
             </div>
@@ -415,7 +415,7 @@ width:95%;
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img6.png"
                             class="img-fluid center-block" /><span>中美转运</span></a></div>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-4">
+            <div class="col-lg-4 col-md-4 col-xs-4 innerPackage">
                 <div class="core-business-item"><a href="../html/free.html"><img src="../img/img7.png"
                             class="img-fluid center-block" /><span>
                             免税州服务</span></a></div>
@@ -735,9 +735,17 @@ width:95%;
             if (country === "us") {
                 $(".topbar .mr-10").html("美国");
                 $(".topbar").find('img').attr("src", "../img/guide_us.png");
-            } else {
+            } else if(country === "ca") {
                 $(".topbar .mr-10").html("加拿大");
                 $(".topbar").find('img').attr("src", "../img/guide_ca.png");
+            } else if(country === "as") {
+                $(".topbar .mr-10").html("澳大利亚");
+                $(".topbar").find('img').attr("src", "../img/guide_as.png");
+                $(".innerPackage").hide();
+            } else if(country === "ja") {
+                $(".topbar .mr-10").html("日本");
+                $(".topbar").find('img').attr("src", "../img/guide_ja.png");
+                $(".innerPackage").hide();
             }
         } else {
             $(".topbar .mr-10").html("美国");

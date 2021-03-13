@@ -6942,7 +6942,7 @@ iframe {
 
 .guide-box {
   width: 320px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 8px 0 #dbdbdb;
   box-shadow: 0 2px 8px 0 #dbdbdb;
@@ -10386,7 +10386,7 @@ body.nav-active {
 }
 
 .guideContent {
-  min-height: 800px;
+  min-height: 1100px;
 }
 
 @media (max-width: 992px) {
