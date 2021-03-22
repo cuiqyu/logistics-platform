@@ -412,7 +412,7 @@ width:95%;
                             class="img-fluid center-block" /><span>奢侈品专线</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4">
-                <div class="core-business-item"><a href="../html/free.html"><img src="../img/img6.png"
+                <div class="core-business-item core-name"><a href="../html/free.html"><img src="../img/img6.png"
                             class="img-fluid center-block" /><span>中美转运</span></a></div>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-4 innerPackage">
@@ -735,17 +735,21 @@ width:95%;
             if (country === "us") {
                 $(".topbar .mr-10").html("美国");
                 $(".topbar").find('img').attr("src", "../img/guide_us.png");
+                $(".core-name span").html("中美转运");
             } else if(country === "ca") {
                 $(".topbar .mr-10").html("加拿大");
                 $(".topbar").find('img').attr("src", "../img/guide_ca.png");
+                $(".core-name span").html("中美转运");
             } else if(country === "as") {
                 $(".topbar .mr-10").html("澳大利亚");
                 $(".topbar").find('img').attr("src", "../img/guide_as.png");
                 $(".innerPackage").hide();
+                $(".core-name span").html("中澳转运");
             } else if(country === "ja") {
                 $(".topbar .mr-10").html("日本");
                 $(".topbar").find('img').attr("src", "../img/guide_ja.png");
                 $(".innerPackage").hide();
+                $(".core-name span").html("中日转运");
             }
         } else {
             $(".topbar .mr-10").html("美国");
