@@ -9371,10 +9371,6 @@ body.nav-active {
   color: #333;
 }
 
-.routes-wrapper .route-list .route .route-date-time {
-  width: 25%;
-  color: #333;
-}
 
 .routes-wrapper .route-list .route i {
   color: #e2231a;
@@ -9386,7 +9382,13 @@ body.nav-active {
 }
 
 .routes-wrapper .route-list .route .route-desc {
-  max-width: 425px;
+  /*width: 425px;*/
+  width: 30%;
+}
+.routes-wrapper .route-list .route .route-remarks{
+  width: 25%;
+  color: #333;
+  
 }
 
 .routes-wrapper .route-list .last {
@@ -10592,6 +10594,9 @@ body.nav-active {
 
   .routes-wrapper .route-list .route .route-desc {
     max-width: 40%;
+  }
+  .routes-wrapper .route-list .route .route-remarks {
+    word-break: break-all;
   }
 
   .time-vertical .intro {

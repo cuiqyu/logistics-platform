@@ -361,7 +361,9 @@
                             '</li><li class="route-date-time">' + (i === 0 ? '<i>' + list[i].recordDate +
                                 '</i>' : '<span>' + list[i].recordDate + '</span>') +
                             '</li><li class="route-desc">' + (i === 0 ? '<i>' + list[i].recordStatusStr +
-                                '</i>' : '<span>' + list[i].recordStatusStr + '</span>') + '</li></ul>';
+                                '</i>' : '<span>' + list[i].recordStatusStr + '</span>') +
+                                '</li><li class="route-remarks">' + (i === 0 ? '<i>' + list[i].remarks +
+                                '</i>' : '<span>' + list[i].remarks + '</span>') + '</li></ul>';
                     }
                     $(".route-list").html(str);
                 } else {
